@@ -155,7 +155,7 @@ public class WorkMenu {
         backButtonMenu.setForeground(Color.BLUE);
 
         backButton = new JButton("Вернуться в главное меню");
-        backButtonMenu.setForeground(Color.decode("#000000"));
+        backButton.setForeground(Color.decode("#000000"));
         backButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         backButton.setBounds(450,190,325,70);
         backButton.setBorder(new RoundedBorder(30));

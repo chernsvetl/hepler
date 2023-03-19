@@ -52,34 +52,17 @@ final class FullNameReplacement implements ReplacementCreator {
         String fullName = solution.getLiteral(solutionVarName).getString();
         String[] nameChunks = fullName.split(" ");
 
-//        if (nameChunks.length != 3) {
-//            // TODO: just log?
-//            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
-//        }
-
-
         if (nameChunks.length == 4) {
-//            Petrovich petrovich = new Petrovich();
-//            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
-//            String lastName = petrovich.say(nameChunks[0], NameType.LastName, gender, wordCase);
-//            String firstName = petrovich.say(nameChunks[1], NameType.FirstName, gender, wordCase);
-//            String patronymicName = petrovich.say(nameChunks[2], NameType.PatronymicName, gender, wordCase);
-//            return firstName + lastName + patronymicName + nameChunks[3];
             return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а' + " " + nameChunks[2] + " " + nameChunks[3];
-        }
-//            String result = Arrays.toString(Arrays.toString(nameChunks).toCharArray())
-//                    .replace("[", "")
-//                    .replace(",", "")
-//                    .replace(" ", "")
-//                    .replace("]", "");
-
-        else {
+        }  else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             String lastName = petrovich.say(nameChunks[0], NameType.LastName, gender, wordCase);
             String firstName = petrovich.say(nameChunks[1], NameType.FirstName, gender, wordCase);
             String patronymicName = petrovich.say(nameChunks[2], NameType.PatronymicName, gender, wordCase);
             return String.format(lastName + " " + firstName + " " + patronymicName);
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
         }
     }
 }
