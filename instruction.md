@@ -29,25 +29,25 @@ _Данный файл расположен в корне проекта._
 _(см. пункт **"Таблицы и правила"**)._
 1. Во вкладке Tools, расположенной в верхнем меню, выбрать пункт _**Create axioms from Excel workbook**_ _(см. скриншот)_
 
-   ![img.png](intelligent_assistant/src/main/resources/img.png)
+   ![img.png](src/main/resources/img.png)
 
 2. Выбираем нужную таблицу и нажимаем _**Open**_ _(см. скриншот)_
 
-   ![img_5.png](intelligent_assistant/src/main/resources/img_5.png)
+   ![img_5.png](src/main/resources/img_5.png)
 
 3. Выбираем _**Load Rules**_ и загружаем правила для этой таблицы, после нажимаем _**Open**_ _(см. скриншот)_
    
-   ![img_6.png](intelligent_assistant/src/main/resources/img_6.png)
+   ![img_6.png](src/main/resources/img_6.png)
 
 4. После того как загрузили правила, нужно сгенерировать аксиомы 
 
 Для этого нажимаем _**Generate Axioms**_ _(см. скриншот)._
 
-   ![img_7.png](intelligent_assistant/src/main/resources/img_7.png)
+   ![img_7.png](src/main/resources/img_7.png)
 
 5. Если ошибок при генерации нет, появится окошко _(см. скриншот)_, где нужно выбрать _**Add to current onlotogy**_
    
-   ![img_8.png](intelligent_assistant/src/main/resources/img_8.png)
+   ![img_8.png](src/main/resources/img_8.png)
 
 ### 4. Повторяем действия из пункта 3 для второй таблицы
 ### 5. Сохраняем файл в формате rdf и помещаем его в корень проекта с именем _students.owl_
