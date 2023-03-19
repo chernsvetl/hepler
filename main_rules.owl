@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра">
+    <Prefix name="" IRI="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="кафедра" IRI="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#"/>
+    <Prefix name="version_2" IRI="http://www.semanticweb.org/oleyn/ontologies/2022/4/version_2#"/>
+    <Declaration>
+        <Class IRI="#Бакалавриат"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ВКР"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Документы"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Заявление_о_направлении_на_практику"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Индивидуальное_задание_на_практику"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КМиАД_производственная_научно-исследовательская"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КМиАД_производственная_технологическая"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КМиАД_учебная_технологическая_1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КМиАД_учебная_технологическая_2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КНиС_производственная_научно-исследовательская"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КНиС_производственная_технологическая"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#КНиС_учебная_ознакомительная"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Кафедра"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Консультант"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Магистратура"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Отзыв_руководителя_ВКР"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Отзыв_руководителя_практики"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Отчет_о_практике"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ПКиИН_производственная_научно-исследовательская"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ПКиИН_производственная_преддипломная"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ПКиИН_учебная_научно-исследовательская"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ПКиИН_учебная_эксплутационная"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Практика"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Рецензент"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Рецензия"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Руководители"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Руководители_ВКР"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Руководители_практики"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Руководитель_ВКР"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Руководитель_от_НГУ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Руководитель_от_организации"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Соруководитель_ВКР"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ТРПС_производственная_научно-исследовательская"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ТРПС_производственная_технологическая"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ТРПС_учебная_ознакомительная_1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ТРПС_учебная_ознакомительная_2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Учащиеся"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#заполнил"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#защищает"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#консультирует"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#на_НГУ_практике_у"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#на_орг_практике_у"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#прикреплен_к_кафедре"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#проходит"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#рецензирует"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#руководит_с"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#согласовывает"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Вид_практики"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Год_прохождения"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Дата_защиты"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Должность"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Должность_в_НГУ"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Должность_в_организации"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Заведующий_кафедры"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Курс"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Место_прохождения_практики"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Наименование_организации"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Номер_группы"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Приказ_на_прохождение_практики"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Профиль_обучения"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Распоряжение_об_корректировки_тем_и_научнх_руководителей"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Распоряжение_об_утверждении_тем_и_научных_руководителей"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Распоряжение_тема"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Тема"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ФИО"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#группа"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Бакалавриат"/>
+        <Class IRI="#Учащиеся"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Заявление_о_направлении_на_практику"/>
+        <Class IRI="#Документы"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Индивидуальное_задание_на_практику"/>
+        <Class IRI="#Документы"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КМиАД_производственная_научно-исследовательская"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КМиАД_производственная_технологическая"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КМиАД_учебная_технологическая_1"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КМиАД_учебная_технологическая_2"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КНиС_производственная_научно-исследовательская"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КНиС_производственная_технологическая"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#КНиС_учебная_ознакомительная"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Консультант"/>
+        <Class IRI="#Руководители_ВКР"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Магистратура"/>
+        <Class IRI="#Учащиеся"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Отзыв_руководителя_ВКР"/>
+        <Class IRI="#Документы"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Отзыв_руководителя_практики"/>
+        <Class IRI="#Документы"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Отчет_о_практике"/>
+        <Class IRI="#Документы"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ПКиИН_производственная_научно-исследовательская"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ПКиИН_производственная_преддипломная"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ПКиИН_учебная_научно-исследовательская"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ПКиИН_учебная_эксплутационная"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Рецензия"/>
+        <Class IRI="#Документы"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Руководители_ВКР"/>
+        <Class IRI="#Руководители"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Руководители_практики"/>
+        <Class IRI="#Руководители"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Руководитель_ВКР"/>
+        <Class IRI="#Руководители_ВКР"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Руководитель_от_НГУ"/>
+        <Class IRI="#Руководители_практики"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Руководитель_от_организации"/>
+        <Class IRI="#Руководители_практики"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Соруководитель_ВКР"/>
+        <Class IRI="#Руководители_ВКР"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ТРПС_производственная_научно-исследовательская"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ТРПС_производственная_технологическая"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ТРПС_учебная_ознакомительная_1"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ТРПС_учебная_ознакомительная_2"/>
+        <Class IRI="#Практика"/>
+    </SubClassOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#защищает"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#на_НГУ_практике_у"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#на_орг_практике_у"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#прикреплен_к_кафедре"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#проходит"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#заполнил"/>
+        <Class IRI="#Учащиеся"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#защищает"/>
+        <Class IRI="#Бакалавриат"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#защищает"/>
+        <Class IRI="#Магистратура"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#консультирует"/>
+        <Class IRI="#Консультант"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#на_НГУ_практике_у"/>
+        <Class IRI="#Бакалавриат"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#на_НГУ_практике_у"/>
+        <Class IRI="#Магистратура"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#на_орг_практике_у"/>
+        <Class IRI="#Бакалавриат"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#на_орг_практике_у"/>
+        <Class IRI="#Магистратура"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#прикреплен_к_кафедре"/>
+        <Class IRI="#Бакалавриат"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#прикреплен_к_кафедре"/>
+        <Class IRI="#Магистратура"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#проходит"/>
+        <Class IRI="#Бакалавриат"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#проходит"/>
+        <Class IRI="#Магистратура"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#рецензирует"/>
+        <Class IRI="#Рецензент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#руководит_с"/>
+        <Class IRI="#Соруководитель_ВКР"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#согласовывает"/>
+        <Class IRI="#Руководитель_ВКР"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#защищает"/>
+        <Class IRI="#ВКР"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#консультирует"/>
+        <Class IRI="#ВКР"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#на_НГУ_практике_у"/>
+        <Class IRI="#Руководитель_от_НГУ"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#на_орг_практике_у"/>
+        <Class IRI="#Руководитель_от_организации"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#прикреплен_к_кафедре"/>
+        <Class IRI="#Кафедра"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#проходит"/>
+        <Class IRI="#Практика"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#рецензирует"/>
+        <Class IRI="#ВКР"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#руководит_с"/>
+        <Class IRI="#ВКР"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#согласовывает"/>
+        <Class IRI="#ВКР"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Должность_в_НГУ"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Должность_в_организации"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Распоряжение_тема"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#Вид_практики"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Год_прохождения"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Дата_защиты"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Должность"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Заведующий_кафедры"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Курс"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Место_прохождения_практики"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Наименование_организации"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Номер_группы"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Приказ_на_прохождение_практики"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Профиль_обучения"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Распоряжение_об_корректировки_тем_и_научнх_руководителей"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Распоряжение_об_утверждении_тем_и_научных_руководителей"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Тема"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ФИО"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#группа"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
