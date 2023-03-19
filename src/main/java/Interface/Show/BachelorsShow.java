@@ -9,7 +9,7 @@ import static Interface.WorkMenu.frame4;
 
 public class BachelorsShow {
     public static void show() {
-        JFileChooser fileChooser = new JFileChooser("C:\\Users\\User\\Desktop\\Assistant\\sveta_vkr\\intelligent_assistant\\target\\classes\\documents\\bachelors\\4th_course");
+        JFileChooser fileChooser = new JFileChooser("target/classes/documents/bachelors/4th_course");
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
                 "DOCX & DOC files", "docx", "doc");
         fileChooser.setFileFilter(filter);

@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class BachelorsDelete {
     public static void delete(){
-        JFileChooser fileChooser = new JFileChooser("C:\\Users\\User\\Desktop\\Assistant\\sveta_vkr\\intelligent_assistant\\target\\classes\\documents\\bachelors");
+        JFileChooser fileChooser = new JFileChooser("target/classes/documents/bachelors/4th_course");
         fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         fileChooser.setMultiSelectionEnabled(true);
         int returnValue = fileChooser.showOpenDialog(null);

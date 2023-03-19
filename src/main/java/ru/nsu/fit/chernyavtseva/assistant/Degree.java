@@ -76,11 +76,6 @@ final class MasterTRPO implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
 
-
-//        return new DocumentTemplate[]{new SupervisorFeedbackMDA(),
-//                new ReviewerFeedbackMDA(), new IndividualTaskMDA(),
-//                new PracticeReportMDA(), new PracticeFeedbackMDA()};
-
             return new DocumentTemplate[]{
                     new SupervisorFeedbackTRPO(),
                     new ReviewerFeedbackTRPO(), new IndividualTaskTRPO(),
