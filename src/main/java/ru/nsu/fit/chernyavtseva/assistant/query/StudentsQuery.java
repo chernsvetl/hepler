@@ -2,11 +2,11 @@ package ru.nsu.fit.chernyavtseva.assistant.query;
 
 public record StudentsQuery(String degree) {
 
-    /*
-    for generating docs for specific degree you need to exchange response in line 22 on response bellow and in Degree.java choose needed array
-            FILTER regex(?профиль, "Компьютерное моделирование и анализ данных")
-            FILTER regex(?профиль, "Программная инженерия и компьютерные науки")
-            FILTER regex(?профиль, "Технология разработки программных систем")
+    /**
+     *     for generating docs for specific degree you need to exchange response in line 22 on response bellow and in Degree.java choose needed array
+     *             FILTER regex(?профиль, "Компьютерное моделирование и анализ данных")
+     *             FILTER regex(?профиль, "Программная инженерия и компьютерные науки")
+     *             FILTER regex(?профиль, "Технология разработки программных систем")
      */
 
     public static final String QUERY_TEMPLATE = """
@@ -39,7 +39,6 @@ public record StudentsQuery(String degree) {
                         
             }
             """;
-
 
     String create() {
         return QUERY_TEMPLATE.replace("$degree", degree);

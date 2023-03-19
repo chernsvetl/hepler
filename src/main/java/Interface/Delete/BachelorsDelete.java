@@ -11,12 +11,8 @@ public class BachelorsDelete {
         fileChooser.setMultiSelectionEnabled(true);
         int returnValue = fileChooser.showOpenDialog(null);
         if(returnValue == JFileChooser.APPROVE_OPTION) {
-//                        File selectedFile = fileChooser.getSelectedFile();
-//                        System.out.println("You selected: " + selectedFile);
-//                        selectedFile.delete();
 
             File[] selectedFile = fileChooser.getSelectedFiles();
-            //System.out.println("You selected: " + Arrays.toString(selectedFile));
 
             Arrays.asList(selectedFile).forEach(x -> {
                 if (x.isFile()) {

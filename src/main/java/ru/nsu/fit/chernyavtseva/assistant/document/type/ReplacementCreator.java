@@ -6,7 +6,6 @@ import com.github.petrovich4j.NameType;
 import com.github.petrovich4j.Petrovich;
 import com.hp.hpl.jena.query.QuerySolution;
 
-
 /**
  * Extracts data from solution and normalizes it if needed
  */

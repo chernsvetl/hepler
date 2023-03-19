@@ -25,8 +25,6 @@ public class BachelorsShow {
                 throw new RuntimeException(e);
             }
         }
-
-
         frame4.setVisible(true);
     }
 }

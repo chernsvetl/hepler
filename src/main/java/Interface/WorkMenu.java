@@ -10,7 +10,6 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -123,40 +122,25 @@ public class WorkMenu {
         label = new JLabel("Выберите действие, которое хотите выполнить");
         label.setFont(new Font("Arial", Font.BOLD, 30));;
         label.setForeground(Color.decode("#9e6e52"));
-        //label.setLocation(150,750);
-
 
         deleteButton = new JButton("Удалить документ");
-        //deleteButton.setSize(300, 40);
-      //  deleteButton.setBackground(Color.decode("#9e6e5f"));
         deleteButton.setForeground(Color.decode("#000000"));
-        //deleteButton.setLocation(450,250);
         deleteButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         deleteButton.setBounds(450,280,325,70);
-
         deleteButton.setBorder(new RoundedBorder(30));
         deleteButton.setForeground(Color.BLUE);
 
 
         exitButton = new JButton("Выход");
-        //exitButton.setSize(300, 40);
-        //exitButton.setBackground(Color.decode("#9e6e5f"));
-
         exitButton.setForeground(Color.decode("#000000"));
-        //exitButton.setLocation(450,600);
         exitButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         exitButton.setBounds(450,600,325,70);
-
         exitButton.setBorder(new RoundedBorder(30));
         exitButton.setForeground(Color.BLUE);
 
 
 
         createButton = new JButton("Заполнить документы");
-        //createButton.setSize(300, 40);
-        //createButton.setBackground(Color.decode("#9e6e5f"));
-        //createButton.setForeground(Color.decode("#000000"));
-        //createButton.setLocation(450,190);
         createButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         createButton.setBounds(450,190,325,70);
         createButton.setBorder(new RoundedBorder(30));
@@ -164,170 +148,125 @@ public class WorkMenu {
 
 
         backButtonMenu = new JButton("Вернуться в главное меню");
-        //backButtonMenu.setSize(300, 40);
-        //backButtonMenu.setBackground(Color.decode("#9e6e5f"));
         backButtonMenu.setForeground(Color.decode("#000000"));
-        // backButtonMenu.setLocation(450,190);
         backButtonMenu.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         backButtonMenu.setBounds(450,190,325,70);
-
         backButtonMenu.setBorder(new RoundedBorder(30));
         backButtonMenu.setForeground(Color.BLUE);
 
         backButton = new JButton("Вернуться в главное меню");
-        //backButtonMenu.setSize(300, 40);
-        //backButton.setBackground(Color.decode("#9e6e5f"));
         backButtonMenu.setForeground(Color.decode("#000000"));
-        // backButtonMenu.setLocation(450,190);
         backButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         backButton.setBounds(450,190,325,70);
-
         backButton.setBorder(new RoundedBorder(30));
         backButton.setForeground(Color.BLUE);
 
         menuButton = new JButton("Перейти в главное меню");
-        //menuButton.setSize(300, 40);
-        //menuButton.setBackground(Color.decode("#9e6e5f"));
         menuButton.setForeground(Color.decode("#000000"));
-        // menuButton.setLocation(450,310);
         menuButton.setBounds(450,310,325,110);
         menuButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));;
-
         menuButton.setBorder(new RoundedBorder(30));
         menuButton.setForeground(Color.BLUE);
 
 
         watchButton = new JButton("Посмотреть документы");
-        //watchButton.setSize(300, 40);
-        //watchButton.setBackground(Color.decode("#9e6e5f"));
         watchButton.setForeground(Color.decode("#000000"));
-        //watchButton.setLocation(450,310);
         watchButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         watchButton.setBounds(450,370,325,70);
-
         watchButton.setBorder(new RoundedBorder(30));
         watchButton.setForeground(Color.BLUE);
 
         forthCourseButton = new JButton("2 курс");
-        //watchButton.setSize(300, 40);
-        //forthCourseButton.setBackground(Color.decode("#9e6e5f"));
         forthCourseButton.setForeground(Color.decode("#000000"));
-        //watchButton.setLocation(450,310);
         forthCourseButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         forthCourseButton.setBounds(450,290,325,70);
-
         forthCourseButton.setBorder(new RoundedBorder(30));
         forthCourseButton.setForeground(Color.BLUE);
 
 
         thirdCourseButton = new JButton("4 курс");
-        //thirdCourseButton.setBackground(Color.decode("#9e6e5f"));
         thirdCourseButton.setForeground(Color.decode("#000000"));
         thirdCourseButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         thirdCourseButton.setBounds(450,290,325,70);
-
         thirdCourseButton.setBorder(new RoundedBorder(30));
         thirdCourseButton.setForeground(Color.BLUE);
 
         allDocsView = new JButton("Все документы за 2023 г.");
-        //watchButton.setSize(300, 40);
-        //allDocsView.setBackground(Color.decode("#9e6e5f"));
         allDocsView.setForeground(Color.decode("#000000"));
-        //watchButton.setLocation(450,310);
         allDocsView.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         allDocsView.setBounds(450,510,325,70);
-
         allDocsView.setBorder(new RoundedBorder(30));
         allDocsView.setForeground(Color.BLUE);
 
 
         bachelors = new JButton("Бакалавриат");
-       // bachelors.setBackground(Color.decode("#9e6e5f"));
         bachelors.setForeground(Color.decode("#000000"));
         bachelors.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         bachelors.setBounds(450,290,325,70);
-
-
         bachelors.setBorder(new RoundedBorder(30));
         bachelors.setForeground(Color.BLUE);
 
 
         masters = new JButton("Магистратура");
-       // masters.setBackground(Color.decode("#9e6e5f"));
         masters.setForeground(Color.decode("#000000"));
         masters.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         masters.setBounds(450,400,325,70);
-
         masters.setBorder(new RoundedBorder(30));
         masters.setForeground(Color.BLUE);
 
 
         bachelorsDelete = new JButton("Бакалавриат");
-       // bachelorsDelete.setBackground(Color.decode("#9e6e5f"));
         bachelorsDelete.setForeground(Color.decode("#000000"));
         bachelorsDelete.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         bachelorsDelete.setBounds(450,290,325,70);
-
         bachelorsDelete.setBorder(new RoundedBorder(30));
         bachelorsDelete.setForeground(Color.BLUE);
 
 
         mastersDelete = new JButton("Магистратура");
-       // mastersDelete.setBackground(Color.decode("#9e6e5f"));
         mastersDelete.setForeground(Color.decode("#000000"));
         mastersDelete.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         mastersDelete.setBounds(450,400,325,70);
-
         mastersDelete.setBorder(new RoundedBorder(30));
         mastersDelete.setForeground(Color.BLUE);
 
 
         deleteButtonbach4 = new JButton("Бакалавриат");
-       // deleteButtonbach4.setBackground(Color.decode("#9e6e5f"));
         deleteButtonbach4.setForeground(Color.decode("#000000"));
         deleteButtonbach4.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         deleteButtonbach4.setBounds(450,290,325,70);
-
         deleteButtonbach4.setBorder(new RoundedBorder(30));
         deleteButtonbach4.setForeground(Color.BLUE);
 
 
         deleteButtonMag2 = new JButton("Магистратура");
-       // deleteButtonMag2.setBackground(Color.decode("#9e6e5f"));
         deleteButtonMag2.setForeground(Color.decode("#000000"));
         deleteButtonMag2.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         deleteButtonMag2.setBounds(450,400,325,70);
-
         deleteButtonMag2.setBorder(new RoundedBorder(30));
         deleteButtonMag2.setForeground(Color.BLUE);
 
 
         bachWatch = new JButton("Бакалавриат");
-       // bachWatch.setBackground(Color.decode("#9e6e5f"));
         bachWatch.setForeground(Color.decode("#000000"));
         bachWatch.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         bachWatch.setBounds(450,290,325,70);
-
         bachWatch.setBorder(new RoundedBorder(30));
         bachWatch.setForeground(Color.BLUE);
 
 
         mastersWatch = new JButton("Магистратура");
-       // mastersWatch.setBackground(Color.decode("#9e6e5f"));
         mastersWatch.setForeground(Color.decode("#000000"));
         mastersWatch.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         mastersWatch.setBounds(450,400,325,70);
-
         mastersWatch.setBorder(new RoundedBorder(30));
         mastersWatch.setForeground(Color.BLUE);
 
 
         backButtonDelete = new JButton("Вернуться в главное меню");
-      //  backButtonDelete.setBackground(Color.decode("#9e6e5f"));
         backButtonDelete.setForeground(Color.decode("#000000"));
         backButtonDelete.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         backButtonDelete.setBounds(450,190,325,70);
-
         backButtonDelete.setBorder(new RoundedBorder(30));
         backButtonDelete.setForeground(Color.BLUE);
 
@@ -456,14 +395,7 @@ public class WorkMenu {
         frame2.setVisible(false);
 
 
-//        frame0.add(menuButton);
-//        frame0.add(label);
-//        frame0.getContentPane().add(contentPane3);
-//        frame0.setVisible(true);
-
-
         frame0.add(menuButton);
-        //menuButton.setBounds(450,100,400,410);
         frame0.getContentPane().add(contentPane3);
         frame0.setLocationRelativeTo(null);
         frame0.setVisible(true);
@@ -495,11 +427,6 @@ public class WorkMenu {
         frame11.add(createBachelorButton);
         frame11.add(createMasterButton);
         frame11.getContentPane().add(contentPane12);
-
-
-//        frame9.add(mastersWatch);
-//        frame9.add(bachWatch);
-//        frame9.getContentPane().add(contentPane10);
 
 
     }
