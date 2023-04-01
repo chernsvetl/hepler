@@ -26,6 +26,6 @@ public record ReviewerFeedback() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "reviewer_feedback.docx";
+        return "09.03.01_PIiKN_VKR_recenziya.docx";
     }
 }

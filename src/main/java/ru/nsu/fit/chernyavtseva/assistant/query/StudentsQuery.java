@@ -8,8 +8,8 @@ public record StudentsQuery(String degree) {
      *             FILTER regex(?профиль, "Программная инженерия и компьютерные науки")
      *             FILTER regex(?профиль, "Технология разработки программных систем")
      */
-
-
+            //FILTER regex(?профиль, "Компьютерное моделирование и анализ данных|Программная инженерия и компьютерные науки")
+            //FILTER regex(?профиль, "Технология разработки программных систем")
     public static final String QUERY_TEMPLATE = """
             PREFIX my: <http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#>
             SELECT * WHERE {

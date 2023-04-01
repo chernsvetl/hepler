@@ -9,7 +9,7 @@ import java.util.Map;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.fullName;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record ReviewerFeedbackTRPO() implements DocumentTemplate {
+public record ReviewerFeedbackTRPS() implements DocumentTemplate {
 
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION = Map.of(
             "имяСтудентаР", fullName("фио_студента", Case.Genitive),
@@ -27,6 +27,6 @@ public record ReviewerFeedbackTRPO() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "reviewer_feedback_trpo.docx";
+        return "09.04.01_TRPS_VKR_recenziya.docx";
     }
 }

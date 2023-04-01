@@ -24,6 +24,6 @@ public record SupervisorFeedback() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "supervisor_feedback.docx";
+        return "09.03.01_PIiKN_VKR_otzyv.docx";
     }
 }

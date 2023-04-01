@@ -38,6 +38,6 @@ public record IndividualTaskMDA() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "individual_task_mda.docx";
+        return "Прил 1_ИЗ на практику_Магистратура_КМиАД_4 сем.docx";
     }
 }

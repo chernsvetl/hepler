@@ -36,6 +36,6 @@ public record IndividualTask() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "individual_task.docx";
+        return "Прил 1_ИЗ на практику_Бакалавриат_ПИиКН_8 семестр.docx";
     }
 }

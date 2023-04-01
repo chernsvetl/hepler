@@ -1,20 +1,19 @@
 package ru.nsu.fit.chernyavtseva.assistant.document.type.course2;
 
+import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
 
 import java.util.Map;
 
+import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.fullName;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record PracticeFeedbackTRPO() implements DocumentTemplate {
-
+public record SupervisorFeedbackTRPS() implements DocumentTemplate {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION = Map.of(
+            "имяСтудентаР", fullName("фио_студента", Case.Genitive),
             "имяСтудентаИ", simple("фио_студента"),
-            "группаСтудента", simple("группа_студента"),
-            "местоПрактики", simple("место_практики"),
-            "имяРуководителяОтОрганизации", simple("фио_орг_руководителя"),
-            "должностьВОрганизации", simple("должность_орг_руководителя"),
+            "имяРуководителяВКР", simple("фио_руководителя"),
             "темаВКР", simple("тема_вкр")
     );
 
@@ -25,6 +24,6 @@ public record PracticeFeedbackTRPO() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "practice_feedback_trpo.docx";
+        return "09.04.01_TRPS_VKR_otzyv.docx";
     }
 }

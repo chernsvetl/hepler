@@ -27,6 +27,6 @@ public record ReviewerFeedbackMDA() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "reviewer_feedback_mda.docx";
+        return "09.04.01_KMiAD_VKR_recenziya.docx";
     }
 }

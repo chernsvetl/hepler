@@ -25,6 +25,6 @@ public record PracticeFeedback() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "practice_feedback.docx";
+        return "Прил 3_Отзыв руководителя практики_Бакалавриат_ПИиКН_8 семестр.docx";
     }
 }

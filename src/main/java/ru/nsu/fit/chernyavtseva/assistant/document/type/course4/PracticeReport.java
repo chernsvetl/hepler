@@ -34,6 +34,6 @@ public record PracticeReport() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "practice_report.docx";
+        return "Прил 2_Отчет о практике_Бакалавриат_ПииКН_8 семестр.docx";
     }
 }

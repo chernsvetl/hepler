@@ -25,6 +25,6 @@ public record PracticeFeedbackMDA() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "practice_feedback_mda.docx";
+        return "Прил 3_Отзыв руководителя_Магистратура_КМиАД_4 сем.docx";
     }
 }

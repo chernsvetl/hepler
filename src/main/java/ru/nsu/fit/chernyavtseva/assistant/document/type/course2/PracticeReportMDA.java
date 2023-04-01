@@ -34,6 +34,6 @@ public record PracticeReportMDA() implements DocumentTemplate {
 
     @Override
     public String fileName() {
-        return "practice_report_mda.docx";
+        return "Прил 2_Отчет о практике_Магистратура_КМиАД_4 сем.docx";
     }
 }

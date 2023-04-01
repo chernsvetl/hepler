@@ -6,8 +6,7 @@ import ru.nsu.fit.chernyavtseva.assistant.document.type.course4.*;
 
 sealed public interface Degree {
 
-    Degree[] DEGREES = new Degree[]{new Bachelor(), new MasterTRPO()};
-    //Degree[] DEGREES = new Degree[]{new Bachelor(),new MasterMDA()};
+    Degree[] DEGREES = new Degree[]{new Bachelor(), new Master()};
 
     static Degree[] all() {
         return DEGREES;
@@ -50,9 +49,7 @@ final class Bachelor implements Degree {
 }
 
 
-
-
-final class MasterTRPO implements Degree {
+final class Master implements Degree {
 
     /**
      * Degree name, used inside query
@@ -76,40 +73,14 @@ final class MasterTRPO implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
 
-            return new DocumentTemplate[]{
-                    new SupervisorFeedbackTRPO(),
-                    new ReviewerFeedbackTRPO(), new IndividualTaskTRPO(),
-                    new PracticeReportTRPO(), new PracticeFeedbackTRPO()};
-        }
-    }
 
+        return new DocumentTemplate[]{
+                new SupervisorFeedbackTRPS(),
+                new ReviewerFeedbackTRPS(), new IndividualTaskTRPS(),
+                new PracticeReportTRPS(), new PracticeFeedbackTRPS()};
 
-final class MasterMDA implements Degree {
-
-    /**
-     * Degree name, used inside query
-     */
-    @Override
-    public String name() {
-        return "Магистратура";
-    }
-
-    /**
-     * Subdirectory where to search for tempates / where to dump generated docs
-     */
-    @Override
-    public String dir() {
-        return "masters/2nd_course";
-    }
-
-    /**
-     * Which templates should be generated
-     */
-    @Override
-    public DocumentTemplate[] toGenerate() {
-
-        return new DocumentTemplate[]{new SupervisorFeedbackMDA(),
-                new ReviewerFeedbackMDA(), new IndividualTaskMDA(),
-                new PracticeReportMDA(), new PracticeFeedbackMDA()};
+//        return new DocumentTemplate[]{new SupervisorFeedbackMDA(),
+//                new ReviewerFeedbackMDA(), new IndividualTaskMDA(),
+//                new PracticeReportMDA(), new PracticeFeedbackMDA()};
     }
 }

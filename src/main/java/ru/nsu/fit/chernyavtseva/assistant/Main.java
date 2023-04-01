@@ -16,7 +16,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        BasicConfigurator.configure(); /* log4j error */
 
         Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         try (InputStream in = Main.class.getResourceAsStream(MODEL_FILENAME)) {
