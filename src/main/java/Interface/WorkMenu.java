@@ -10,6 +10,8 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.IndividualTaskTRPS;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -28,6 +30,7 @@ public class WorkMenu {
     public JFrame frame9;
     public JFrame frame10;
     public JFrame frame11;
+    public JFrame frame12;
     private ActionListener action;
     private JButton deleteButtonbach4, exitButton, createButton, menuButton, backButtonMenu, watchButton, backButton, thirdCourseButton, forthCourseButton,
             allDocsView, bachelors, masters, mastersDelete, bachelorsDelete, deleteButton, deleteButtonMag2,
@@ -86,6 +89,10 @@ public class WorkMenu {
         frame11.setSize(1200, 800);
         frame11.setLocationRelativeTo(null);
 
+        frame12 = new JFrame(title);
+        frame12.setSize(1200, 800);
+        frame12.setLocationRelativeTo(null);
+
         JPanel contentPane3 = new JPanel();
         contentPane3.setBackground(Color.decode("#FFE4C4"));
 
@@ -119,6 +126,9 @@ public class WorkMenu {
         JPanel contentPane12 = new JPanel();
         contentPane12.setBackground(Color.decode("#FFE4C4"));
 
+        JPanel contentPane13 = new JPanel();
+        contentPane13.setBackground(Color.decode("#FFE4C4"));
+
         label = new JLabel("Выберите действие, которое хотите выполнить");
         label.setFont(new Font("Arial", Font.BOLD, 30));;
         label.setForeground(Color.decode("#9e6e52"));
@@ -141,10 +151,20 @@ public class WorkMenu {
 
 
         createButton = new JButton("Заполнить документы");
+        createButton.setForeground(Color.decode("#000000"));
         createButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         createButton.setBounds(450,190,325,70);
         createButton.setBorder(new RoundedBorder(30));
         createButton.setForeground(Color.BLUE);
+
+
+
+        createMasterButton = new JButton("Магистратура 2 курс МДА");
+        createMasterButton.setForeground(Color.decode("#000000"));
+        createMasterButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        createMasterButton.setBounds(450,190,325,70);
+        createMasterButton.setBorder(new RoundedBorder(30));
+        createMasterButton.setForeground(Color.BLUE);
 
 
         backButtonMenu = new JButton("Вернуться в главное меню");
@@ -305,18 +325,20 @@ public class WorkMenu {
 //                }
 
 
-                else if  (button == createButton)
-                {
-                    try {
-                        Main.main(null);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                    System.out.println("Documents generated!");
-
-
-                    frame3.setVisible(true);
+                else if  (button == createButton){
+                    frame11.setVisible(true);
                 }
+                 /* documents are not generating
+                  */
+                else if  (button == createMasterButton)
+                {
+                    new IndividualTaskTRPS();
+                    System.out.println("Documents generated!");
+                     frame3.setVisible(true);
+                }
+
+
+
                 else if (button == menuButton)
                 {
                     frame2.setVisible(true);
@@ -383,12 +405,13 @@ public class WorkMenu {
         mastersWatch.addActionListener(action);
         backButtonDelete.addActionListener(action);
 //        createBachelorButton.addActionListener(action);
-//        createMasterButton.addActionListener(action);
+        createMasterButton.addActionListener(action);
 
         frame2.add(deleteButton);
         frame2.add(exitButton);
         frame2.add(createButton);
         frame2.add(watchButton);
+       // frame2.add(createMasterButton);
         frame2.add(label);
         label.setBounds(270,100,750,40);
         frame2.getContentPane().add(contentPane1);
@@ -424,7 +447,7 @@ public class WorkMenu {
         frame8.add(deleteButtonMag2);
         frame8.getContentPane().add(contentPane9);
 
-        frame11.add(createBachelorButton);
+
         frame11.add(createMasterButton);
         frame11.getContentPane().add(contentPane12);
 
