@@ -76,7 +76,8 @@ final class FullNameReplacement implements ReplacementCreator {
 
         if (nameChunks.length == 4) {
             return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а' + " " + nameChunks[2] + " " + nameChunks[3];
-        }  else if (nameChunks.length == 3) {
+        }
+        else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             String lastName = petrovich.say(nameChunks[0], NameType.LastName, gender, wordCase);
