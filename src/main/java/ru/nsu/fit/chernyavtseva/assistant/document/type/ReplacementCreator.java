@@ -5,6 +5,10 @@ import com.github.petrovich4j.Gender;
 import com.github.petrovich4j.NameType;
 import com.github.petrovich4j.Petrovich;
 import com.hp.hpl.jena.query.QuerySolution;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.IndividualTaskMDA;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.IndividualTaskTRPS;
+
+import java.util.Arrays;
 
 /**
  * Extracts data from solution and normalizes it if needed
@@ -51,6 +55,24 @@ final class FullNameReplacement implements ReplacementCreator {
     public String replacement(QuerySolution solution) {
         String fullName = solution.getLiteral(solutionVarName).getString();
         String[] nameChunks = fullName.split(" ");
+
+
+
+
+        /* can't genarate docs for define profile */
+        if(solution.get("профиль").asLiteral().getString().equals("Технология разработки программных систем")){
+            // to generate docs for people, who has profile = Технология разработки программных систем
+            new IndividualTaskTRPS();
+            System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
+
+        } else if(solution.get("профиль").asLiteral().getString().equals("Компьютерное моделирование и анализ данных")){
+            // to generate docs for people, who has profile = Компьютерное моделирование и анализ данных
+            new IndividualTaskMDA();
+            System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
+        }
+
+
+
 
         if (nameChunks.length == 4) {
             return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а' + " " + nameChunks[2] + " " + nameChunks[3];

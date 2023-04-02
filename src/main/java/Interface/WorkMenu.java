@@ -332,7 +332,12 @@ public class WorkMenu {
                   */
                 else if  (button == createMasterButton)
                 {
-                    new IndividualTaskTRPS();
+                    try {
+                        Main.main(null);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    // new IndividualTaskTRPS();
                     System.out.println("Documents generated!");
                      frame3.setVisible(true);
                 }
