@@ -73,7 +73,24 @@ final class Master implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
 
+/*
+по логике здесь нужно проверять профиль обучения у магистранта и формировать пакет доков для конкретного направления, но строки из
+ReplacementCreator в функции replacement не видны а именно: */
+        /* тут суть какая: например, у Дементьевой указан профиль - Моделирование и анализ данных, а доки у нее генерируются для ТРПО
+        если делать доки и для тпрс и для мад, то у всех по 10 документов вместо 5 */
 
+        /* can't genarate docs for define profile */
+
+  /*    if(solution.get("профиль").asLiteral().getString().equals("Технология разработки программных систем")){
+            new IndividualTaskTRPS();
+            System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
+
+        } else if(solution.get("профиль").asLiteral().getString().equals("Компьютерное моделирование и анализ данных")){
+            new IndividualTaskMDA();
+            System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
+        }
+
+ */
         return new DocumentTemplate[]{
                 new SupervisorFeedbackTRPS(),
                 new ReviewerFeedbackTRPS(), new IndividualTaskTRPS(),
