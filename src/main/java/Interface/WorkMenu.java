@@ -324,19 +324,17 @@ public class WorkMenu {
 //                }
 
 
-                else if  (button == createButton){
-                    frame11.setVisible(true);
-                }
-                 /* documents are not generating
-                  */
-                else if  (button == createMasterButton)
+//                else if  (button == createButton){
+//                    frame11.setVisible(true);
+//                }
+
+                else if  (button == createButton)
                 {
                     try {
                         Main.main(null);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    // new IndividualTaskTRPS();
 
                     System.out.println("Documents generated!");
                      frame3.setVisible(true);
