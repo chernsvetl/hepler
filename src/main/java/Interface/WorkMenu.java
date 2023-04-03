@@ -10,12 +10,17 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.*;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.*;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+
+import static ru.nsu.fit.chernyavtseva.assistant.Main.generateTemplates;
 
 public class WorkMenu {
     public JFrame frame0;
@@ -33,7 +38,7 @@ public class WorkMenu {
     private ActionListener action;
     private JButton deleteButtonbach4, exitButton, createButton, menuButton, backButtonMenu, watchButton, backButton, thirdCourseButton, forthCourseButton,
             allDocsView, bachelors, masters, mastersDelete, bachelorsDelete, deleteButton, deleteButtonMag2,
-            bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton;
+            bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton, createMasterButtonTRPS, backBtnFromGen;
     private JLabel label;
 
     private String title = "Интеллектуальный помощник секретаря кафедры";
@@ -158,12 +163,27 @@ public class WorkMenu {
 
 
 
-        createMasterButton = new JButton("Магистратура 2 курс МДА");
+        createMasterButton = new JButton("Магистратура 2 курс КМиАД 4 семестр");
         createMasterButton.setForeground(Color.decode("#000000"));
         createMasterButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         createMasterButton.setBounds(450,190,325,70);
         createMasterButton.setBorder(new RoundedBorder(30));
         createMasterButton.setForeground(Color.BLUE);
+
+
+        createMasterButtonTRPS = new JButton("Магистратура 2 курс ТРПС 4 семестр");
+        createMasterButtonTRPS.setForeground(Color.decode("#000000"));
+        createMasterButtonTRPS.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        createMasterButtonTRPS.setBounds(450,280,325,70);
+        createMasterButtonTRPS.setBorder(new RoundedBorder(30));
+        createMasterButtonTRPS.setForeground(Color.BLUE);
+
+        createBachelorButton = new JButton("Бакалавриат 4 курс ПИиКН 8 семестр");
+        createBachelorButton.setForeground(Color.decode("#000000"));
+        createBachelorButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        createBachelorButton.setBounds(450,370,325,70);
+        createBachelorButton.setBorder(new RoundedBorder(30));
+        createBachelorButton.setForeground(Color.BLUE);
 
 
         backButtonMenu = new JButton("Вернуться в главное меню");
@@ -179,6 +199,13 @@ public class WorkMenu {
         backButton.setBounds(450,190,325,70);
         backButton.setBorder(new RoundedBorder(30));
         backButton.setForeground(Color.BLUE);
+
+        backBtnFromGen = new JButton("Вернуться в главное меню");
+        backBtnFromGen.setForeground(Color.decode("#000000"));
+        backBtnFromGen.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        backBtnFromGen.setBounds(450,640,325,70);
+        backBtnFromGen.setBorder(new RoundedBorder(30));
+        backBtnFromGen.setForeground(Color.BLUE);
 
         menuButton = new JButton("Перейти в главное меню");
         menuButton.setForeground(Color.decode("#000000"));
@@ -324,23 +351,128 @@ public class WorkMenu {
 //                }
 
 
-//                else if  (button == createButton){
-//                    frame11.setVisible(true);
-//                }
-
-                else if  (button == createButton)
+                else if  (button == createButton){
+                    frame11.setVisible(true);
+                }
+                /* documents are not generating
+                 */
+                else if  (button == createMasterButton)
                 {
+
                     try {
-                        Main.main(null);
+                        generateTemplates(template -> template instanceof IndividualTaskMDA);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedbackMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeReportMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof ReviewerFeedbackMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+//                    try {
+//                        Main.main(null);
+//                    } catch (IOException e) {
+//                        throw new RuntimeException(e);
+//                    }
+                    // new IndividualTaskTRPS();
 
                     System.out.println("Documents generated!");
-                     frame3.setVisible(true);
+                    frame3.setVisible(true);
                 }
 
+                else if  (button == createMasterButtonTRPS)
+                {
+                    try {
+                        generateTemplates(template -> template instanceof IndividualTaskTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeReportTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof ReviewerFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+//                    try {
+//                        Main.main(null);
+//                    } catch (IOException e) {
+//                        throw new RuntimeException(e);
+//                    }
+                    // new IndividualTaskTRPS();
 
+                    System.out.println("Documents generated!");
+                    frame3.setVisible(true);
+                }
+                else if  (button == createBachelorButton)
+                {
+                    try {
+                        generateTemplates(template -> template instanceof IndividualTask);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedback);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeReport);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof ReviewerFeedback);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedback);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+//                    try {
+//                        Main.main(null);
+//                    } catch (IOException e) {
+//                        throw new RuntimeException(e);
+//                    }
+                    // new IndividualTaskTRPS();
+
+                    System.out.println("Documents generated!");
+                    frame3.setVisible(true);
+                }
+                else if (button == backBtnFromGen)
+                {
+                    frame2.setVisible(true);
+                }
 
                 else if (button == menuButton)
                 {
@@ -407,14 +539,16 @@ public class WorkMenu {
         bachWatch.addActionListener(action);
         mastersWatch.addActionListener(action);
         backButtonDelete.addActionListener(action);
-//        createBachelorButton.addActionListener(action);
+        createBachelorButton.addActionListener(action);
         createMasterButton.addActionListener(action);
+        createMasterButtonTRPS.addActionListener(action);
+        backBtnFromGen.addActionListener(action);
 
         frame2.add(deleteButton);
         frame2.add(exitButton);
         frame2.add(createButton);
         frame2.add(watchButton);
-       // frame2.add(createMasterButton);
+        // frame2.add(createMasterButton);
         frame2.add(label);
         label.setBounds(270,100,750,40);
         frame2.getContentPane().add(contentPane1);
@@ -452,6 +586,9 @@ public class WorkMenu {
 
 
         frame11.add(createMasterButton);
+        frame11.add(createBachelorButton);
+        frame11.add(createMasterButtonTRPS);
+        frame11.add(backBtnFromGen);
         frame11.getContentPane().add(contentPane12);
 
 

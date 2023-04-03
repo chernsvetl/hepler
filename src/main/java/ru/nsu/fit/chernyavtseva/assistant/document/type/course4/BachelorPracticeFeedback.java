@@ -1,13 +1,14 @@
 package ru.nsu.fit.chernyavtseva.assistant.document.type.course4;
 
-import ru.nsu.fit.chernyavtseva.assistant.document.type.DocumentTemplate;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.PracticeFeedback;
 
 import java.util.Map;
 
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record PracticeFeedback() implements DocumentTemplate {
+public record BachelorPracticeFeedback() implements PracticeFeedback {
 
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION = Map.of(
             "имяСтудентаИ", simple("фио_студента"),

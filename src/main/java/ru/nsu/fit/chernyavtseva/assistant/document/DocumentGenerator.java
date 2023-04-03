@@ -3,7 +3,7 @@ package ru.nsu.fit.chernyavtseva.assistant.document;
 import com.hp.hpl.jena.query.QuerySolution;
 import org.apache.poi.xwpf.usermodel.*;
 import ru.nsu.fit.chernyavtseva.assistant.Degree;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.DocumentTemplate;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
 import ru.nsu.fit.chernyavtseva.assistant.util.PathUtil;
 
@@ -21,12 +21,15 @@ public class DocumentGenerator {
     private static final String TEMPLATES_DIR = "/templates";
     private static final String DOCS_DIR = "documents";
 
-    public static void generate(Degree degree, Iterator<QuerySolution> solutions) {
+    public static void generate(Degree degree, Iterator<QuerySolution> solutions, DocumentTemplateFilter documentFilter) {
         Path outDirPath = PathUtil.newResourceDir(DOCS_DIR, degree.dir());
 
         while (solutions.hasNext()) {
             QuerySolution solution = solutions.next();
             for (DocumentTemplate template : degree.toGenerate()) {
+                if (!documentFilter.test(template)) {
+                    continue;
+                }
                 Path inPath = PathUtil.resource(TEMPLATES_DIR, degree.dir(), template.fileName());
                 generateOne(inPath, outDirPath, template, solution);
             }

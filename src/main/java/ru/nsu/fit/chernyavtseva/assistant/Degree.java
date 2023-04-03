@@ -1,6 +1,6 @@
 package ru.nsu.fit.chernyavtseva.assistant;
 
-import ru.nsu.fit.chernyavtseva.assistant.document.type.*;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.*;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.*;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.course4.*;
@@ -50,9 +50,9 @@ final class Bachelor implements Degree {
      */
     @Override
     public DocumentTemplate[] toGenerate() {
-        return new DocumentTemplate[]{new SupervisorFeedback(),
-                new ReviewerFeedback(), new IndividualTask(),
-                new PracticeReport(), new PracticeFeedback()};
+        return new DocumentTemplate[]{new BachelorSupervisorFeedback(),
+                new BachelorReviewerFeedback(), new BachelorIndividualTask(),
+                new BachelorPracticeReport(), new BachelorPracticeFeedback()};
     }
 }
 

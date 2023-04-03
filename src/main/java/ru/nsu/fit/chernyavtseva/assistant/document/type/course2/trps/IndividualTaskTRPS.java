@@ -1,7 +1,7 @@
 package ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps;
 
 import com.github.petrovich4j.Case;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.DocumentTemplate;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
 
 import java.util.HashMap;

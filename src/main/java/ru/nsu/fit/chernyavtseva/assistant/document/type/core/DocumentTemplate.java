@@ -1,4 +1,6 @@
-package ru.nsu.fit.chernyavtseva.assistant.document.type;
+package ru.nsu.fit.chernyavtseva.assistant.document.type.core;
+
+import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
 
 import java.util.Map;
 
