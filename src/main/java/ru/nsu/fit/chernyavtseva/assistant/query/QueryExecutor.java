@@ -14,8 +14,8 @@ public class QueryExecutor {
         this.model = model;
     }
 
-    public void findStudents(String degree, Consumer<Iterator<QuerySolution>> consumer) {
-        String queryText = new StudentsQuery(degree).create();
+    public void findStudents(String degree, String profile, Consumer<Iterator<QuerySolution>> consumer) {
+        String queryText = new StudentsQuery(degree, profile).create();
         Query query = QueryFactory.create(queryText);
         try (QueryExecution qe = QueryExecutionFactory.create(query, model)) {
             consumer.accept(qe.execSelect());

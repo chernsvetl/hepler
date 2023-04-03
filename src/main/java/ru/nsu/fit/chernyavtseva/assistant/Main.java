@@ -24,7 +24,7 @@ public class Main {
 
         QueryExecutor executor = new QueryExecutor(model);
         for (Degree degree : DEGREES) {
-            executor.findStudents(degree.name(),
+            executor.findStudents(degree.name(), degree.profile(),
                     solution -> DocumentGenerator.generate(degree, solution));
         }
     }

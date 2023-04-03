@@ -10,7 +10,6 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.IndividualTaskTRPS;
 
 import javax.swing.*;
 import java.awt.*;
@@ -338,6 +337,7 @@ public class WorkMenu {
                         throw new RuntimeException(e);
                     }
                     // new IndividualTaskTRPS();
+
                     System.out.println("Documents generated!");
                      frame3.setVisible(true);
                 }

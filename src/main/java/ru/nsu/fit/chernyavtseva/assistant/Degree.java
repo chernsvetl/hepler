@@ -1,12 +1,13 @@
 package ru.nsu.fit.chernyavtseva.assistant;
 
 import ru.nsu.fit.chernyavtseva.assistant.document.type.*;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.*;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.*;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.*;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.course4.*;
 
 sealed public interface Degree {
 
-    Degree[] DEGREES = new Degree[]{new Bachelor(), new Master()};
+    Degree[] DEGREES = new Degree[]{new Bachelor(), new MasterMDA(), new MasterTPRS()};
 
     static Degree[] all() {
         return DEGREES;
@@ -15,6 +16,8 @@ sealed public interface Degree {
     String name();
 
     String dir();
+
+    String profile();
 
     DocumentTemplate[] toGenerate();
 }
@@ -37,6 +40,11 @@ final class Bachelor implements Degree {
         return "bachelors/4th_course";
     }
 
+    @Override
+    public String profile() {
+        return "Программная инженерия и компьютерные науки";
+    }
+
     /**
      * Which templates should be generated
      */
@@ -49,7 +57,7 @@ final class Bachelor implements Degree {
 }
 
 
-final class Master implements Degree {
+final class MasterMDA implements Degree {
 
     /**
      * Degree name, used inside query
@@ -64,7 +72,12 @@ final class Master implements Degree {
      */
     @Override
     public String dir() {
-        return "masters/2nd_course";
+        return "masters/2nd_course/mda";
+    }
+
+    @Override
+    public String profile() {
+        return "Компьютерное моделирование и анализ данных";
     }
 
     /**
@@ -73,31 +86,36 @@ final class Master implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
 
-/*
-по логике здесь нужно проверять профиль обучения у магистранта и формировать пакет доков для конкретного направления, но строки из
-ReplacementCreator в функции replacement не видны а именно: */
-        /* тут суть какая: например, у Дементьевой указан профиль - Моделирование и анализ данных, а доки у нее генерируются для ТРПО
-        если делать доки и для тпрс и для мад, то у всех по 10 документов вместо 5 */
 
-        /* can't genarate docs for define profile */
+        return new DocumentTemplate[]{
+                new SupervisorFeedbackMDA(),
+                new ReviewerFeedbackMDA(), new IndividualTaskMDA(),
+                new PracticeReportMDA(), new PracticeFeedbackMDA()};
+    }
+}
 
-  /*    if(solution.get("профиль").asLiteral().getString().equals("Технология разработки программных систем")){
-            new IndividualTaskTRPS();
-            System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
+final class MasterTPRS implements Degree {
 
-        } else if(solution.get("профиль").asLiteral().getString().equals("Компьютерное моделирование и анализ данных")){
-            new IndividualTaskMDA();
-            System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
-        }
+    @Override
+    public String name() {
+        return "Магистратура";
+    }
 
- */
+    @Override
+    public String dir() {
+        return "masters/2nd_course/tprs";
+    }
+
+    @Override
+    public String profile() {
+        return "Технология разработки программных систем";
+    }
+
+    @Override
+    public DocumentTemplate[] toGenerate() {
         return new DocumentTemplate[]{
                 new SupervisorFeedbackTRPS(),
                 new ReviewerFeedbackTRPS(), new IndividualTaskTRPS(),
                 new PracticeReportTRPS(), new PracticeFeedbackTRPS()};
-
-//        return new DocumentTemplate[]{new SupervisorFeedbackMDA(),
-//                new ReviewerFeedbackMDA(), new IndividualTaskMDA(),
-//                new PracticeReportMDA(), new PracticeFeedbackMDA()};
     }
 }

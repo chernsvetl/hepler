@@ -1,15 +1,8 @@
 package ru.nsu.fit.chernyavtseva.assistant.query;
 
-public record StudentsQuery(String degree) {
+public record StudentsQuery(String degree, String profile) {
 
-    /**
-     *     for generating docs for specific degree you need to exchange response in line 22 on response bellow and in Degree.java choose needed array
-     *             FILTER regex(?профиль, "Компьютерное моделирование и анализ данных")
-     *             FILTER regex(?профиль, "Программная инженерия и компьютерные науки")
-     *             FILTER regex(?профиль, "Технология разработки программных систем")
-     */
-            //FILTER regex(?профиль, "Компьютерное моделирование и анализ данных|Программная инженерия и компьютерные науки")
-            //FILTER regex(?профиль, "Технология разработки программных систем")
+
     public static final String QUERY_TEMPLATE = """
             PREFIX my: <http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#>
             SELECT * WHERE {
@@ -20,7 +13,7 @@ public record StudentsQuery(String degree) {
             ?студент my:Место_прохождения_практики ?место_практики .
             ?студент my:Приказ_на_прохождение_практики ?приказ_практика .
             ?студент my:Профиль_обучения ?профиль .
-            FILTER regex(?профиль, "Технология разработки программных систем|Программная инженерия и компьютерные науки|Компьютерное моделирование и анализ данных")
+            FILTER regex(?профиль, "$profile")
 
 
             ?студент my:на_НГУ_практике_у ?руководитель_от_НГУ .
@@ -42,6 +35,6 @@ public record StudentsQuery(String degree) {
 
 
     String create() {
-        return QUERY_TEMPLATE.replace("$degree", degree);
+        return QUERY_TEMPLATE.replace("$degree", degree).replace("$profile", profile);
     }
 }

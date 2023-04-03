@@ -5,10 +5,8 @@ import com.github.petrovich4j.Gender;
 import com.github.petrovich4j.NameType;
 import com.github.petrovich4j.Petrovich;
 import com.hp.hpl.jena.query.QuerySolution;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.IndividualTaskMDA;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.IndividualTaskTRPS;
-
-import java.util.Arrays;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.IndividualTaskMDA;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.IndividualTaskTRPS;
 
 /**
  * Extracts data from solution and normalizes it if needed
