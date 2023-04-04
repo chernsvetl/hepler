@@ -2,12 +2,14 @@ package ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda;
 
 import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.PracticeFeedbackMDA;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.PracticeFeedbackTRPS;
 
 import java.util.Map;
 
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record PracticeFeedbackMDA() implements DocumentTemplate {
+public record MasterPracticeFeedbackMDA() implements PracticeFeedbackMDA {
 
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION = Map.of(
             "имяСтудентаИ", simple("фио_студента"),

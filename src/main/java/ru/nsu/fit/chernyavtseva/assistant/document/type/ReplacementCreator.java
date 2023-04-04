@@ -5,8 +5,8 @@ import com.github.petrovich4j.Gender;
 import com.github.petrovich4j.NameType;
 import com.github.petrovich4j.Petrovich;
 import com.hp.hpl.jena.query.QuerySolution;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.IndividualTaskMDA;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.IndividualTaskTRPS;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.MasterIndividualTaskMDA;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.MasterIndividualTaskTRPS;
 
 /**
  * Extracts data from solution and normalizes it if needed
@@ -60,12 +60,12 @@ final class FullNameReplacement implements ReplacementCreator {
         /* can't genarate docs for define profile */
         if(solution.get("профиль").asLiteral().getString().equals("Технология разработки программных систем")){
             // to generate docs for people, who has profile = Технология разработки программных систем
-            new IndividualTaskTRPS();
+            new MasterIndividualTaskTRPS();
             System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
 
         } else if(solution.get("профиль").asLiteral().getString().equals("Компьютерное моделирование и анализ данных")){
             // to generate docs for people, who has profile = Компьютерное моделирование и анализ данных
-            new IndividualTaskMDA();
+            new MasterIndividualTaskMDA();
             System.out.println(solution.get("фио_студента") + " " +  solution.get("профиль"));
         }
 

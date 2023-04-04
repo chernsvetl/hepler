@@ -3,6 +3,8 @@ package ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda;
 import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.IndividualTaskMDA;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.IndividualTaskTRPS;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +12,7 @@ import java.util.Map;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.fullName;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record IndividualTaskMDA() implements DocumentTemplate {
+public record MasterIndividualTaskMDA() implements IndividualTaskMDA {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
 
 

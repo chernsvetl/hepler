@@ -88,9 +88,9 @@ final class MasterMDA implements Degree {
 
 
         return new DocumentTemplate[]{
-                new SupervisorFeedbackMDA(),
-                new ReviewerFeedbackMDA(), new IndividualTaskMDA(),
-                new PracticeReportMDA(), new PracticeFeedbackMDA()};
+                new MasterSupervisorFeedbackMDA(),
+                new MasterReviewerFeedbackMDA(), new MasterIndividualTaskMDA(),
+                new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA()};
     }
 }
 
@@ -114,8 +114,8 @@ final class MasterTPRS implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
         return new DocumentTemplate[]{
-                new SupervisorFeedbackTRPS(),
-                new ReviewerFeedbackTRPS(), new IndividualTaskTRPS(),
-                new PracticeReportTRPS(), new PracticeFeedbackTRPS()};
+                new MasterSupervisorFeedbackTRPS(),
+                new MasterReviewerFeedbackTRPS(), new MasterIndividualTaskTRPS(),
+                new MasterPracticeReportTRPS(), new MasterPracticeFeedbackTRPS()};
     }
 }

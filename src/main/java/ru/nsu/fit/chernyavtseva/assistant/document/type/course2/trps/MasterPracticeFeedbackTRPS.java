@@ -2,12 +2,13 @@ package ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps;
 
 import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.PracticeFeedbackTRPS;
 
 import java.util.Map;
 
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record PracticeFeedbackTRPS() implements DocumentTemplate {
+public record MasterPracticeFeedbackTRPS() implements PracticeFeedbackTRPS {
 
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION = Map.of(
             "имяСтудентаИ", simple("фио_студента"),

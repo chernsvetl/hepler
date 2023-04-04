@@ -9,10 +9,8 @@ import Interface.Show.MastersShow;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import ru.nsu.fit.chernyavtseva.assistant.Main;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.core.*;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.*;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.*;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,7 +36,8 @@ public class WorkMenu {
     private ActionListener action;
     private JButton deleteButtonbach4, exitButton, createButton, menuButton, backButtonMenu, watchButton, backButton, thirdCourseButton, forthCourseButton,
             allDocsView, bachelors, masters, mastersDelete, bachelorsDelete, deleteButton, deleteButtonMag2,
-            bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton, createMasterButtonTRPS, backBtnFromGen;
+            bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton, createMasterButtonTRPS, backBtnFromGen,
+    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn;
     private JLabel label;
 
     private String title = "Интеллектуальный помощник секретаря кафедры";
@@ -184,6 +183,56 @@ public class WorkMenu {
         createBachelorButton.setBounds(450,370,325,70);
         createBachelorButton.setBorder(new RoundedBorder(30));
         createBachelorButton.setForeground(Color.BLUE);
+
+
+        allDocsCreateBtn = new JButton("Все документы");
+        allDocsCreateBtn.setForeground(Color.decode("#000000"));
+        allDocsCreateBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        allDocsCreateBtn.setBounds(450,100,325,70);
+        allDocsCreateBtn.setBorder(new RoundedBorder(30));
+        allDocsCreateBtn.setForeground(Color.BLUE);
+
+        izBtn = new JButton("Индивидуальное задание");
+        izBtn.setForeground(Color.decode("#000000"));
+        izBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        izBtn.setBounds(450,190,325,70);
+        izBtn.setBorder(new RoundedBorder(30));
+        izBtn.setForeground(Color.BLUE);
+
+        practiceReportBtn = new JButton("Отчет о практике");
+        practiceReportBtn.setForeground(Color.decode("#000000"));
+        practiceReportBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        practiceReportBtn.setBounds(450,280,325,70);
+        practiceReportBtn.setBorder(new RoundedBorder(30));
+        practiceReportBtn.setForeground(Color.BLUE);
+
+        practiceFeedBackBtn = new JButton("Отзыв");
+        practiceFeedBackBtn.setForeground(Color.decode("#000000"));
+        practiceFeedBackBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        practiceFeedBackBtn.setBounds(450,370,325,70);
+        practiceFeedBackBtn.setBorder(new RoundedBorder(30));
+        practiceFeedBackBtn.setForeground(Color.BLUE);
+
+        reviewerFeedbackBtn = new JButton("Отзыв руководителя ВКР");
+        reviewerFeedbackBtn.setForeground(Color.decode("#000000"));
+        reviewerFeedbackBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        reviewerFeedbackBtn.setBounds(450,460,325,70);
+        reviewerFeedbackBtn.setBorder(new RoundedBorder(30));
+        reviewerFeedbackBtn.setForeground(Color.BLUE);
+
+        supervisorFeedbackBtn = new JButton("Рецензия");
+        supervisorFeedbackBtn.setForeground(Color.decode("#000000"));
+        supervisorFeedbackBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        supervisorFeedbackBtn.setBounds(450,550,325,70);
+        supervisorFeedbackBtn.setBorder(new RoundedBorder(30));
+        supervisorFeedbackBtn.setForeground(Color.BLUE);
+
+        backButtonMenuBtn = new JButton("Вернуться в главное меню");
+        backButtonMenuBtn.setForeground(Color.decode("#000000"));
+        backButtonMenuBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        backButtonMenuBtn.setBounds(450,640,325,70);
+        backButtonMenuBtn.setBorder(new RoundedBorder(30));
+        backButtonMenuBtn.setForeground(Color.BLUE);
 
 
         backButtonMenu = new JButton("Вернуться в главное меню");
@@ -352,20 +401,48 @@ public class WorkMenu {
 
 
                 else if  (button == createButton){
-                    frame11.setVisible(true);
+                    frame12.setVisible(true);
                 }
-                /* documents are not generating
-                 */
-                else if  (button == createMasterButton)
-                {
 
+                else if  (button == allDocsCreateBtn)
+                {
                     try {
                         generateTemplates(template -> template instanceof IndividualTaskMDA);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
                     try {
+                        generateTemplates(template -> template instanceof IndividualTask);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof IndividualTaskTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof PracticeFeedbackMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedback);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                    generateTemplates(template -> template instanceof PracticeReport);
+                    } catch (IOException e) {
+                    throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeReportTRPS);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -380,35 +457,7 @@ public class WorkMenu {
                         throw new RuntimeException(e);
                     }
                     try {
-                        generateTemplates(template -> template instanceof SupervisorFeedbackMDA);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-//                    try {
-//                        Main.main(null);
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-                    // new IndividualTaskTRPS();
-
-                    System.out.println("Documents generated!");
-                    frame3.setVisible(true);
-                }
-
-                else if  (button == createMasterButtonTRPS)
-                {
-                    try {
-                        generateTemplates(template -> template instanceof IndividualTaskTRPS);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                    try {
-                        generateTemplates(template -> template instanceof PracticeFeedbackTRPS);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                    try {
-                        generateTemplates(template -> template instanceof PracticeReportTRPS);
+                        generateTemplates(template -> template instanceof ReviewerFeedback);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -418,24 +467,54 @@ public class WorkMenu {
                         throw new RuntimeException(e);
                     }
                     try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedback);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof SupervisorFeedbackTRPS);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-//                    try {
-//                        Main.main(null);
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-                    // new IndividualTaskTRPS();
-
-                    System.out.println("Documents generated!");
+                    System.out.println("All documents generated!");
                     frame3.setVisible(true);
                 }
-                else if  (button == createBachelorButton)
+
+                else if  (button == izBtn)
                 {
                     try {
+                        generateTemplates(template -> template instanceof IndividualTaskMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof IndividualTask);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof IndividualTaskTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    System.out.println("Documents IZ generated!");
+                    frame3.setVisible(true);
+                }
+
+                else if  (button == practiceFeedBackBtn)
+                {
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeFeedbackMDA);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -444,8 +523,35 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
+                    System.out.println("Documents header feedback generated!");
+                    frame3.setVisible(true);
+                }
+
+                else if  (button == practiceReportBtn)
+                {
                     try {
                         generateTemplates(template -> template instanceof PracticeReport);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeReportTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof PracticeReportMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    System.out.println("Documents report generated!");
+                    frame3.setVisible(true);
+                }
+
+                else if  (button == reviewerFeedbackBtn)
+                {
+                    try {
+                        generateTemplates(template -> template instanceof ReviewerFeedbackMDA);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -455,25 +561,44 @@ public class WorkMenu {
                         throw new RuntimeException(e);
                     }
                     try {
+                        generateTemplates(template -> template instanceof ReviewerFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    System.out.println("Documents VKR recenziya generated!");
+                    frame3.setVisible(true);
+                }
+
+                else if  (button == supervisorFeedbackBtn)
+                {
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof SupervisorFeedback);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-//                    try {
-//                        Main.main(null);
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-                    // new IndividualTaskTRPS();
-
-                    System.out.println("Documents generated!");
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    System.out.println("Documents VKR otzyv generated!");
                     frame3.setVisible(true);
                 }
-                else if (button == backBtnFromGen)
+
+                else if (button == backButtonMenuBtn)
                 {
                     frame2.setVisible(true);
                 }
 
+                else if (button == backBtnFromGen)
+                {
+                    frame2.setVisible(true);
+                }
                 else if (button == menuButton)
                 {
                     frame2.setVisible(true);
@@ -543,6 +668,14 @@ public class WorkMenu {
         createMasterButton.addActionListener(action);
         createMasterButtonTRPS.addActionListener(action);
         backBtnFromGen.addActionListener(action);
+        allDocsCreateBtn.addActionListener(action);
+
+        izBtn.addActionListener(action);
+        reviewerFeedbackBtn.addActionListener(action);
+        practiceReportBtn.addActionListener(action);
+        supervisorFeedbackBtn.addActionListener(action);
+        practiceFeedBackBtn.addActionListener(action);
+        backButtonMenuBtn.addActionListener(action);
 
         frame2.add(deleteButton);
         frame2.add(exitButton);
@@ -591,6 +724,14 @@ public class WorkMenu {
         frame11.add(backBtnFromGen);
         frame11.getContentPane().add(contentPane12);
 
+        frame12.add(izBtn);
+        frame12.add(reviewerFeedbackBtn);
+        frame12.add(supervisorFeedbackBtn);
+        frame12.add(practiceFeedBackBtn);
+        frame12.add(practiceReportBtn);
+        frame12.add(backButtonMenuBtn);
+        frame12.add(allDocsCreateBtn);
+        frame12.getContentPane().add(contentPane13);
 
     }
     public static void main(String... args)

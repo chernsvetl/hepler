@@ -3,6 +3,8 @@ package ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda;
 import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.PracticeReportMDA;
+import ru.nsu.fit.chernyavtseva.assistant.document.type.core.PracticeReportTRPS;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +12,7 @@ import java.util.Map;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.fullName;
 import static ru.nsu.fit.chernyavtseva.assistant.document.type.ReplacementCreator.simple;
 
-public record PracticeReportMDA() implements DocumentTemplate {
+public record MasterPracticeReportMDA() implements PracticeReportMDA {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
 
     static {
