@@ -213,14 +213,14 @@ public class WorkMenu {
         practiceFeedBackBtn.setBorder(new RoundedBorder(30));
         practiceFeedBackBtn.setForeground(Color.BLUE);
 
-        reviewerFeedbackBtn = new JButton("Отзыв руководителя ВКР");
+        reviewerFeedbackBtn = new JButton("Рецензия");
         reviewerFeedbackBtn.setForeground(Color.decode("#000000"));
         reviewerFeedbackBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         reviewerFeedbackBtn.setBounds(450,460,325,70);
         reviewerFeedbackBtn.setBorder(new RoundedBorder(30));
         reviewerFeedbackBtn.setForeground(Color.BLUE);
 
-        supervisorFeedbackBtn = new JButton("Рецензия");
+        supervisorFeedbackBtn = new JButton("Отзыв руководителя ВКР");
         supervisorFeedbackBtn.setForeground(Color.decode("#000000"));
         supervisorFeedbackBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         supervisorFeedbackBtn.setBounds(450,550,325,70);
@@ -481,7 +481,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("All documents generated!");
+                    System.out.println("All documents generated!"); // Все документы сгенерированы
                     frame3.setVisible(true);
                 }
 
@@ -502,7 +502,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents IZ generated!");
+                    System.out.println("Documents IZ generated!"); // Документы с названием "Индивидуальное задание" сгенерированы
                     frame3.setVisible(true);
                 }
 
@@ -523,7 +523,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents header feedback generated!");
+                    System.out.println("Documents header feedback generated!"); // Документы с названием "Отзыв руководителя практики" сгенерированы
                     frame3.setVisible(true);
                 }
 
@@ -544,7 +544,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents report generated!");
+                    System.out.println("Documents report generated!"); // Документы с названием "Отчет" сгенерированы
                     frame3.setVisible(true);
                 }
 
@@ -565,7 +565,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents VKR recenziya generated!");
+                    System.out.println("Documents VKR recenziya generated!"); // Документы с названием "Рецензия" сгенерированы
                     frame3.setVisible(true);
                 }
 
@@ -586,7 +586,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents VKR otzyv generated!");
+                    System.out.println("Documents VKR otzyv generated!"); // Документы с названием "Отзыв руководителя ВКР" сгенерированы
                     frame3.setVisible(true);
                 }
 

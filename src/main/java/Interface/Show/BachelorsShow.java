@@ -9,7 +9,7 @@ import static Interface.WorkMenu.frame4;
 
 public class BachelorsShow {
     public static void show() {
-        JFileChooser fileChooser = new JFileChooser("target/classes/documents/bachelors/4th_course");
+        JFileChooser fileChooser = new JFileChooser("C:\\Users\\User\\Desktop\\helper\\hepler\\target\\classes\\documents\\bachelors\\4th_course");
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
                 "DOCX & DOC files", "docx", "doc");
         fileChooser.setFileFilter(filter);
@@ -18,7 +18,7 @@ public class BachelorsShow {
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
-            System.out.println("You selected: " + selectedFile);
+            System.out.println("You selected document: " + selectedFile); // Вы открыли документ
             try {
                 Runtime.getRuntime().exec("rundll32 url.dll, FileProtocolHandler " + selectedFile);
             } catch (IOException e) {

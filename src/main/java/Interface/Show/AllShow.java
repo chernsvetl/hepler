@@ -10,7 +10,7 @@ import static Interface.WorkMenu.frame4;
 public class AllShow {
     public static void show() {
 
-        JFileChooser fileChooser = new JFileChooser("target/classes/documents");
+        JFileChooser fileChooser = new JFileChooser("C:\\Users\\User\\Desktop\\helper\\hepler\\target\\classes\\documents");
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
                 "DOCX & DOC files", "docx", "doc");
         fileChooser.setFileFilter(filter);

@@ -2,6 +2,7 @@ package ru.nsu.fit.chernyavtseva.assistant.query;
 
 public record StudentsQuery(String degree, String profile) {
 
+    //             ?студент my:рецензирует ?рецензирует .
 
     public static final String QUERY_TEMPLATE = """
             PREFIX my: <http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#>
@@ -29,6 +30,10 @@ public record StudentsQuery(String degree, String profile) {
             ?руководитель my:Должность ?должность_руководителя .
 
             ?вкр my:Тема ?тема_вкр .
+            
+            ?рецензент my:рецензирует ?вкр .
+            ?рецензент my:ФИО ?фио_рецензента .
+            ?рецензент my:Должность ?должность_рецензента .
 
             }
             """;

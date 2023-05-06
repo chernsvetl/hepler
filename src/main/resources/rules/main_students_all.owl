@@ -670,6 +670,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АкифьевАндрейАндреевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АкифьевАндрейАндреевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаДецентрализованнойБиржыНаОсновеБлокчейнаSolana"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">руководитель группы
+разработки, ООО
+&quot;Программируемые сети&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Акифьев Андрей
+Андреевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АнализЭмоцийЧеловекаНаОсновеВидеоСИспользованиемНейронныхСетейИСемантическихМоделей -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АнализЭмоцийЧеловекаНаОсновеВидеоСИспользованиемНейронныхСетейИСемантическихМоделей">
@@ -691,6 +705,33 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Программная инженерия и компьютерные науки</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ашихмин Игорь Александрович</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19203</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БабуринаКсенияЭдуардовна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БабуринаКсенияЭдуардовна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМодуляЗаказаТоваровМассовогоПотребленияСИспользованиемТехнологииБлокчейн"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">аналитик, ООО
+&quot;Десенчери&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Бабурина Ксения
+Эдуардовна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БазановаОльгаМихайловна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БазановаОльгаМихайловна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенияДляСтабилотренингаСБиологическойОбратнойСвязью"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Разработкавеб-приложенияДляОценкиПравильностиЧтенияВслухСИспользованиемМоделиWav2Vec2"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.б.н.,
+доцент, ММЦ ММФ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Базанова Ольга
+Михайловна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -782,6 +823,51 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БойкоРоманВикторович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БойкоРоманВикторович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ОбеспечениеЭффективнойРаботыССостояниемОператоровВСистемеПотоковойОбработкиДанныхApacheFlink"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий инженер
+ключевых проектов, ООО
+&quot;Техкомпания Хуавей&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Бойко Роман Викторович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БолдыревИгорьАнатольевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БолдыревИгорьАнатольевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАвтоматизированнойСистемыАнализаПартнеровКоммерческогоБанка"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАвтоматизированныхМетодовВеденияДиалогаСПользователемДляПроведенияСобеседований"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">директор,
+АНО &quot;Кластер
+искусственного
+интеллекта&quot;</кафедра:Должность>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">директор, АНО  &quot;Кластер искусственного интеллекта&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Болдырев Игорь
+Анатольевич</кафедра:ФИО>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Болдырев Игорь Анатольевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БондаренкоИван -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БондаренкоИван">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаКонструированияПризнаковДляТабличныхДанных"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">научный сотрудник,
+Лаборатория прикладных
+цифровых технологий
+ММЦ ММФ НГУ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Бондаренко Иван</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БорзовАлександрСергеевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БорзовАлександрСергеевич">
@@ -839,6 +925,46 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БукшевИванЕвгеньевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БукшевИванЕвгеньевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыАвтоматизацииКонструированияЛингвистическихШаблоновДляИзвлеченияИнформацииИзТекстов"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">инженер-разработчик ООО  &quot;Авито Тех&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Букшев Иван Евгеньевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БумагинАнтонОлегович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БумагинАнтонОлегович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РеализацияМодуляСопоставлениядинамически-генерируемыхJava-классовСоСхемойДанныхВРеляционнойСУБД"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий
+разработчик, ООО &quot;1С-
+Софт&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Бумагин Антон
+Олегович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВагановаАннаИгоревна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВагановаАннаИгоревна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АвтоматическаяВизуальнаяОценкаПоведенияСистемыТранспортныхРоботов"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Разработкавизуально-ОдометрическогоSLAMДляТранспортныхРоботов"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iOS-
+разработчик, ООО
+&quot;Группа Развития&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ваганова Анна
+Игоревна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВасильеваЕленаСергеевна -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВасильеваЕленаСергеевна">
@@ -871,6 +997,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВергуновЕвгенийГеннадьевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВергуновЕвгенийГеннадьевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПостроениеОнтологииНейрофизиологическихМаркеровПсихиатрическихРасстройствНаОсновеАвтоматическогоАнализаНаучныхПубликаций"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.психол.н., с.н.с., НИИ
+Нейронаук и
+Медицины</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Вергунов Евгений
+Геннадьевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВороноваАлияРашидовна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВороноваАлияРашидовна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПерсональногоПомощникаДляПланированияТуристическихМаршрутов"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммнойСистемыСоставленияМенюДляДетейСОграничениямиВПитании"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заместитель
+руководителя
+управления, ЗАО ЦФТ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Воронова Алия
+Рашидовна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГавриловаДарьяАлександровна -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГавриловаДарьяАлександровна">
@@ -883,6 +1038,21 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Программная инженерия и компьютерные науки</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гаврилова Дарья Александровна</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19207</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГалиеваАйяГалиевна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГалиеваАйяГалиевна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГибридныеМетодыМоделированияПользователяНаОсновеСемантическихТехнологийИНейронныхСетейДляСозданияИнтеллектуальныхПомощников"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МетодыРаспознаванияИОбработкиПользовательскихНамеренийДляСозданияИнтеллектуальныхПомощников"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМетодовУлучшенияНейронныхСетейПриПомощиАлгоритмаМягкойПодпространственнойКластеризации"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательногоСервисаДляТорговлиНаФинансовыхРынкахНаОсновеАвтоматизированногоИзвлеченияЗнанийИзНовостныхИсточников"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iOS-разработчик, ООО
+&quot;Тревелтек&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Галиева Айя Галиевна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -906,6 +1076,49 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГореявчевНикитаАлексеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гореявчев Никита Алексеевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГородничевМаксимАлександрович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГородничевМаксимАлександрович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#SidecarКонтейнерыКакСпособПостроенияАвторизацииИАутентификацииВСовременныхМикросервисныхСистемах"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПроектированиеИРеализацияМобильнойSDKДляУправленияПоведениемСистемыСИспользованиемТехникFeatureToggles"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляСистемыОповещенияОЛокальнойСейсмичностиНаОсновеНейронныхСетей"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СтатическоеСканированиеИУправлениеПрофилемБезопасностиПриложений"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">н.с.,
+ИВМиМГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Городничев Максим
+Александрович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГумировВиталийШамилович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГумировВиталийШамилович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АвтоматизированныеМетодыОпределенияЭмоциональногоСостоянияЧеловекаНаОсновеАнализаИзображенияИРечи"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АнализЭмоцийЧеловекаНаОсновеВидеоСИспользованиемНейронныхСетейИСемантическихМоделей"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">директор, ООО  &quot;Аилайн СНГ&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гумиров Виталий Шамилович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДаниловаОльгаВладимировна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДаниловаОльгаВладимировна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаПоПравильномуПитанию"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательнойСистемыПерсональныхТренировок"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыИзмененияЭмоциональногоВыраженияЛицаЧеловекаНаФотографииСИспользованиемТехнологииGAN"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">программист, ООО
+&quot;МС ТИМ&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Данилова Ольга
+Владимировна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -935,6 +1148,21 @@
         <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с.н.с., к.г.-м.н.</кафедра:Должность_в_организации>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИГМ СО РАН</кафедра:Наименование_организации>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Добрецов Николай Николаевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДолгушеваЕкатеринаВладимировна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДолгушеваЕкатеринаВладимировна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСемантическихМетодовВыраженияЭмоцийДляСозданияИнтеллектуальныхПомощников"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РаспознаваниеЭмоцийВТекстахЕстественногоЯзыка"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший инженер-
+программист, ООО
+&quot;Единые системы&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Долгушева Екатерина
+Владимировна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -1271,6 +1499,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КондыревДмитрийОлегович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КондыревДмитрийОлегович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаБлокчейнПлатформыДляОсуществленияСделокСДинамическимДисконтированием"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМодуляУправленияСистемыУмногоДомаСИспользованиемТехнологииБлокчейн"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенийДляКонсолидацииДанныхУправленческогоУчета"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">разработчик
+ПО, ООО &quot;Десенчери&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кондырев Дмитрий
+Олегович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КоролевДмитрийАлексеевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КоролевДмитрийАлексеевич">
@@ -1367,6 +1610,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КулаковИванЮрьевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КулаковИванЮрьевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляКонтроляКачестваАвтоматическойОбработкиНепрерывныхЗаписейЛокальногоСейсмическогоМониторинга"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляОрганизацииСвязиИУправленияСистемойСейсмическогоМониторинга"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.г.-м.н., зав.
+лаб., ИНГГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кулаков Иван
+Юрьевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КуликовМатвейДмитриевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КуликовМатвейДмитриевич">
@@ -1395,6 +1652,47 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Программная инженерия и компьютерные науки</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Латыш Никита Евгеньевич</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19206</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЛевинЕвгенийАндреевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЛевинЕвгенийАндреевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КлассификацияICA-компонентДляРезультатов%28табличныхданных%29ЭлектроэнцефалографииКакДополнительныйИнструментВРаботеФизиолога"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РешениеЗадачиФормированияНаправленногоЛуча%28beamforming%29ДляОценкиФункциональногоСостояния"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.б.н.,
+с.н.с., НИО
+ангионеврологии и
+нейрохирургии
+Института онкологии и
+нейрохирургии
+НМИЦ им. акад. Е.Н.
+Мешалкина</кафедра:Должность>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.б.н., с.н.с.,
+НИО ангионеврологии и
+нейрохирургии
+Института онкологии и
+нейрохирургии
+НМИЦ им. акад. Е.Н.
+Мешалкина</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Левин Евгений
+Андреевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЛевчуговаАннаАлександровна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЛевчуговаАннаАлександровна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенияДляЗнакомствНаБазеТехнологииFlutter"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаЦифровойПлатформыДляОсуществленияКриптовалютногоp2pКредитования"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">аналитик, ООО
+&quot;Десенчери&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Левчугова Анна
+Александровна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -1431,6 +1729,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МаксимоваАннаМаксимовна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МаксимоваАннаМаксимовна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоСредстваДляУправленияТекстовымиЗаданиямиВЦФТ-Банке"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">главный
+инженер-технолог,
+ЗАО ЦФТ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Максимова Анна
+Максимовна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МалаеваЕленаДмитриевна -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МалаеваЕленаДмитриевна">
@@ -1447,6 +1759,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МамашЕленаАлександровна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МамашЕленаАлександровна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоМодуляСравнительнойОценкиАлгоритмовТопографическойКоррекцииМультиспектральныхСнимковВСредеQGIS"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.,
+с.н.с., ФИЦ ИВТ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мамаш Елена
+Александровна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МанасянТигранЛевонович -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МанасянТигранЛевонович">
@@ -1459,6 +1784,19 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Технология разработки программных систем</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Манасян Тигран Левонович</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21222</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МарининИгорьВалерьевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МарининИгорьВалерьевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтерактивногоПриложенияМоделиКарьера%22Борок%22СИспользованиемТехнологииВиртуальнойРеальности"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зам. дир.,
+ИВМиМГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Маринин Игорь
+Валерьевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -1484,6 +1822,19 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МатвеевАлексейСергеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Матвеев Алексей Сергеевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МедведьИринаВикторовна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МедведьИринаВикторовна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляАнализаРезультатовЛокальногоСейсмическогоМониторинга"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.г.-м.н.,
+с.н.с., ИНГГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Медведь Ирина
+Викторовна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -1544,6 +1895,21 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Программная инженерия и компьютерные науки</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Михайлов Михаил Сергеевич</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19201</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МоргачеваАлександраИгоревна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МоргачеваАлександраИгоревна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоКомплексаДляАвтоматизацииРаботыВетеринарныхКлиникИУчетаИсторииЗдоровьяДомашнихЖивотных"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательнойСистемыПодбораСпециалистовДляВетеринарныхКлиникНаОсновеМетодовМашинногоОбучения"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">инженер-
+программист, ООО
+&quot;Диджитал Ресерч&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Моргачева Александра
+Игоревна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -1617,6 +1983,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПавловскийЕвгенийНиколаевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПавловскийЕвгенийНиколаевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииДеревьевСинтаксическогоРазбораДляКонструированияШаблонов"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.,
+зав. лаб., ЛАПДиМО
+ММФ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Павловский Евгений
+Николаевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПальчуновДмитрийЕвгеньевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПальчуновДмитрийЕвгеньевич">
@@ -1654,6 +2034,19 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Программная инженерия и компьютерные науки</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пашенцев Марат Андреевич</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19209</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПерепёлкинВладиславАлександрович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПерепёлкинВладиславАлександрович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWeb-сервисаДляХраненияИВизуализацииСейсморазведочныхДанных"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">н.с.,
+ИВМиМГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Перепёлкин Владислав
+Александрович</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -1716,6 +2109,21 @@
 расстройств на основе
 автоматического анализа
 научных публикаций</кафедра:Тема>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПриставкаПавелАнатольевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПриставкаПавелАнатольевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтерфейсаСетевогоУстройстваДляРазгрузкиОбработкиТрафикаПриПомощиNetfilter"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПОАбонентскогоУстройства5GНаБазеПроектаSrsRAN"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.т.н.,
+и.о. директора, ИВТ
+СибГУТИ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Приставка Павел
+Анатольевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -2306,6 +2714,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СадовскийНиколайСергеевич -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СадовскийНиколайСергеевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмовПерсонализацииРекомендацийДляСистемыДистанционногоОбучения"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмовПостроенияИерархииКурсовДляРекомендательнойСистемыДистанционногоОбучения"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT-директор,
+ООО &quot;В2 Групп&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Садовский Николай
+Сергеевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СазоноваПолинаАндреевна -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СазоноваПолинаАндреевна">
@@ -2333,6 +2755,22 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Консультант"/>
         <кафедра:консультирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#SidecarКонтейнерыКакСпособПостроенияАвторизацииИАутентификацииВСовременныхМикросервисныхСистемах"/>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сидоров Георгий Александрович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СкоковаВераАндреевна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СкоковаВераАндреевна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыПоддержкиДокументооборотаКафедрДляСтудентов"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыПроверкиСогласованностиОценочныхЗнанийЭкспертов"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший
+инженер-программист
+мобильных
+приложений, ЗАО ЦФТ</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Скокова Вера
+Андреевна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -2402,11 +2840,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТимофееваМарияКирилловна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТимофееваМарияКирилловна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаОпределенияТематическихХарактеристикРусскихПоэтическихТекстовНаОснованииЛексическихПризнаковСИспользованиемНейросетей"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.филол.н.,
+в.н.с., ИМ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Тимофеева Мария
+Кирилловна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТрегубовАртёмСергеевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТрегубовАртёмСергеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Трегубов Артём Сергеевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТрофимовАлександрВикторович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТрофимовАлександрВикторович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АвтоматизированныеМетодыИзвлеченияЭмоцийИзТекстовРусскогоЯзыка"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаДляАвтоматизированногоПорожденияДокументовКафедры"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМетодовВыраженияЭмоцийДляВеденияДиалогаСПользователем"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииГрамматическихконструкций,ТождественныхПоСмыслу"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.,
+директор, ООО
+&quot;Пионер&quot;</кафедра:Должность>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н., директор, ООО  &quot;Пионер&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Трофимов Александр
+Викторович</кафедра:ФИО>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Трофимов Александр Викторович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФоминаАннаАлександровна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФоминаАннаАлександровна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМодуляДетектированияАномалийВЛогахРаспределенныхСистем"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший
+инженер-программист,
+ООО &quot;Тру инжиниринг&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Фомина Анна
+Александровна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -2437,6 +2921,19 @@
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Технология разработки программных систем</кафедра:Профиль_обучения>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Худяков Даниил Александрович</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21223</кафедра:группа>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЧернышовГлебСтаниславович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЧернышовГлебСтаниславович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СозданиеПрототипаСистемыДляУправленияНаучнымиПроектамиВНефтегазовойОтрасли"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">н.с.,
+ИНГГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Чернышов Глеб
+Станиславович</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -2496,6 +2993,21 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РаспознаваниеЭмоцийВТекстахЕстественногоЯзыка"/>
         <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Чуркин Валерий Авдеевич</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ШашокНатальяАлександровна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ШашокНатальяАлександровна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ОптимизацияРаботыСБазойДанныхВПриложенииДляАнализаСтихотворныхТекстов"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИРеализацияАлгоритмовСтатистическогоАнализаФонетическихХарактеристикРусскихПоэтическихТекстов"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий ИТ-инженер,
+АО &quot;Сбербанк-
+Технологии&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Шашок Наталья
+Александровна</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
@@ -2564,6 +3076,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЯблоковАлександрВикторович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЯблоковАлександрВикторович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазвитиеИнтерактивногоГеологическогоМузеяНаОсновеСистемВиртуальнойРеальности"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.,
+с.н.с., ИНГГ СО РАН</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Яблоков Александр
+Викторович</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЯкобсонАлександрАлексеевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЯкобсонАлександрАлексеевич">
@@ -2609,6 +3134,20 @@
         <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
         <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность_в_НГУ>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Яхъяева Гульнара Эркиновна</кафедра:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ванБевернРенеАндреасович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ванБевернРенеАндреасович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРаспределенногоКэшированияПриLookupJoinСВнешнейБазойДанныхВСистемеПотоковойОбработкиДанныхApacheFlink"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">эксперт,
+ООО &quot;Техкомпания
+Хуавей&quot;</кафедра:Должность>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ван Беверн Рене
+Андреасович</кафедра:ФИО>
     </owl:NamedIndividual>
     
 
