@@ -1,3 +1,3 @@
 # intelligent_assistant
-Инструкция: Запустить класс Interface.WorkMenu # hepler
+Инструкция: Запустить класс initiate_interface.WorkMenu # hepler
 

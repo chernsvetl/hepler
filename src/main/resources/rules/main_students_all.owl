@@ -181,6 +181,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заведующий_кафедры -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заведующий_кафедры">
@@ -265,6 +273,14 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Тема">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Ученая_степень_руководителя_ВКР -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Ученая_степень_руководителя_ВКР">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -625,7 +641,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Консультант"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации"/>
         <кафедра:консультирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РаспознаваниеЭмоцийВТекстахЕстественногоЯзыка"/>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> </кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> </кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> </кафедра:Должность_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -795,10 +817,11 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаДецентрализованнойБиржыНаОсновеБлокчейнаSolana"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИРеализацияАлгоритмовСтатистическогоАнализаФонетическихХарактеристикРусскихПоэтическихТекстов"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоМодуляСравнительнойОценкиАлгоритмовТопографическойКоррекцииМультиспектральныхСнимковВСредеQGIS"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор, д.т.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор, д.т.н.</кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">в.н.с., д.т.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий научный сотрудник</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ФИЦ ИВТ</кафедра:Наименование_организации>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.т.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Барахнин Владимир Борисович</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -816,8 +839,9 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенийДляКонсолидацииДанныхУправленческогоУчета"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенияДляЗнакомствНаБазеТехнологииFlutter"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаЦифровойПлатформыДляОсуществленияКриптовалютногоp2pКредитования"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Блощицын Виталий Яковлевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -904,6 +928,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#БочаровАндрейВикторович">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПостроениеОнтологииНейрофизиологическихМаркеровПсихиатрическихРасстройствНаОсновеАвтоматическогоАнализаНаучныхПубликаций"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КлассификацияICA-компонентДляРезультатов%28табличныхданных%29ЭлектроэнцефалографииКакДополнительныйИнструментВРаботеФизиолога"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РешениеЗадачиФормированияНаправленногоЛуча%28beamforming%29ДляОценкиФункциональногоСостояния"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.б.н., старший преподаватель кафедры фундаментальной и прикладной лингвистики ГИ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Бочаров Андрей Викторович</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1011,6 +1039,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВишневскийОлегВладимирович -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВишневскийОлегВладимирович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации"/>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры информационной биологии ФЕН</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий программист</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры информационной биологии ФЕН</кафедра:Должность_руководителя_ВКР>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВороноваАлияРашидовна -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВороноваАлияРашидовна">
@@ -1075,6 +1116,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГореявчевНикитаАлексеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазвитиеИнтерактивногоГеологическогоМузеяНаОсновеСистемВиртуальнойРеальности"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СозданиеПрототипаСистемыДляУправленияНаучнымиПроектамиВНефтегазовойОтрасли"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтерактивногоПриложенияМоделиКарьера%22Борок%22СИспользованиемТехнологииВиртуальнойРеальности"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ассистент кафедры геофизики ГГФ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гореявчев Никита Алексеевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1145,7 +1190,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Консультант"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации"/>
         <кафедра:консультирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоМодуляСравнительнойОценкиАлгоритмовТопографическойКоррекцииМультиспектральныхСнимковВСредеQGIS"/>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с.н.с., к.г.-м.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший научный сотрудник</кафедра:Должность_в_организации>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИГМ СО РАН</кафедра:Наименование_организации>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Добрецов Николай Николаевич</кафедра:ФИО>
     </owl:NamedIndividual>
@@ -1190,8 +1235,9 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтерфейсаСетевогоУстройстваДляРазгрузкиОбработкиТрафикаПриПомощиNetfilter"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПОАбонентскогоУстройства5GНаБазеПроектаSrsRAN"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.т.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.т.н.</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.т.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дроздова Вера Геннадьевна</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1208,8 +1254,9 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательногоСервисаДляТорговлиНаФинансовыхРынкахНаОсновеАвтоматизированногоИзвлеченияЗнанийИзНовостныхИсточников"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыАвтоматизацииКонструированияЛингвистическихШаблоновДляИзвлеченияИнформацииИзТекстов"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СтатическоеСканированиеИУправлениеПрофилемБезопасностиПриложений"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, д.ф.-м.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, д.ф.-м.н.</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры алгебры и математической логики ММФ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры алгебры и математической логики ММФ</кафедра:Должность_руководителя_ВКР>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дудкин Федор Анатольевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1225,10 +1272,11 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляСистемыОповещенияОЛокальнойСейсмичностиНаОсновеНейронныхСетей"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СозданиеПрототипаСистемыДляУправленияНаучнымиПроектамиВНефтегазовойОтрасли"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтерактивногоПриложенияМоделиКарьера%22Борок%22СИспользованиемТехнологииВиртуальнойРеальности"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зам. директора по научной работе, к.ф.-м.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры систем информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зам. директора по научной работе</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры систем информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИНГГ СО РАН</кафедра:Наименование_организации>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дучков Антон Альбертович</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1302,6 +1350,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЗыковаАнастасияАлексеевна">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммнойСистемыСоставленияМенюДляДетейСОграничениямиВПитании"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательнойСистемыПерсональныхТренировок"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыПроверкиСогласованностиОценочныхЗнанийЭкспертов"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РаспознаваниеЭмоцийВТекстахЕстественногоЯзыка"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РеализацияМодуляСопоставлениядинамически-генерируемыхJava-классовСоСхемойДанныхВРеляционнойСУБД"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ассистент кафедры общей информатики ФИТ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Зыкова Анастасия Алексеевна</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1809,9 +1863,11 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ОбеспечениеЭффективнойРаботыССостояниемОператоровВСистемеПотоковойОбработкиДанныхApacheFlink"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРаспределенногоКэшированияПриLookupJoinСВнешнейБазойДанныхВСистемеПотоковойОбработкиДанныхApacheFlink"/>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зав. кафедрой, д.ф.-м.н.</кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зав. лабораторией, д.ф.-м.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заведующий кафедрой программирования ММФ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заведующий лабораторией информационных систем</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заведующий кафедрой программирования ММФ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИСИ СО РАН</кафедра:Наименование_организации>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Марчук Александр Гурьевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1821,6 +1877,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МатвеевАлексейСергеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляКонтроляКачестваАвтоматическойОбработкиНепрерывныхЗаписейЛокальногоСейсмическогоМониторинга"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляОрганизацииСвязиИУправленияСистемойСейсмическогоМониторинга"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляСистемыОповещенияОЛокальнойСейсмичностиНаОсновеНейронныхСетей"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWeb-сервисаДляХраненияИВизуализацииСейсморазведочныхДанных"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший преподаватель кафедры параллельных вычислений ФИТ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Матвеев Алексей Сергеевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -1918,6 +1979,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#НайдановЧимитАнтонович">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаДляАвтоматизированногоПорожденияДокументовКафедры"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаПоПравильномуПитанию"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПерсональногоПомощникаДляПланированияТуристическихМаршрутов"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоСредстваДляУправленияТекстовымиЗаданиямиВЦФТ-Банке"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСемантическихМетодовВыраженияЭмоцийДляСозданияИнтеллектуальныхПомощников"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыИзмененияЭмоциональногоВыраженияЛицаЧеловекаНаФотографииСИспользованиемТехнологииGAN"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыПоддержкиДокументооборотаКафедрДляСтудентов"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший преподаватель кафедры общей информатики ФИТ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Найданов Чимит Антонович</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2013,10 +2082,11 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаДляАвтоматизированногоПорожденияДокументовКафедры"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМетодовУлучшенияНейронныхСетейПриПомощиАлгоритмаМягкойПодпространственнойКластеризации"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииГрамматическихконструкций,ТождественныхПоСмыслу"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зав. кафедрой, д.ф.-м.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зав. кафедрой, д.ф.-м.н.</кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">в.н.с., д.ф.-м.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заведующий кафедрой общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий научный сотрудник</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заведующий кафедрой общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИМ СО РАН</кафедра:Наименование_организации>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пальчунов Дмитрий Евгеньевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2134,6 +2204,15 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВКР"/>
         <кафедра:Тема rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Проектирование и реализация мобильной SDK для
 управления поведением системы с использованием техник feature toggles</кафедра:Тема>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПросьбаПрислатьНаКафедруФИОРуководителяВКР -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПросьбаПрислатьНаКафедруФИОРуководителяВКР">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Просьба прислать на кафедру ФИО руководителя ВКР</кафедра:Должность_руководителя_ВКР>
     </owl:NamedIndividual>
     
 
@@ -2657,7 +2736,8 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыПоддержкиДокументооборотаКафедрДляСтудентов"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РеализацияМодуляСопоставлениядинамически-генерируемыхJava-классовСоСхемойДанныхВРеляционнойСУБД"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КлассификацияICA-компонентДляРезультатов%28табличныхданных%29ЭлектроэнцефалографииКакДополнительныйИнструментВРаботеФизиолога"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры высшей математики ММФ</кафедра:Должность_руководителя_ВКР>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ряскин Александр Николаевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2689,10 +2769,11 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенияДляСтабилотренингаСБиологическойОбратнойСвязью"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Разработкавеб-приложенияДляОценкиПравильностиЧтенияВслухСИспользованиемМоделиWav2Vec2"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РешениеЗадачиФормированияНаправленногоЛуча%28beamforming%29ДляОценкиФункциональногоСостояния"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор, д.филос.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор, д.филос.н.</кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">в.н.с., д.филос.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ведущий научный сотрудник</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">НИИНМ</кафедра:Наименование_организации>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.филос.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Савостьянов Александр Николаевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2731,9 +2812,19 @@
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СазоноваПолинаАндреевна -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СазоноваПолинаАндреевна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп.,  </кафедра:Должность_в_НГУ>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаБлокчейнПлатформыДляОсуществленияСделокСДинамическимДисконтированием"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаДецентрализованнойБиржыНаОсновеБлокчейнаSolana"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМодуляЗаказаТоваровМассовогоПотребленияСИспользованиемТехнологииБлокчейн"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМодуляУправленияСистемыУмногоДомаСИспользованиемТехнологииБлокчейн"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенийДляКонсолидацииДанныхУправленческогоУчета"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПриложенияДляЗнакомствНаБазеТехнологииFlutter"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаЦифровойПлатформыДляОсуществленияКриптовалютногоp2pКредитования"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший преподаватель кафедры общей информатики ФИТ</кафедра:Должность>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сазонова Полина Андреевна</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2742,8 +2833,12 @@
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СвириденкоДмитрийИванович -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СвириденкоДмитрийИванович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, д.ф.-м.н.</кафедра:Должность_в_НГУ>
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации"/>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">заведующий лабораторией цифровых двойников и анализа больших данных</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Свириденко Дмитрий Иванович</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2816,9 +2911,15 @@
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СтепановПавелАндреевич -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СтепановПавелАндреевич">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп.,  </кафедра:Должность_в_НГУ>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииДеревьевСинтаксическогоРазбораДляКонструированияШаблонов"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыАвтоматизацииКонструированияЛингвистическихШаблоновДляИзвлеченияИнформацииИзТекстов"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииГрамматическихконструкций,ТождественныхПоСмыслу"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший преподаватель кафедры общей информатики ФИТ</кафедра:Должность>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Степанов Павел Андреевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2857,6 +2958,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТрегубовАртёмСергеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ГибридныеМетодыМоделированияПользователяНаОсновеСемантическихТехнологийИНейронныхСетейДляСозданияИнтеллектуальныхПомощников"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#МетодыРаспознаванияИОбработкиПользовательскихНамеренийДляСозданияИнтеллектуальныхПомощников"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАвтоматизированныхМетодовВеденияДиалогаСПользователемДляПроведенияСобеседований"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоКомплексаДляАвтоматизацииРаботыВетеринарныхКлиникИУчетаИсторииЗдоровьяДомашнихЖивотных"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательнойСистемыПодбораСпециалистовДляВетеринарныхКлиникНаОсновеМетодовМашинногоОбучения"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ассистент кафедры общей информатики ФИТ</кафедра:Должность>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший преподаватель кафедры общей информатики ФИТ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Трегубов Артём Сергеевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -2898,11 +3006,15 @@
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ХазанкинГригорийРоманович -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ХазанкинГригорийРоманович">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп.,  </кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">инженер-исследователь,  </кафедра:Должность_в_организации>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтерфейсаСетевогоУстройстваДляРазгрузкиОбработкиТрафикаПриПомощиNetfilter"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший преподаватель кафедры общей информатики ФИТ</кафедра:Должность>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">инженер-исследователь</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. преп. кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">НИИНМ, Отдел клинической нейронауки</кафедра:Наименование_организации>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Хазанкин Григорий Романович</кафедра:ФИО>
     </owl:NamedIndividual>
@@ -2991,7 +3103,8 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательнойСистемыПодбораСпециалистовДляВетеринарныхКлиникНаОсновеМетодовМашинногоОбучения"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Разработкавизуально-ОдометрическогоSLAMДляТранспортныхРоботов"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РаспознаваниеЭмоцийВТекстахЕстественногоЯзыка"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Чуркин Валерий Авдеевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -3093,6 +3206,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЯкобсонАлександрАлексеевич">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМетодовВыраженияЭмоцийДляВеденияДиалогаСПользователем"/>
+        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ассистент кафедры общей информатики ФИТ</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Якобсон Александр Алексеевич</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -3107,10 +3222,9 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляАнализаРезультатовЛокальногоСейсмическогоМониторинга"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляКонтроляКачестваАвтоматическойОбработкиНепрерывныхЗаписейЛокальногоСейсмическогоМониторинга"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаWEB-интерфейсаДляОрганизацииСвязиИУправленияСистемойСейсмическогоМониторинга"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с.н.с., к.ф.-м.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с.н.с. НОЦГПН, к.ф.-м.н.</кафедра:Должность_в_НГУ>
-        <кафедра:Должность_в_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с.н.с., к.ф.-м.н.</кафедра:Должность_в_организации>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">старший научный сотрудник НОЦГПННГУ</кафедра:Должность_руководителя_ВКР>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИНГГ СО РАН</кафедра:Наименование_организации>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Яскевич Сергей Владимирович</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -3131,8 +3245,9 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаРекомендательнойСистемыПерсональныхТренировок"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыИзмененияЭмоциональногоВыраженияЛицаЧеловекаНаФотографииСИспользованиемТехнологииGAN"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаСистемыПроверкиСогласованностиОценочныхЗнанийЭкспертов"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность>
-        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент, к.ф.-м.н.</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_в_НГУ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_в_НГУ>
+        <кафедра:Должность_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент кафедры общей информатики ФИТ</кафедра:Должность_руководителя_ВКР>
+        <кафедра:Ученая_степень_руководителя_ВКР rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.</кафедра:Ученая_степень_руководителя_ВКР>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Яхъяева Гульнара Эркиновна</кафедра:ФИО>
     </owl:NamedIndividual>
     
@@ -3148,38 +3263,6 @@
 Хуавей&quot;</кафедра:Должность>
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ван Беверн Рене
 Андреасович</кафедра:ФИО>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#доцент -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#доцент">
-        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.,  </кафедра:Должность>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н., доцент</кафедра:Должность>
-        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">доцент</кафедра:ФИО>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#зав.Кафедрой -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#зав.Кафедрой">
-        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.ф.-м.н.,  </кафедра:Должность>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.ф.-м.н., доцент</кафедра:Должность>
-        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">зав. кафедрой</кафедра:ФИО>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#профессор -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#профессор">
-        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР"/>
-        <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д.т.н., доцент</кафедра:Должность>
-        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">профессор</кафедра:ФИО>
     </owl:NamedIndividual>
     
 

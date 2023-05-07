@@ -3,9 +3,9 @@ package ru.nsu.fit.chernyavtseva.assistant;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import ru.nsu.fit.chernyavtseva.assistant.document.DocumentGenerator;
-import ru.nsu.fit.chernyavtseva.assistant.document.DocumentTemplateFilter;
-import ru.nsu.fit.chernyavtseva.assistant.query.QueryExecutor;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.DocumentGenerator;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.DocumentTemplateFilter;
+import ru.nsu.fit.chernyavtseva.assistant.query_model.QueryExecutor;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,9 +1,9 @@
 package ru.nsu.fit.chernyavtseva.assistant;
 
-import ru.nsu.fit.chernyavtseva.assistant.document.type.core.DocumentTemplate;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.mda.*;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course2.trps.*;
-import ru.nsu.fit.chernyavtseva.assistant.document.type.course4.*;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.DocumentTemplate;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.*;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.*;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.*;
 
 sealed public interface Degree {
 
