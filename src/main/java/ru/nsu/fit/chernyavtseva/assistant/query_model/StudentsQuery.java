@@ -39,7 +39,7 @@ public record StudentsQuery(String degree, String profile) {
              ?соруководитель my:ФИО ?фио_соруководителя_вкр .
              ?соруководитель my:Должность ?должность_соруководителя_вкр .
             }
-             
+              
             }
             """;
 
