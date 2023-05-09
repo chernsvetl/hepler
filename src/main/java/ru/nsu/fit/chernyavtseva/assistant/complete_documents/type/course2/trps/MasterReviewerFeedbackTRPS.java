@@ -30,8 +30,4 @@ public record MasterReviewerFeedbackTRPS() implements ReviewerFeedbackTRPS {
         return "09.04.01_TRPS_VKR_recenziya.docx";
     }
 
-//    @Override
-//    public boolean generateFor(Map<String, String> studentReplacements) {
-//        return studentReplacements.containsKey("фиоСоруководителяВКР");
-//    }
 }
