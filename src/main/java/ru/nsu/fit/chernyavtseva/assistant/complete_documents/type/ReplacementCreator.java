@@ -38,12 +38,16 @@ final class UriConverterReplacement implements ReplacementCreator {
     @Override
     public String replacement(QuerySolution solution) {
         String replacement = delegateTo.replacement(solution);
+        if (replacement == null) {
+            return replacement;
+        }
         for (char c : ENCODED_CHARS) {
             String encoded = URLEncoder.encode(String.valueOf(c), StandardCharsets.UTF_8);
             replacement = replacement.replaceAll(encoded, String.valueOf(c));
         }
         return replacement;
     }
+
 }
 
 final class Simple implements ReplacementCreator {
@@ -57,8 +61,12 @@ final class Simple implements ReplacementCreator {
 
     @Override
     public String replacement(QuerySolution solution) {
-        return solution.getLiteral(varName).getString();
+        if (solution.contains(varName)) {
+            return solution.getLiteral(varName).getString();
+        }
+        return null;
     }
+
 }
 
 final class FullNameReplacement implements ReplacementCreator {
@@ -73,6 +81,9 @@ final class FullNameReplacement implements ReplacementCreator {
 
     @Override
     public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
         String fullName = solution.getLiteral(solutionVarName).getString();
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {

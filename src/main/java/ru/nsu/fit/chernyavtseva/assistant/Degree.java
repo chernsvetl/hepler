@@ -116,6 +116,7 @@ final class MasterTPRS implements Degree {
         return new DocumentTemplate[]{
                 new MasterSupervisorFeedbackTRPS(),
                 new MasterReviewerFeedbackTRPS(), new MasterIndividualTaskTRPS(),
-                new MasterPracticeReportTRPS(), new MasterPracticeFeedbackTRPS()};
+                new MasterPracticeReportTRPS(), new MasterPracticeFeedbackTRPS(),
+                new MasterSupervisorFeedbackTRPS2()};
     }
 }

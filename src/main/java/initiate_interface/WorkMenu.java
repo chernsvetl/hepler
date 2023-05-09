@@ -586,6 +586,11 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackTRPS2);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     System.out.println("Documents VKR otzyv generated!"); // Документы с названием "Отзыв руководителя ВКР" сгенерированы
                     frame3.setVisible(true);
                 }

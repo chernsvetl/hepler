@@ -38,6 +38,9 @@ public class DocumentGenerator {
 
     private static void generateOne(Path inPath, Path outDirPath, DocumentTemplate toGenerate, QuerySolution s) {
         Map<String, String> studentReplacements = studentReplacements(toGenerate.replacements(), s);
+        if (!toGenerate.generateFor(studentReplacements)) {
+            return;
+        }
         try (XWPFDocument doc = new XWPFDocument(Files.newInputStream(inPath))) {
             // replace in paragraphs
             for (XWPFParagraph xwpfParagraph : doc.getParagraphs()) {
@@ -72,6 +75,7 @@ public class DocumentGenerator {
 
     private static Map<String, String> studentReplacements(Map<String, ReplacementCreator> solutionVarNames, QuerySolution s) {
         return solutionVarNames.entrySet().stream()
+                .filter(e -> e.getValue().replacement(s) != null)
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         e -> e.getValue().replacement(s)

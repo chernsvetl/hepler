@@ -14,9 +14,9 @@ public record MasterSupervisorFeedbackTRPS() implements SupervisorFeedbackTRPS {
             "имяСтудентаР", fullName("фио_студента", Case.Genitive),
             "имяСтудентаИ", simple("фио_студента"),
             "имяРуководителяВКР", simple("фио_руководителя"),
-            "темаВКР", simple("тема_вкр"),
             "УчСтепРукВКР", simple("ученая_степень_руководителя_ВКР"),
-            "должностьРуководителяВКР", simple("должность_руководителя_вкр")
+            "должностьРуководителяВКР", simple("должность_руководителя_вкр"),
+            "темаВКР", simple("тема_вкр")
     );
 
     @Override
@@ -27,5 +27,10 @@ public record MasterSupervisorFeedbackTRPS() implements SupervisorFeedbackTRPS {
     @Override
     public String fileName() {
         return "09.04.01_TRPS_VKR_otzyv.docx";
+    }
+
+        @Override
+    public boolean generateFor(Map<String, String> studentReplacements) {
+        return !studentReplacements.containsKey("фиоСоруководителяВКР");
     }
 }

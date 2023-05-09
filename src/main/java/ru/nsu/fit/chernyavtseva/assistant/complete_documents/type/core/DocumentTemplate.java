@@ -22,5 +22,9 @@ public interface DocumentTemplate {
     default String prefixVarName() {
         return "фио_студента";
     }
+
+    default boolean generateFor(Map<String, String> studentReplacements) {
+        return true;
+    }
 }
 
