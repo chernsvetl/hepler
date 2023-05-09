@@ -472,12 +472,27 @@ public class WorkMenu {
                         throw new RuntimeException(e);
                     }
                     try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackMDA2);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof SupervisorFeedback);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
                     try {
+                        generateTemplates(template -> template instanceof SupervisorFeedback2);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof SupervisorFeedbackTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackTRPS2);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -577,7 +592,17 @@ public class WorkMenu {
                         throw new RuntimeException(e);
                     }
                     try {
+                        generateTemplates(template -> template instanceof SupervisorFeedbackMDA2);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
                         generateTemplates(template -> template instanceof SupervisorFeedback);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof SupervisorFeedback2);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
