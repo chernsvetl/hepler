@@ -28,7 +28,7 @@ public record MasterIndividualTaskTRPS() implements IndividualTaskTRPS {
         DOC_FIELD_TO_SOLUTION.put("имяРуководителяВКР", simple("фио_руководителя"));
         DOC_FIELD_TO_SOLUTION.put("темаВКР", simple("тема_вкр"));
         DOC_FIELD_TO_SOLUTION.put("должностьРуководителяВКР", simple("должность_руководителя_вкр"));
-
+        DOC_FIELD_TO_SOLUTION.put("должностьРуководителяКраткоВКР", simple("должность_руководителя_вкр_кратко"));
     }
 
     @Override
