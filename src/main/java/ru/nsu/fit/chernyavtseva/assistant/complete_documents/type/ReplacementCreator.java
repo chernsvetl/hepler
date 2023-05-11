@@ -8,6 +8,7 @@ import com.hp.hpl.jena.query.QuerySolution;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 /**
  * Extracts data from solution and normalizes it if needed
@@ -94,6 +95,11 @@ final class FullNameReplacement implements ReplacementCreator {
             String lastName = petrovich.say(nameChunks[0], NameType.LastName, gender, wordCase);
             String firstName = petrovich.say(nameChunks[1], NameType.FirstName, gender, wordCase);
             String patronymicName = petrovich.say(nameChunks[2], NameType.PatronymicName, gender, wordCase);
+
+            if (Objects.equals(nameChunks[0], "Кривошея")) {
+
+                return String.format(lastName.replaceFirst("я","и") + " " + firstName + " " +patronymicName);
+            } else
             return String.format(lastName + " " + firstName + " " + patronymicName);
         } else {
             throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
