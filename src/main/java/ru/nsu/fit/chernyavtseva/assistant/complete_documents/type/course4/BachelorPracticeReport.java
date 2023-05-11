@@ -19,6 +19,7 @@ public record BachelorPracticeReport() implements PracticeReport {
         DOC_FIELD_TO_SOLUTION.put("группаСтудента", simple("группа_студента"));
         DOC_FIELD_TO_SOLUTION.put("темаВКР", simple("тема_вкр"));
         DOC_FIELD_TO_SOLUTION.put("местоПрактики", simple("место_практики"));
+        DOC_FIELD_TO_SOLUTION.put("полноеНаименованиеМестаПрактики", simple("место_практики_полное_наименование"));
         DOC_FIELD_TO_SOLUTION.put("имяРуководителяОтНГУ", simple("фио_НГУ_руководителя"));
         DOC_FIELD_TO_SOLUTION.put("должностьВНГУ", simple("должность_НГУ_руководителя"));
         DOC_FIELD_TO_SOLUTION.put("имяРуководителяОтОрганизации", simple("фио_орг_руководителя"));

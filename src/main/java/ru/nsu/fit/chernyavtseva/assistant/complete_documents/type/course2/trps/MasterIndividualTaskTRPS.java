@@ -20,6 +20,7 @@ public record MasterIndividualTaskTRPS() implements IndividualTaskTRPS {
         DOC_FIELD_TO_SOLUTION.put("имяСтудентаИ", simple("фио_студента"));
         DOC_FIELD_TO_SOLUTION.put("группаСтудента", simple("группа_студента"));
         DOC_FIELD_TO_SOLUTION.put("местоПрактики", simple("место_практики"));
+        DOC_FIELD_TO_SOLUTION.put("полноеНаименованиеМестаПрактики", simple("место_практики_полное_наименование"));
         DOC_FIELD_TO_SOLUTION.put("приказПрактика", simple("приказ_практика"));
         DOC_FIELD_TO_SOLUTION.put("имяРуководителяОтНГУ", simple("фио_НГУ_руководителя"));
         DOC_FIELD_TO_SOLUTION.put("должностьВНГУ", simple("должность_НГУ_руководителя"));

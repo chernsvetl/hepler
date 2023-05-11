@@ -181,6 +181,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР_кратко -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР_кратко">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заведующий_кафедры -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заведующий_кафедры">
@@ -269,10 +285,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Ученая_степень_руководителя_ВКР -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Ученая_степень_руководителя_ВКР">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО_для_подписи -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО_для_подписи">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_ознакомлен -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_ознакомлен">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_принял -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_принял">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
 
