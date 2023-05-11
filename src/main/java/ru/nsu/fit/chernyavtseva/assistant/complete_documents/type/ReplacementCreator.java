@@ -95,7 +95,7 @@ final class FullNameReplacement implements ReplacementCreator {
             String lastName = petrovich.say(nameChunks[0], NameType.LastName, gender, wordCase);
             String firstName = petrovich.say(nameChunks[1], NameType.FirstName, gender, wordCase);
             String patronymicName = petrovich.say(nameChunks[2], NameType.PatronymicName, gender, wordCase);
-
+    // the best way because library does not support that case
             if (Objects.equals(nameChunks[0], "Кривошея")) {
 
                 return String.format(lastName.replaceFirst("я","и") + " " + firstName + " " +patronymicName);

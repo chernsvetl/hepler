@@ -213,6 +213,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_практики_полное_наименование -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_практики_полное_наименование">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_прохождения_практики -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_прохождения_практики">
