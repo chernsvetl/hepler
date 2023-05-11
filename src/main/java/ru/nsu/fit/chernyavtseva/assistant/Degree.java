@@ -52,7 +52,7 @@ final class Bachelor implements Degree {
     public DocumentTemplate[] toGenerate() {
         return new DocumentTemplate[]{new BachelorSupervisorFeedback(),
                 new BachelorReviewerFeedback(), new BachelorIndividualTask(),
-                new BachelorPracticeReport(), new BachelorPracticeFeedback(), new BachelorSupervisorFeedback2()};
+                new BachelorPracticeReport(), new BachelorPracticeFeedback(), new BachelorSupervisorFeedback2(), new BachelorApplicationForPractice()};
     }
 }
 
@@ -90,7 +90,7 @@ final class MasterMDA implements Degree {
         return new DocumentTemplate[]{
                 new MasterSupervisorFeedbackMDA(), new MasterSupervisorFeedbackMDA2(),
                 new MasterReviewerFeedbackMDA(), new MasterIndividualTaskMDA(),
-                new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA()};
+                new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA(), new MasterApplicationForPracticeMDA()};
     }
 }
 
@@ -117,6 +117,6 @@ final class MasterTPRS implements Degree {
                 new MasterSupervisorFeedbackTRPS(),
                 new MasterReviewerFeedbackTRPS(), new MasterIndividualTaskTRPS(),
                 new MasterPracticeReportTRPS(), new MasterPracticeFeedbackTRPS(),
-                new MasterSupervisorFeedbackTRPS2()};
+                new MasterSupervisorFeedbackTRPS2(), new MasterApplicationForPracticeTRPS()};
     }
 }

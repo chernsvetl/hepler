@@ -10,6 +10,9 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.*;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.MasterApplicationForPracticeMDA;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.MasterApplicationForPracticeTRPS;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.BachelorApplicationForPractice;
 
 
 import javax.swing.*;
@@ -33,11 +36,13 @@ public class WorkMenu {
     public JFrame frame10;
     public JFrame frame11;
     public JFrame frame12;
+    public JFrame frame13;
+    public JFrame frame14;
     private ActionListener action;
     private JButton deleteButtonbach4, exitButton, createButton, menuButton, backButtonMenu, watchButton, backButton, thirdCourseButton, forthCourseButton,
             allDocsView, bachelors, masters, mastersDelete, bachelorsDelete, deleteButton, deleteButtonMag2,
             bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton, createMasterButtonTRPS, backBtnFromGen,
-    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn;
+    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn, applicationPractice, backBtnApp;
     private JLabel label;
 
     private String title = "Интеллектуальный помощник секретаря кафедры";
@@ -96,6 +101,14 @@ public class WorkMenu {
         frame12.setSize(1200, 800);
         frame12.setLocationRelativeTo(null);
 
+        frame13 = new JFrame(title);
+        frame13.setSize(1200, 800);
+        frame13.setLocationRelativeTo(null);
+
+        frame14 = new JFrame(title);
+        frame14.setSize(1200, 800);
+        frame14.setLocationRelativeTo(null);
+
         JPanel contentPane3 = new JPanel();
         contentPane3.setBackground(Color.decode("#FFE4C4"));
 
@@ -131,6 +144,12 @@ public class WorkMenu {
 
         JPanel contentPane13 = new JPanel();
         contentPane13.setBackground(Color.decode("#FFE4C4"));
+
+        JPanel contentPane14 = new JPanel();
+        contentPane14.setBackground(Color.decode("#FFE4C4"));
+
+        JPanel contentPane15 = new JPanel();
+        contentPane15.setBackground(Color.decode("#FFE4C4"));
 
         label = new JLabel("Выберите действие, которое хотите выполнить");
         label.setFont(new Font("Arial", Font.BOLD, 30));;
@@ -188,9 +207,18 @@ public class WorkMenu {
         allDocsCreateBtn = new JButton("Все документы");
         allDocsCreateBtn.setForeground(Color.decode("#000000"));
         allDocsCreateBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
-        allDocsCreateBtn.setBounds(450,100,325,70);
+        allDocsCreateBtn.setBounds(450,10,325,70);
         allDocsCreateBtn.setBorder(new RoundedBorder(30));
         allDocsCreateBtn.setForeground(Color.BLUE);
+
+        applicationPractice = new JButton("Заявление на практику");
+        applicationPractice.setForeground(Color.decode("#000000"));
+        applicationPractice.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        applicationPractice.setBounds(450,100,325,70);
+        applicationPractice.setBorder(new RoundedBorder(30));
+        applicationPractice.setForeground(Color.BLUE);
+
+
 
         izBtn = new JButton("Индивидуальное задание");
         izBtn.setForeground(Color.decode("#000000"));
@@ -365,6 +393,13 @@ public class WorkMenu {
         backButtonDelete.setBorder(new RoundedBorder(30));
         backButtonDelete.setForeground(Color.BLUE);
 
+        backBtnApp = new JButton("Вернуться в главное меню");
+        backBtnApp.setForeground(Color.decode("#000000"));
+        backBtnApp.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        backBtnApp.setBounds(450,190,325,70);
+        backBtnApp.setBorder(new RoundedBorder(30));
+        backBtnApp.setForeground(Color.BLUE);
+
         action  = new ActionListener()
         {
             public void actionPerformed(ActionEvent ae)
@@ -496,6 +531,20 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
+                    try {
+                        generateTemplates(template -> template instanceof BachelorApplicationForPractice);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }                    try {
+                    generateTemplates(template -> template instanceof MasterApplicationForPracticeMDA);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                    try {
+                        generateTemplates(template -> template instanceof MasterApplicationForPracticeTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     System.out.println("All documents generated!"); // Все документы сгенерированы
                     frame3.setVisible(true);
                 }
@@ -540,6 +589,27 @@ public class WorkMenu {
                     }
                     System.out.println("Documents header feedback generated!"); // Документы с названием "Отзыв руководителя практики" сгенерированы
                     frame3.setVisible(true);
+                }
+
+                else if  (button == applicationPractice)
+                {
+                    try {
+                        generateTemplates(template -> template instanceof ApplicationPracticeMDA);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof ApplicationPracticeTRPS);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    try {
+                        generateTemplates(template -> template instanceof ApplicationPractice);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    System.out.println("Documents intro practice generated!"); // Документы с названием "Заявление на практику" сгенерированы
+                    frame14.setVisible(true);
                 }
 
                 else if  (button == practiceReportBtn)
@@ -655,7 +725,10 @@ public class WorkMenu {
                 {
                     frame2.setVisible(true);
                 }
-
+                else if (button == backBtnApp)
+                {
+                    frame2.setVisible(true);
+                }
                 else if (button == allDocsView)
                 {
                     AllShow.show();
@@ -706,6 +779,9 @@ public class WorkMenu {
         supervisorFeedbackBtn.addActionListener(action);
         practiceFeedBackBtn.addActionListener(action);
         backButtonMenuBtn.addActionListener(action);
+        backBtnApp.addActionListener(action);
+        applicationPractice.addActionListener(action);
+
 
         frame2.add(deleteButton);
         frame2.add(exitButton);
@@ -761,8 +837,12 @@ public class WorkMenu {
         frame12.add(practiceReportBtn);
         frame12.add(backButtonMenuBtn);
         frame12.add(allDocsCreateBtn);
+        frame12.add(applicationPractice);
         frame12.getContentPane().add(contentPane13);
 
+
+        frame14.add(backBtnApp);
+        frame14.getContentPane().add(contentPane15);
     }
     public static void main(String... args)
     {
