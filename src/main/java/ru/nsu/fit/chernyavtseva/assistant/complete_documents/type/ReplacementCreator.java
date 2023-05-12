@@ -28,6 +28,11 @@ public sealed interface ReplacementCreator {
 
     }
 
+    static ReplacementCreator genderFio(String solutionVarName) {
+        return new UriConverterReplacement(new GenderStudentImReplacement(solutionVarName));
+
+    }
+
     String replacement(QuerySolution solution);
 }
 
@@ -129,7 +134,7 @@ final class GenderStudentReplacement implements ReplacementCreator {
         String fullName = solution.getLiteral(solutionVarName).getString();
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {
-            return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а' + " " + nameChunks[2] + " " + nameChunks[3];
+            return "Обучающегося";
         } else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
@@ -140,6 +145,43 @@ final class GenderStudentReplacement implements ReplacementCreator {
                 }
                 default -> {
                     return "Обучающегося";
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
+        }
+    }
+}
+
+
+
+final class GenderStudentImReplacement implements ReplacementCreator {
+
+    private final String solutionVarName;
+
+    GenderStudentImReplacement(String solutionVarName) {
+        this.solutionVarName = solutionVarName;
+    }
+
+    @Override
+    public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
+        String fullName = solution.getLiteral(solutionVarName).getString();
+        String[] nameChunks = fullName.split(" ");
+        if (nameChunks.length == 4) {
+            return "Обучающийся";
+        } else if (nameChunks.length == 3) {
+            Petrovich petrovich = new Petrovich();
+            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
+            // the best way because library does not support that case
+            switch (gender) {
+                case Female -> {
+                    return "Обучающаяся";
+                }
+                default -> {
+                    return "Обучающийся";
                 }
             }
         } else {

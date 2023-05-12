@@ -5,6 +5,7 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.PracticeF
 
 import java.util.Map;
 
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.genderFio;
 import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
 
 public record BachelorPracticeFeedback() implements PracticeFeedback {
@@ -17,7 +18,8 @@ public record BachelorPracticeFeedback() implements PracticeFeedback {
             "имяРуководителяОтОрганизации", simple("фио_орг_руководителя"),
             "должностьВОрганизации", simple("должность_орг_руководителя"),
             "темаВКР", simple("тема_вкр"),
-            "имяДляПодписи", simple("фио_подпись")
+            "имяДляПодписи", simple("фио_подпись"),
+            "обучФиоИм", genderFio("фио_студента")
     );
 
     @Override

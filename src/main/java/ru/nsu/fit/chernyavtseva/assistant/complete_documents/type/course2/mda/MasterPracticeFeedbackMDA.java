@@ -5,7 +5,7 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.PracticeF
 
 import java.util.Map;
 
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
 
 public record MasterPracticeFeedbackMDA() implements PracticeFeedbackMDA {
 
@@ -17,8 +17,10 @@ public record MasterPracticeFeedbackMDA() implements PracticeFeedbackMDA {
             "имяРуководителяОтОрганизации", simple("фио_орг_руководителя"),
             "должностьВОрганизации", simple("должность_орг_руководителя"),
             "темаВКР", simple("тема_вкр"),
-            "имяДляПодписи", simple("фио_подпись")
+            "имяДляПодписи", simple("фио_подпись"),
+            "обучФиоИм", genderFio("фио_студента")
     );
+
 
     @Override
     public Map<String, ReplacementCreator> replacements() {
