@@ -23,6 +23,11 @@ public sealed interface ReplacementCreator {
         return new UriConverterReplacement(new FullNameReplacement(solutionVarName, wordCase));
     }
 
+    static ReplacementCreator gender(String solutionVarName) {
+        return new UriConverterReplacement(new GenderStudentReplacement(solutionVarName));
+
+    }
+
     String replacement(QuerySolution solution);
 }
 
@@ -63,6 +68,7 @@ final class Simple implements ReplacementCreator {
     @Override
     public String replacement(QuerySolution solution) {
         if (solution.contains(varName)) {
+            System.out.println();
             return solution.getLiteral(varName).getString();
         }
         return null;
@@ -106,3 +112,39 @@ final class FullNameReplacement implements ReplacementCreator {
         }
     }
 }
+
+final class GenderStudentReplacement implements ReplacementCreator {
+
+    private final String solutionVarName;
+
+    GenderStudentReplacement(String solutionVarName) {
+        this.solutionVarName = solutionVarName;
+    }
+
+    @Override
+    public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
+        String fullName = solution.getLiteral(solutionVarName).getString();
+        String[] nameChunks = fullName.split(" ");
+        if (nameChunks.length == 4) {
+            return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а' + " " + nameChunks[2] + " " + nameChunks[3];
+        } else if (nameChunks.length == 3) {
+            Petrovich petrovich = new Petrovich();
+            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
+            // the best way because library does not support that case
+            switch (gender) {
+                case Female -> {
+                    return "Обучающейся";
+                }
+                default -> {
+                    return "Обучающегося";
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
+        }
+    }
+}
+

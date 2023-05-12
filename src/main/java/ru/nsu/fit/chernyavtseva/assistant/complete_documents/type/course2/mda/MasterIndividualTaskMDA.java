@@ -7,8 +7,7 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.Individua
 import java.util.HashMap;
 import java.util.Map;
 
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.fullName;
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
 
 public record MasterIndividualTaskMDA() implements IndividualTaskMDA {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
@@ -31,6 +30,7 @@ public record MasterIndividualTaskMDA() implements IndividualTaskMDA {
         DOC_FIELD_TO_SOLUTION.put("должностьРуководителяВКР", simple("должность_руководителя_вкр"));
         DOC_FIELD_TO_SOLUTION.put("должностьРуководителяКраткоВКР", simple("должность_руководителя_вкр_кратко"));
         DOC_FIELD_TO_SOLUTION.put("имяДляПодписи", simple("фио_подпись"));
+        DOC_FIELD_TO_SOLUTION.put("обучСтудОбрПадеж", gender("фио_студента"));
 
     }
 

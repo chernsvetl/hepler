@@ -7,8 +7,7 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.Applicati
 import java.util.HashMap;
 import java.util.Map;
 
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.fullName;
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
 
 public record MasterApplicationForPracticeTRPS() implements ApplicationPracticeTRPS {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
@@ -20,6 +19,7 @@ public record MasterApplicationForPracticeTRPS() implements ApplicationPracticeT
         DOC_FIELD_TO_SOLUTION.put("полноеНаименованиеМестаПрактики", simple("место_практики_полное_наименование"));
         DOC_FIELD_TO_SOLUTION.put("имяРуководителяВКР", simple("фио_руководителя"));
         DOC_FIELD_TO_SOLUTION.put("должностьРуководителяКраткоВКР", simple("должность_руководителя_вкр_кратко"));
+        DOC_FIELD_TO_SOLUTION.put("обучСтудОбрПадеж", gender("фио_студента"));
 
 
     }
