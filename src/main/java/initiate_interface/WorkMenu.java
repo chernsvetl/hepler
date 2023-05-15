@@ -423,18 +423,6 @@ public class WorkMenu {
                     frame8.setVisible(true);
                 }
 
-
-//                else if (button == createBachelorButton){
-//                    try {
-//                        Main.main();
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-//                    System.out.println("Documents generated!");
-//                    frame3.setVisible(true);
-//                }
-
-
                 else if  (button == createButton){
                     frame12.setVisible(true);
                 }
@@ -545,7 +533,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("All documents generated!"); // Все документы сгенерированы
+                    System.out.println("Все документы сгенерированы"); // All documents generated!
                     frame3.setVisible(true);
                 }
 
@@ -566,7 +554,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents IZ generated!"); // Документы с названием "Индивидуальное задание" сгенерированы
+                    System.out.println("Документы с названием \"Индивидуальное задание\" сгенерированы"); // Documents IZ generated!
                     frame3.setVisible(true);
                 }
 
@@ -587,7 +575,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents header feedback generated!"); // Документы с названием "Отзыв руководителя практики" сгенерированы
+                    System.out.println("Документы с названием \"Отзыв руководителя практики\" сгенерированы"); // Documents header feedback generated!
                     frame3.setVisible(true);
                 }
 
@@ -608,7 +596,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents intro practice generated!"); // Документы с названием "Заявление на практику" сгенерированы
+                    System.out.println("Документы с названием \"Заявление на практику\" сгенерированы"); //  Documents intro practice generated!
                     frame14.setVisible(true);
                 }
 
@@ -629,7 +617,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents report generated!"); // Документы с названием "Отчет" сгенерированы
+                    System.out.println("Документы с названием \"Отчет\" сгенерированы"); //  Documents report generated!
                     frame3.setVisible(true);
                 }
 
@@ -650,7 +638,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents VKR recenziya generated!"); // Документы с названием "Рецензия" сгенерированы
+                    System.out.println("Документы с названием \"Рецензия\" сгенерированы"); // Documents VKR recenziya generated!
                     frame3.setVisible(true);
                 }
 
@@ -686,7 +674,7 @@ public class WorkMenu {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Documents VKR otzyv generated!"); // Документы с названием "Отзыв руководителя ВКР" сгенерированы
+                    System.out.println("Документы с названием \"Отзыв руководителя ВКР\" сгенерированы"); //Documents VKR otzyv generated!
                     frame3.setVisible(true);
                 }
 
