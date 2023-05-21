@@ -6,8 +6,7 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.ReviewerF
 
 import java.util.Map;
 
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.fullName;
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
 
 public record BachelorReviewerFeedback() implements ReviewerFeedback {
 
@@ -17,7 +16,8 @@ public record BachelorReviewerFeedback() implements ReviewerFeedback {
             "имяРуководителяВКР", simple("фио_руководителя"),
             "темаВКР", simple("тема_вкр"),
             "фиоРецензента", simple("фио_рецензента"),
-            "должностьРецензента", simple("должность_рецензента")
+            "должностьРецензента", simple("должность_рецензента"),
+            "формаСтудента", genderForm("фио_студента")
     );
 
     @Override

@@ -33,6 +33,11 @@ public sealed interface ReplacementCreator {
 
     }
 
+    static ReplacementCreator genderForm(String solutionVarName) {
+        return new UriConverterReplacement(new GenderFormStudentReplacement(solutionVarName));
+
+    }
+
     String replacement(QuerySolution solution);
 }
 
@@ -154,6 +159,40 @@ final class GenderStudentReplacement implements ReplacementCreator {
 }
 
 
+final class GenderFormStudentReplacement implements ReplacementCreator {
+
+    private final String solutionVarName;
+
+    GenderFormStudentReplacement(String solutionVarName) {
+        this.solutionVarName = solutionVarName;
+    }
+
+    @Override
+    public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
+        String fullName = solution.getLiteral(solutionVarName).getString();
+        String[] nameChunks = fullName.split(" ");
+        if (nameChunks.length == 4) {
+            return "студенту";
+        } else if (nameChunks.length == 3) {
+            Petrovich petrovich = new Petrovich();
+            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
+            // the best way because library does not support that case
+            switch (gender) {
+                case Female -> {
+                    return "студентке";
+                }
+                default -> {
+                    return "студенту";
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
+        }
+    }
+}
 
 final class GenderStudentImReplacement implements ReplacementCreator {
 
