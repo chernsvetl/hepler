@@ -51,8 +51,7 @@ final class Bachelor implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
         return new DocumentTemplate[]{new BachelorSupervisorFeedback(),
-                new BachelorReviewerFeedback(), new BachelorIndividualTask(),
-                new BachelorPracticeReport(), new BachelorPracticeFeedback(), new BachelorSupervisorFeedback2(), new BachelorApplicationForPractice()};
+                 new BachelorIndividualTask(), new BachelorPracticeReport(), new BachelorPracticeFeedback(), new BachelorSupervisorFeedback2(), new BachelorApplicationForPractice()};
     }
 }
 

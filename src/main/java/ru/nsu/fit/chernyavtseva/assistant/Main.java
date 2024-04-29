@@ -14,6 +14,7 @@ public class Main {
     private static final String MODEL_FILENAME = "/main_students_all.owl";
     private static final Degree[] DEGREES = Degree.all();
 
+
     public static void main(String[] args) throws IOException {
         generateTemplates(DocumentTemplateFilter.EMPTY);
     }
