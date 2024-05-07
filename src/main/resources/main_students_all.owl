@@ -2154,6 +2154,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#НайдановЧимитАнтонович">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР"/>
         <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаДляАвтоматизированногоПорожденияДокументовКафедры"/>
+        <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПомощника"/>
         <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаПоПравильномуПитанию"/>
         <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПерсональногоПомощникаДляПланированияТуристическихМаршрутов"/>
         <кафедра:руководит_с rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПрограммногоСредстваДляУправленияТекстовымиЗаданиямиВЦФТ-Банке"/>
@@ -2258,6 +2259,7 @@
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАвтоматизированнойСистемыАнализаПартнеровКоммерческогоБанка"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАвтоматизированныхМетодовВеденияДиалогаСПользователемДляПроведенияСобеседований"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаДляАвтоматизированногоПорожденияДокументовКафедры"/>
+        <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПомощника"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМетодовУлучшенияНейронныхСетейПриПомощиАлгоритмаМягкойПодпространственнойКластеризации"/>
         <кафедра:согласовывает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииГрамматическихконструкций,ТождественныхПоСмыслу"/>
         <кафедра:ДатаБакРук rdf:datatype="http://www.w3.org/2001/XMLSchema#string">«9» февраля 2023 г.</кафедра:ДатаБакРук>
@@ -2601,7 +2603,12 @@
         <кафедра:Тема rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Разработка интеллектуального помощника для автоматизированного порождения документов кафедры</кафедра:Тема>
     </owl:NamedIndividual>
     
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПомощника -->
 
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПомощника">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВКР"/>
+        <кафедра:Тема rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Разработка помощника</кафедра:Тема>
+    </owl:NamedIndividual>
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаПоПравильномуПитанию -->
 
@@ -3171,6 +3178,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
         <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#АвтоматизированныеМетодыИзвлеченияЭмоцийИзТекстовРусскогоЯзыка"/>
         <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаИнтеллектуальногоПомощникаДляАвтоматизированногоПорожденияДокументовКафедры"/>
+        <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПомощника"/>
         <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаМетодовВыраженияЭмоцийДляВеденияДиалогаСПользователем"/>
         <кафедра:рецензирует rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаАлгоритмаАнализаИКлассификацииГрамматическихконструкций,ТождественныхПоСмыслу"/>
         <кафедра:Должность rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к.ф.-м.н.,
@@ -3267,26 +3275,23 @@
         <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Чернявцева Светлана Игоревна</кафедра:ФИО>
         <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19204</кафедра:группа>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЧерпаковКириллМаксимович -->
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ШабалинАртем -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЧерпаковКириллМаксимович">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ШабалинАртем">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Бакалавриат"/>
-        <кафедра:защищает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаБлокчейнПлатформыДляОсуществленияСделокСДинамическимДисконтированием"/>
-        <кафедра:на_НГУ_практике_у rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#СазоноваПолинаАндреевна"/>
+        <кафедра:защищает rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#РазработкаПомощника"/>
+        <кафедра:на_НГУ_практике_у rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПальчуновДмитрийЕвгеньевич"/>
         <кафедра:на_орг_практике_у rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПальчуновДмитрийЕвгеньевич"/>
         <кафедра:Место_практики_полное_наименование rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ФГБУН Институт математики им. С. Л. Соболева СО РАН, Лаборатория теории вычислимости и прикладной логики, 630090, Новосибирская обл., Новосибирск, пр. Академика Коптюга, 4</кафедра:Место_практики_полное_наименование>
         <кафедра:Место_прохождения_практики rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИМ СО РАН, Лаборатория теории вычислимости и прикладной логики</кафедра:Место_прохождения_практики>
         <кафедра:Наименование_организации rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ИМ СО РАН</кафедра:Наименование_организации>
         <кафедра:Приказ_на_прохождение_практики rdf:datatype="http://www.w3.org/2001/XMLSchema#string">«9» февраля 2023 г. №12-ас</кафедра:Приказ_на_прохождение_практики>
         <кафедра:Профиль_обучения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Программная инженерия и компьютерные науки</кафедра:Профиль_обучения>
-        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Черпаков Кирилл Максимович</кафедра:ФИО>
-        <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19201</кафедра:группа>
+        <кафедра:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Шабалин Артем</кафедра:ФИО>
+        <кафедра:группа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11111</кафедра:группа>
     </owl:NamedIndividual>
-    
-
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ЧесноковВадимВладимирович -->
 

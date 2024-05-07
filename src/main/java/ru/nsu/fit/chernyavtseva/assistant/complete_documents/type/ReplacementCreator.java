@@ -105,7 +105,11 @@ final class FullNameReplacement implements ReplacementCreator {
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {
             return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а' + " " + nameChunks[2] + " " + nameChunks[3];
-        } else if (nameChunks.length == 3) {
+        }
+        else if (nameChunks.length == 2) {
+            return nameChunks[0] + 'а' + " " + nameChunks[1] + 'а';
+        }
+        else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             String lastName = petrovich.say(nameChunks[0], NameType.LastName, gender, wordCase);
@@ -140,7 +144,11 @@ final class GenderStudentReplacement implements ReplacementCreator {
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {
             return "Обучающегося";
-        } else if (nameChunks.length == 3) {
+        }
+        if (nameChunks.length == 2) {
+            return "Обучающегося";
+        }
+        else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             // the best way because library does not support that case
@@ -176,7 +184,11 @@ final class GenderFormStudentReplacement implements ReplacementCreator {
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {
             return "студенту";
-        } else if (nameChunks.length == 3) {
+        }
+        if (nameChunks.length == 2) {
+            return "студенту";
+        }
+        else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             // the best way because library does not support that case
@@ -211,7 +223,11 @@ final class GenderStudentImReplacement implements ReplacementCreator {
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {
             return "Обучающийся";
-        } else if (nameChunks.length == 3) {
+        }
+        if (nameChunks.length == 2) {
+            return "Обучающийся";
+        }
+        else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             // the best way because library does not support that case
