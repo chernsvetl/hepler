@@ -12,7 +12,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.*;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.MasterApplicationForPracticeMDA;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.MasterApplicationForPracticeTRPS;
-import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.BachelorApplicationForPractice;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.piikn.BachelorApplicationForPractice;
 
 
 import javax.swing.*;

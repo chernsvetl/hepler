@@ -1,4 +1,4 @@
-package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4;
+package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.knis;
 
 import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
 
-public record BachelorIndividualTask() implements IndividualTask {
+public record BachelorIndividualTaskKnis() implements IndividualTask {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
 
     static {
@@ -41,6 +41,6 @@ public record BachelorIndividualTask() implements IndividualTask {
 
     @Override
     public String fileName() {
-        return "Прил 1_ИЗ на практику_Бакалавриат_ПИиКН_8 семестр.docx";
+        return "Прил 1_ИЗ на практику_Бакалавриат_КНиС_8 семестр.docx";
     }
 }

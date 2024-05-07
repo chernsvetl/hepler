@@ -1,4 +1,4 @@
-package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4;
+package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.piikn;
 
 import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator;

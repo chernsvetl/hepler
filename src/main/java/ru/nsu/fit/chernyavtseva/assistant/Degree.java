@@ -3,11 +3,12 @@ package ru.nsu.fit.chernyavtseva.assistant;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.DocumentTemplate;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.*;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.*;
-import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.*;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.knis.*;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.piikn.*;
 
 sealed public interface Degree {
 
-    Degree[] DEGREES = new Degree[]{new Bachelor(), new MasterMDA(), new MasterTPRS()};
+    Degree[] DEGREES = new Degree[]{new BachelorPikn(), new BachelorKnis(), new MasterMDA(), new MasterTPRS()};
 
     static Degree[] all() {
         return DEGREES;
@@ -22,7 +23,7 @@ sealed public interface Degree {
     DocumentTemplate[] toGenerate();
 }
 
-final class Bachelor implements Degree {
+final class BachelorPikn implements Degree {
 
     /**
      * Degree name, used inside query
@@ -37,7 +38,7 @@ final class Bachelor implements Degree {
      */
     @Override
     public String dir() {
-        return "bachelors/4th_course";
+        return "bachelors/4th_course/piikn";
     }
 
     @Override
@@ -90,6 +91,47 @@ final class MasterMDA implements Degree {
                 new MasterSupervisorFeedbackMDA(), new MasterSupervisorFeedbackMDA2(),
                 new MasterReviewerFeedbackMDA(), new MasterIndividualTaskMDA(),
                 new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA(), new MasterApplicationForPracticeMDA()};
+    }
+}
+
+final class BachelorKnis implements Degree {
+
+    /**
+     * Degree name, used inside query
+     */
+    @Override
+    public String name() {
+        return "Бакалавриат";
+    }
+
+    /**
+     * Subdirectory where to search for tempates / where to dump generated docs
+     */
+    @Override
+    public String dir() {
+        return "bachelors/4th_course/knis";
+    }
+
+    @Override
+    public String profile() {
+        return "Компьютерные науки и системотехника";
+    }
+
+    /**
+     * Which templates should be generated
+     */
+    @Override
+    public DocumentTemplate[] toGenerate() {
+
+
+        return new DocumentTemplate[]{
+                new BachelorSupervisorFeedbackKnis(),
+                new BachelorIndividualTaskKnis(),
+                new BachelorPracticeReportKnis(),
+                new BachelorPracticeFeedbackKnis(),
+                new BachelorSupervisorFeedback2Knis(),
+                new BachelorApplicationForPracticeKnis()
+        };
     }
 }
 
