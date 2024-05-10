@@ -8,7 +8,7 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.piikn.
 
 sealed public interface Degree {
 
-    Degree[] DEGREES = new Degree[]{new BachelorPikn(), new BachelorKnis(), new MasterMDA(), new MasterTPRS()};
+    Degree[] DEGREES = new Degree[]{new BachelorPikn(), new BachelorKnis(), new MasterMDA(), new MasterTRPS()};
 
     static Degree[] all() {
         return DEGREES;
@@ -52,7 +52,14 @@ final class BachelorPikn implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
         return new DocumentTemplate[]{new BachelorSupervisorFeedback(),
-                 new BachelorIndividualTask(), new BachelorPracticeReport(), new BachelorPracticeFeedback(), new BachelorSupervisorFeedback2(), new BachelorApplicationForPractice()};
+                 new BachelorIndividualTask(), new BachelorPracticeReport(),
+                new BachelorPracticeFeedback(), new BachelorSupervisorFeedback2(),
+                new BachelorApplicationForPractice(), new BachelorAnnotationPikn(),
+                new BachelorCalenderPikn(), new BachelorListLiteraturePikn(),
+                new BachelorLastPagePikn(), new BachelorNormPikn(),
+                new BachelorTaskPikn(), new BachelorTaskPikn2(),
+                new BachelorTitulPikn(), new BachelorCalenderPikn2()
+        };
     }
 }
 
@@ -90,7 +97,15 @@ final class MasterMDA implements Degree {
         return new DocumentTemplate[]{
                 new MasterSupervisorFeedbackMDA(), new MasterSupervisorFeedbackMDA2(),
                 new MasterReviewerFeedbackMDA(), new MasterIndividualTaskMDA(),
-                new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA(), new MasterApplicationForPracticeMDA()};
+                new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA(),
+                new MasterApplicationForPracticeMDA(),
+                new MasterAnnotationMda(), new MasterCalenderMda2(),
+                new MasterCalenderMda(), new MasterListLiteratureMda(),
+                new MasterLastPageMda(), new MasterNormMda(),
+                new MasterTaskMda(), new MasterTaskMda2(),
+                new MasterTitulMda()
+
+        };
     }
 }
 
@@ -130,12 +145,17 @@ final class BachelorKnis implements Degree {
                 new BachelorPracticeReportKnis(),
                 new BachelorPracticeFeedbackKnis(),
                 new BachelorSupervisorFeedback2Knis(),
-                new BachelorApplicationForPracticeKnis()
+                new BachelorApplicationForPracticeKnis(),
+                new BachelorAnnotationKnis(),
+                new BachelorCalenderKnis(), new BachelorListLiteratureKnis(),
+                new BachelorLastPageKnis(), new BachelorNormKnis(),
+                new BachelorTaskKnis(), new BachelorTaskKnis2(),
+                new BachelorTitulKnis(), new BachelorCalenderKnis2()
         };
     }
 }
 
-final class MasterTPRS implements Degree {
+final class MasterTRPS implements Degree {
 
     @Override
     public String name() {
@@ -144,7 +164,7 @@ final class MasterTPRS implements Degree {
 
     @Override
     public String dir() {
-        return "masters/2nd_course/tprs";
+        return "masters/2nd_course/trps";
     }
 
     @Override
@@ -158,6 +178,11 @@ final class MasterTPRS implements Degree {
                 new MasterSupervisorFeedbackTRPS(),
                 new MasterReviewerFeedbackTRPS(), new MasterIndividualTaskTRPS(),
                 new MasterPracticeReportTRPS(), new MasterPracticeFeedbackTRPS(),
-                new MasterSupervisorFeedbackTRPS2(), new MasterApplicationForPracticeTRPS()};
+                new MasterSupervisorFeedbackTRPS2(), new MasterApplicationForPracticeTRPS(),
+                new MasterAnnotationTrps(), new MasterCalenderTrps(), new MasterListLiteratureTrps(),
+                new MasterLastPageTrps(), new MasterNormTrps(),
+                new MasterTaskTrps(), new MasterTaskTrps2(),
+                new MasterTitulTrps(), new MasterCalenderTrps2()
+        };
     }
 }

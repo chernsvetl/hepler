@@ -40,6 +40,11 @@ public record StudentsQuery(String degree, String profile) {
             ?руководитель my:Должность_руководителя_ВКР_кратко ?должность_руководителя_вкр_кратко .
  
             ?вкр my:Тема ?тема_вкр .
+            
+            optional { ?рецензент my:рецензирует ?вкр .
+            ?рецензент my:ФИО ?фио_рецензента .
+            ?рецензент my:Должность ?должность_рецензента .             
+            }            
                   
             optional { ?соруководитель my:руководит_с ?вкр .
              ?соруководитель my:ФИО ?фио_соруководителя_вкр .
@@ -54,3 +59,4 @@ public record StudentsQuery(String degree, String profile) {
         return QUERY_TEMPLATE.replace("$degree", degree).replace("$profile", profile);
     }
 }
+
