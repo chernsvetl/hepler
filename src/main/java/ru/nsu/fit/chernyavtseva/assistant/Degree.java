@@ -58,7 +58,7 @@ final class BachelorPikn implements Degree {
                 new BachelorCalenderPikn(), new BachelorListLiteraturePikn(),
                 new BachelorLastPagePikn(), new BachelorNormPikn(),
                 new BachelorTaskPikn(), new BachelorTaskPikn2(),
-                new BachelorTitulPikn(), new BachelorCalenderPikn2()
+                new BachelorTitulPikn(), new BachelorCalenderPikn2(),  new BachelorPublicPikn()
         };
     }
 }
@@ -95,6 +95,7 @@ final class MasterMDA implements Degree {
 
 
         return new DocumentTemplate[]{
+                /*
                 new MasterSupervisorFeedbackMDA(), new MasterSupervisorFeedbackMDA2(),
                 new MasterReviewerFeedbackMDA(), new MasterIndividualTaskMDA(),
                 new MasterPracticeReportMDA(), new MasterPracticeFeedbackMDA(),
@@ -103,8 +104,8 @@ final class MasterMDA implements Degree {
                 new MasterCalenderMda(), new MasterListLiteratureMda(),
                 new MasterLastPageMda(), new MasterNormMda(),
                 new MasterTaskMda(), new MasterTaskMda2(),
-                new MasterTitulMda()
-
+                new MasterTitulMda(),  new MasterPublicMad()
+                 */
         };
     }
 }
@@ -140,6 +141,7 @@ final class BachelorKnis implements Degree {
 
 
         return new DocumentTemplate[]{
+                /*
                 new BachelorSupervisorFeedbackKnis(),
                 new BachelorIndividualTaskKnis(),
                 new BachelorPracticeReportKnis(),
@@ -150,7 +152,8 @@ final class BachelorKnis implements Degree {
                 new BachelorCalenderKnis(), new BachelorListLiteratureKnis(),
                 new BachelorLastPageKnis(), new BachelorNormKnis(),
                 new BachelorTaskKnis(), new BachelorTaskKnis2(),
-                new BachelorTitulKnis(), new BachelorCalenderKnis2()
+                new BachelorTitulKnis(), new BachelorCalenderKnis2(), new BachelorPublicKnis()
+        */
         };
     }
 }
@@ -175,6 +178,7 @@ final class MasterTRPS implements Degree {
     @Override
     public DocumentTemplate[] toGenerate() {
         return new DocumentTemplate[]{
+                /*
                 new MasterSupervisorFeedbackTRPS(),
                 new MasterReviewerFeedbackTRPS(), new MasterIndividualTaskTRPS(),
                 new MasterPracticeReportTRPS(), new MasterPracticeFeedbackTRPS(),
@@ -182,7 +186,9 @@ final class MasterTRPS implements Degree {
                 new MasterAnnotationTrps(), new MasterCalenderTrps(), new MasterListLiteratureTrps(),
                 new MasterLastPageTrps(), new MasterNormTrps(),
                 new MasterTaskTrps(), new MasterTaskTrps2(),
-                new MasterTitulTrps(), new MasterCalenderTrps2()
+                new MasterTitulTrps(), new MasterCalenderTrps2(),  new MasterPublicTrps()
+
+   */
         };
     }
 }

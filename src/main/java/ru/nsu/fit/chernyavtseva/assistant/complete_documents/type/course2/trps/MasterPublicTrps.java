@@ -1,25 +1,25 @@
-package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.piikn;
+package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps;
 
 import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator;
-import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.NormPikn;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.PublicPikn;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.PublicTrps;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.fullName;
 import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
 
-public record BachelorNormPikn() implements NormPikn {
+
+public record MasterPublicTrps() implements PublicTrps {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
 
     static {
         DOC_FIELD_TO_SOLUTION = new HashMap<>();
         DOC_FIELD_TO_SOLUTION.put("имяСтудентаР", fullName("фио_студента", Case.Genitive));
         DOC_FIELD_TO_SOLUTION.put("группаСтудента", simple("группа_студента"));
-        DOC_FIELD_TO_SOLUTION.put("темаВКР", simple("тема_вкр"));
-        DOC_FIELD_TO_SOLUTION.put("имяСтудентаИ", simple("фио_студента"));
-
     }
-
     @Override
     public Map<String, ReplacementCreator> replacements() {
         return DOC_FIELD_TO_SOLUTION;
@@ -27,6 +27,7 @@ public record BachelorNormPikn() implements NormPikn {
 
     @Override
     public String fileName() {
-        return "Бакалавриат_Лист нормоконтроля_ПИиКН.docx";
+        return "ТРПС_Список_публикаций.docx";
     }
 }
+

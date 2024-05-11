@@ -38,6 +38,11 @@ public sealed interface ReplacementCreator {
 
     }
 
+    static ReplacementCreator genderFormTwor(String solutionVarName) {
+        return new UriConverterReplacement(new GenderStudentTworReplacement(solutionVarName));
+
+    }
+
     String replacement(QuerySolution solution);
 }
 
@@ -237,6 +242,45 @@ final class GenderStudentImReplacement implements ReplacementCreator {
                 }
                 default -> {
                     return "Обучающийся";
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
+        }
+    }
+}
+
+
+final class GenderStudentTworReplacement implements ReplacementCreator {
+
+    private final String solutionVarName;
+
+    GenderStudentTworReplacement(String solutionVarName) {
+        this.solutionVarName = solutionVarName;
+    }
+
+    @Override
+    public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
+        String fullName = solution.getLiteral(solutionVarName).getString();
+        String[] nameChunks = fullName.split(" ");
+        if (nameChunks.length == 4) {
+            return "студентом";
+        }
+        if (nameChunks.length == 2) {
+            return "студентом";
+        }
+        else if (nameChunks.length == 3) {
+            Petrovich petrovich = new Petrovich();
+            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
+            switch (gender) {
+                case Female -> {
+                    return "студенткой";
+                }
+                default -> {
+                    return "студентом";
                 }
             }
         } else {
