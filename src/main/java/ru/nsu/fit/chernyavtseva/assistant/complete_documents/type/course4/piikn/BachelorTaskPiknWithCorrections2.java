@@ -2,17 +2,15 @@ package ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course4.piikn
 
 import com.github.petrovich4j.Case;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator;
-import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.ListLiteratirePikn;
-import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.NormPikn;
-import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.TaskPikn;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.TaskPiknCor;
+import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.TaskPiknCor2;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.genderFormTwor;
 
-public record BachelorTaskPikn() implements TaskPikn {
+public record BachelorTaskPiknWithCorrections2() implements TaskPiknCor2 {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
 
     static {
@@ -35,7 +33,8 @@ public record BachelorTaskPikn() implements TaskPikn {
         DOC_FIELD_TO_SOLUTION.put("бакДатаРук", simple("бак_дата_рук"));
         DOC_FIELD_TO_SOLUTION.put("имяСтудентаД", fullName("фио_студента", Case.Dative));
         DOC_FIELD_TO_SOLUTION.put("формаСтудентаДат", genderFormTwor("фио_студента"));
- }
+    // add key for low with corrections
+    }
 
     @Override
     public Map<String, ReplacementCreator> replacements() {
@@ -44,14 +43,12 @@ public record BachelorTaskPikn() implements TaskPikn {
 
     @Override
     public String fileName() {
-        return "Бакалавриат_Задание_на_ВКР_ПИиКН.docx";
+        return "Бакалавриат_Задание_на_ВКР_ПИиКН_с_соруководителем_и_корректировкой.docx";
     }
-
 
     // replace data, presented follow, change УчСтепРукВКР to low with correctness
     @Override
     public boolean generateFor(Map<String, String> studentReplacements) {
-        return (!studentReplacements.containsKey("фиоСоруководителяВКР") && !studentReplacements.containsKey("должностьСоруководителяВКР")
-                && !studentReplacements.containsKey("УчСтепРукВКР"));
+        return (studentReplacements.containsKey("фиоСоруководителяВКР") && studentReplacements.containsKey("УчСтепРукВКР"));
     }
 }

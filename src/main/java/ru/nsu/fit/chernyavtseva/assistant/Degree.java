@@ -58,7 +58,9 @@ final class BachelorPikn implements Degree {
                 new BachelorCalenderPikn(), new BachelorListLiteraturePikn(),
                 new BachelorLastPagePikn(), new BachelorNormPikn(),
                 new BachelorTaskPikn(), new BachelorTaskPikn2(),
-                new BachelorTitulPikn(), new BachelorCalenderPikn2(),  new BachelorPublicPikn()
+                new BachelorTitulPikn(), new BachelorCalenderPikn2(),
+                new BachelorPublicPikn(), new BachelorTaskPiknWithCorrections(),
+                new BachelorTaskPiknWithCorrections2()
         };
     }
 }

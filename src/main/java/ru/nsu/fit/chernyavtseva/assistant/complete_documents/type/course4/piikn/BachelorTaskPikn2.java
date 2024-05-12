@@ -37,6 +37,7 @@ public record BachelorTaskPikn2() implements TaskPikn2 {
         DOC_FIELD_TO_SOLUTION.put("фиоСоруководителяВКР", simple("фио_соруководителя_вкр"));
         DOC_FIELD_TO_SOLUTION.put("должностьСоруководителяВКР", simple("должность_соруководителя_вкр"));
         DOC_FIELD_TO_SOLUTION.put("формаСтудентаДат", genderFormTwor("фио_студента"));
+
     }
 
     @Override
@@ -49,8 +50,12 @@ public record BachelorTaskPikn2() implements TaskPikn2 {
         return "Бакалавриат_Задание_на_ВКР_ПИиКН_с_соруководителем.docx";
     }
 
+    /* replace data, presented follow, change формаСтудентаДат to low with correctness
+    now this doc couldn't generate because формаСтудентаДат you need to change (how it to do it I wrote earlier)
+     */
     @Override
     public boolean generateFor(Map<String, String> studentReplacements) {
-        return (studentReplacements.containsKey("фиоСоруководителяВКР") && studentReplacements.containsKey("должностьСоруководителяВКР"));
+        return (studentReplacements.containsKey("фиоСоруководителяВКР") && studentReplacements.containsKey("должностьСоруководителяВКР")
+                && !studentReplacements.containsKey("формаСтудентаДат"));
     }
 }
