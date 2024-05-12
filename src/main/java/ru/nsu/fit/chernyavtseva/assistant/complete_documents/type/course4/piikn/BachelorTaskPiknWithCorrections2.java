@@ -32,7 +32,7 @@ public record BachelorTaskPiknWithCorrections2() implements TaskPiknCor2 {
         DOC_FIELD_TO_SOLUTION.put("обучСтудОбрПадеж", gender("фио_студента"));
         DOC_FIELD_TO_SOLUTION.put("бакДатаРук", simple("бак_дата_рук"));
         DOC_FIELD_TO_SOLUTION.put("имяСтудентаД", fullName("фио_студента", Case.Dative));
-        DOC_FIELD_TO_SOLUTION.put("формаСтудентаДат", genderFormTwor("фио_студента"));
+        DOC_FIELD_TO_SOLUTION.put("формаСтудентаДат", genderFormDatStud("фио_студента"));
     // add key for low with corrections
     }
 

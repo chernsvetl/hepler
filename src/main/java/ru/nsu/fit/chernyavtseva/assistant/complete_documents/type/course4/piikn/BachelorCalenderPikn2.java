@@ -33,7 +33,7 @@ public record BachelorCalenderPikn2() implements CalenderPikn2 {
         DOC_FIELD_TO_SOLUTION.put("имяДляПодписи", simple("фио_подпись"));
         DOC_FIELD_TO_SOLUTION.put("обучСтудОбрПадеж", gender("фио_студента"));
         DOC_FIELD_TO_SOLUTION.put("бакДатаРук", simple("бак_дата_рук"));
-
+        DOC_FIELD_TO_SOLUTION.put("студИмФорм", genderFormImStud("фио_студента"));
     }
 
     @Override

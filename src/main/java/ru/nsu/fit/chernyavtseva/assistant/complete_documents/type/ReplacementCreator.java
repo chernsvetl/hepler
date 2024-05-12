@@ -43,6 +43,16 @@ public sealed interface ReplacementCreator {
 
     }
 
+    static ReplacementCreator genderFormImStud(String solutionVarName) {
+        return new UriConverterReplacement(new GenderStudentImStudReplacement(solutionVarName));
+
+    }
+
+    static ReplacementCreator genderFormDatStud(String solutionVarName) {
+        return new UriConverterReplacement(new GenderDatFormStudentReplacement(solutionVarName));
+
+    }
+
     String replacement(QuerySolution solution);
 }
 
@@ -256,6 +266,85 @@ final class GenderStudentTworReplacement implements ReplacementCreator {
     private final String solutionVarName;
 
     GenderStudentTworReplacement(String solutionVarName) {
+        this.solutionVarName = solutionVarName;
+    }
+
+    @Override
+    public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
+        String fullName = solution.getLiteral(solutionVarName).getString();
+        String[] nameChunks = fullName.split(" ");
+        if (nameChunks.length == 4) {
+            return "студентом";
+        }
+        if (nameChunks.length == 2) {
+            return "студентом";
+        }
+        else if (nameChunks.length == 3) {
+            Petrovich petrovich = new Petrovich();
+            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
+            switch (gender) {
+                case Female -> {
+                    return "студенткой";
+                }
+                default -> {
+                    return "студентом";
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
+        }
+    }
+}
+
+
+final class GenderStudentImStudReplacement implements ReplacementCreator {
+
+    private final String solutionVarName;
+
+    GenderStudentImStudReplacement(String solutionVarName) {
+        this.solutionVarName = solutionVarName;
+    }
+
+    @Override
+    public String replacement(QuerySolution solution) {
+        if (!solution.contains(solutionVarName)) {
+            return null;
+        }
+        String fullName = solution.getLiteral(solutionVarName).getString();
+        String[] nameChunks = fullName.split(" ");
+        if (nameChunks.length == 4) {
+            return "Студент";
+        }
+        if (nameChunks.length == 2) {
+            return "Студент";
+        }
+        else if (nameChunks.length == 3) {
+            Petrovich petrovich = new Petrovich();
+            Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
+            switch (gender) {
+                case Female -> {
+                    return "Студентка";
+                }
+                default -> {
+                    return "Студент";
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("No full name in variable " + solutionVarName + "; value: " + fullName);
+        }
+    }
+}
+
+
+
+final class GenderDatFormStudentReplacement implements ReplacementCreator {
+
+    private final String solutionVarName;
+
+    GenderDatFormStudentReplacement(String solutionVarName) {
         this.solutionVarName = solutionVarName;
     }
 

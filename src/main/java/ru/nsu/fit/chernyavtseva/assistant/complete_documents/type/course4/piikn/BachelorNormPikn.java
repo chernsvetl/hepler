@@ -5,8 +5,8 @@ import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCre
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.NormPikn;
 import java.util.HashMap;
 import java.util.Map;
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.fullName;
-import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.simple;
+
+import static ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.ReplacementCreator.*;
 
 public record BachelorNormPikn() implements NormPikn {
     private static final Map<String, ReplacementCreator> DOC_FIELD_TO_SOLUTION;
@@ -17,7 +17,7 @@ public record BachelorNormPikn() implements NormPikn {
         DOC_FIELD_TO_SOLUTION.put("группаСтудента", simple("группа_студента"));
         DOC_FIELD_TO_SOLUTION.put("темаВКР", simple("тема_вкр"));
         DOC_FIELD_TO_SOLUTION.put("имяСтудентаИ", simple("фио_студента"));
-
+        DOC_FIELD_TO_SOLUTION.put("студИмФорм", genderFormImStud("фио_студента"));
     }
 
     @Override
@@ -27,6 +27,6 @@ public record BachelorNormPikn() implements NormPikn {
 
     @Override
     public String fileName() {
-        return "Бакалавриат_Лист нормоконтроля_ПИиКН.docx";
+        return "Бакалавриат_Лист_нормоконтроля_ПИиКН.docx";
     }
 }

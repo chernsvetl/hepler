@@ -32,6 +32,8 @@ public record BachelorCalenderPikn() implements CalenderPikn {
         DOC_FIELD_TO_SOLUTION.put("имяДляПодписи", simple("фио_подпись"));
         DOC_FIELD_TO_SOLUTION.put("обучСтудОбрПадеж", gender("фио_студента"));
         DOC_FIELD_TO_SOLUTION.put("бакДатаРук", simple("бак_дата_рук"));
+        DOC_FIELD_TO_SOLUTION.put("студИмФорм", genderFormImStud("фио_студента"));
+
 
     }
 

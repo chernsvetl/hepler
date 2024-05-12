@@ -36,7 +36,7 @@ public record BachelorTaskPikn2() implements TaskPikn2 {
         DOC_FIELD_TO_SOLUTION.put("УчСтепРукВКР", simple("ученая_степень_руководителя_ВКР"));
         DOC_FIELD_TO_SOLUTION.put("фиоСоруководителяВКР", simple("фио_соруководителя_вкр"));
         DOC_FIELD_TO_SOLUTION.put("должностьСоруководителяВКР", simple("должность_соруководителя_вкр"));
-        DOC_FIELD_TO_SOLUTION.put("формаСтудентаДат", genderFormTwor("фио_студента"));
+        DOC_FIELD_TO_SOLUTION.put("формаСтудентаДат", genderFormDatStud("фио_студента"));
 
     }
 
