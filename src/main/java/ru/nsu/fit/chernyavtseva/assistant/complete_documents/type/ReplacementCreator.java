@@ -267,20 +267,20 @@ final class GenderStudentTworReplacement implements ReplacementCreator {
         String fullName = solution.getLiteral(solutionVarName).getString();
         String[] nameChunks = fullName.split(" ");
         if (nameChunks.length == 4) {
-            return "студентом";
+            return "Студенту";
         }
         if (nameChunks.length == 2) {
-            return "студентом";
+            return "Студенту";
         }
         else if (nameChunks.length == 3) {
             Petrovich petrovich = new Petrovich();
             Gender gender = petrovich.gender(nameChunks[2], Gender.Both);
             switch (gender) {
                 case Female -> {
-                    return "студенткой";
+                    return "Студентке";
                 }
                 default -> {
-                    return "студентом";
+                    return "Студенту";
                 }
             }
         } else {
