@@ -1,5 +1,6 @@
 package normative_control.validation;
 
+import static normative_control.notifications.Notifications.SPARQL_ERROR;
 import static normative_control.validation.DocumentValidator.extractFromSparql;
 import static normative_control.validation.DocumentValidator.validateDocxFiles;
 import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
@@ -12,7 +13,7 @@ public class Main {
         if (data != null) {
             validateDocxFiles(docxDirectoryPath, data);
         } else {
-            System.err.println("Не удалось извлечь данные из SPARQL запроса.");
+            System.err.println(SPARQL_ERROR);
         }
     }
 }

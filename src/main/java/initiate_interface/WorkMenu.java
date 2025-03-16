@@ -9,6 +9,7 @@ import initiate_interface.Show.MastersShow;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import normative_control.validation.Main;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.*;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.MasterApplicationForPracticeMDA;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.MasterApplicationForPracticeTRPS;
@@ -42,7 +43,7 @@ public class WorkMenu {
     private JButton deleteButtonbach4, exitButton, createButton, menuButton, backButtonMenu, watchButton, backButton, thirdCourseButton, forthCourseButton,
             allDocsView, bachelors, masters, mastersDelete, bachelorsDelete, deleteButton, deleteButtonMag2,
             bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton, createMasterButtonTRPS, backBtnFromGen,
-    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn, applicationPractice, backBtnApp;
+    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn, applicationPractice, backBtnApp, validateButton;
     private JLabel label;
 
     private String title = "Интеллектуальный помощник секретаря кафедры";
@@ -179,15 +180,12 @@ public class WorkMenu {
         createButton.setBorder(new RoundedBorder(30));
         createButton.setForeground(Color.BLUE);
 
-
-
         createMasterButton = new JButton("Магистратура 2 курс КМиАД 4 семестр");
         createMasterButton.setForeground(Color.decode("#000000"));
         createMasterButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         createMasterButton.setBounds(450,190,325,70);
         createMasterButton.setBorder(new RoundedBorder(30));
         createMasterButton.setForeground(Color.BLUE);
-
 
         createMasterButtonTRPS = new JButton("Магистратура 2 курс ТРПС 4 семестр");
         createMasterButtonTRPS.setForeground(Color.decode("#000000"));
@@ -203,7 +201,6 @@ public class WorkMenu {
         createBachelorButton.setBorder(new RoundedBorder(30));
         createBachelorButton.setForeground(Color.BLUE);
 
-
         allDocsCreateBtn = new JButton("Все документы");
         allDocsCreateBtn.setForeground(Color.decode("#000000"));
         allDocsCreateBtn.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
@@ -217,8 +214,6 @@ public class WorkMenu {
         applicationPractice.setBounds(450,100,325,70);
         applicationPractice.setBorder(new RoundedBorder(30));
         applicationPractice.setForeground(Color.BLUE);
-
-
 
         izBtn = new JButton("Индивидуальное задание");
         izBtn.setForeground(Color.decode("#000000"));
@@ -291,13 +286,19 @@ public class WorkMenu {
         menuButton.setBorder(new RoundedBorder(30));
         menuButton.setForeground(Color.BLUE);
 
-
         watchButton = new JButton("Посмотреть документы");
         watchButton.setForeground(Color.decode("#000000"));
         watchButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
         watchButton.setBounds(450,370,325,70);
         watchButton.setBorder(new RoundedBorder(30));
         watchButton.setForeground(Color.BLUE);
+
+        validateButton = new JButton("Нормоконтроль");
+        validateButton.setForeground(Color.decode("#000000"));
+        validateButton.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        validateButton.setBounds(450,460,325,70);
+        validateButton.setBorder(new RoundedBorder(30));
+        validateButton.setForeground(Color.BLUE);
 
         forthCourseButton = new JButton("2 курс");
         forthCourseButton.setForeground(Color.decode("#000000"));
@@ -599,7 +600,9 @@ public class WorkMenu {
                     System.out.println("Документы с названием \"Заявление на практику\" сгенерированы"); //  Documents intro practice generated!
                     frame14.setVisible(true);
                 }
-
+                else if (button == validateButton){
+                    Main.main(null);
+                }
                 else if  (button == practiceReportBtn)
                 {
                     try {
@@ -739,6 +742,7 @@ public class WorkMenu {
         deleteButtonbach4.addActionListener(action);
         exitButton.addActionListener((event) -> System.exit(0));
         createButton.addActionListener(action);
+        validateButton.addActionListener(action);
         menuButton.addActionListener(action);
         backButtonMenu.addActionListener(action);
         backButton.addActionListener(action);
@@ -770,28 +774,25 @@ public class WorkMenu {
         backBtnApp.addActionListener(action);
         applicationPractice.addActionListener(action);
 
-
         frame2.add(deleteButton);
         frame2.add(exitButton);
         frame2.add(createButton);
         frame2.add(watchButton);
+        frame2.add(validateButton);
         // frame2.add(createMasterButton);
         frame2.add(label);
         label.setBounds(270,100,750,40);
         frame2.getContentPane().add(contentPane1);
         frame2.setVisible(false);
 
-
         frame0.add(menuButton);
         frame0.getContentPane().add(contentPane3);
         frame0.setLocationRelativeTo(null);
         frame0.setVisible(true);
 
-
         frame3.add(backButtonMenu);
         frame3.getContentPane().add(contentPane4);
         frame3.setVisible(false);
-
 
         frame4.add(backButton);
         frame4.add(bachelors);
@@ -811,7 +812,6 @@ public class WorkMenu {
         frame8.add(deleteButtonMag2);
         frame8.getContentPane().add(contentPane9);
 
-
         frame11.add(createMasterButton);
         frame11.add(createBachelorButton);
         frame11.add(createMasterButtonTRPS);
@@ -827,7 +827,6 @@ public class WorkMenu {
         frame12.add(allDocsCreateBtn);
         frame12.add(applicationPractice);
         frame12.getContentPane().add(contentPane13);
-
 
         frame14.add(backBtnApp);
         frame14.getContentPane().add(contentPane15);

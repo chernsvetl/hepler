@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
+import static normative_control.notifications.Notifications.ANSI_BLACK;
 import static normative_control.notifications.Notifications.ANSI_GREEN;
 import static normative_control.notifications.Notifications.ANSI_RED;
 import static normative_control.notifications.Notifications.DOCUMENT_ERROR;
@@ -43,6 +44,7 @@ import static normative_control.notifications.Notifications.READING_FILE_ERROR;
 import static normative_control.notifications.Notifications.SPARQL_ERROR;
 import static normative_control.notifications.Notifications.STYLE_ERROR;
 import static normative_control.notifications.Notifications.THEME_ERROR;
+import static normative_control.notifications.Notifications.VALIDATION_END;
 
 public class DocumentValidator {
     private static final String MODEL_FILENAME = "/normocontrol.owl";
@@ -119,6 +121,7 @@ public class DocumentValidator {
                 System.err.println(READING_FILE_ERROR + file.getName() + ": " + e.getMessage());
             }
         }
+        System.out.println(ANSI_BLACK + VALIDATION_END);
     }
     private static String getFontStyle(XWPFDocument document) {
         Map<String, Integer> fontCounts = new HashMap<>();
