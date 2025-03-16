@@ -14,17 +14,39 @@ import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
+
+import static normative_control.notifications.Notifications.ANSI_GREEN;
+import static normative_control.notifications.Notifications.ANSI_RED;
+import static normative_control.notifications.Notifications.DOCUMENT_ERROR;
+import static normative_control.notifications.Notifications.DOCUMENT_SUCCESS;
+import static normative_control.notifications.Notifications.FONT_SIZE_ERROR;
+import static normative_control.notifications.Notifications.FORMAT_CONVERTION_ERROR;
+import static normative_control.notifications.Notifications.NUMBER_CONVERTION_ERROR;
+import static normative_control.notifications.Notifications.PAGES_ERROR;
+import static normative_control.notifications.Notifications.PATH_ERROR;
+import static normative_control.notifications.Notifications.PYTHON_CALL_ERROR;
+import static normative_control.notifications.Notifications.PYTHON_EXECUTION_ERROR;
+import static normative_control.notifications.Notifications.READING_FILE_ERROR;
+import static normative_control.notifications.Notifications.SPARQL_ERROR;
+import static normative_control.notifications.Notifications.STYLE_ERROR;
+import static normative_control.notifications.Notifications.THEME_ERROR;
 
 public class DocumentValidator {
     private static final String MODEL_FILENAME = "/normocontrol.owl";
+    private static final String PYTHON_SCRIPT = "C:\\Users\\User\\Desktop\\hepler\\hepler\\python_scripts\\theme_validator.py";
     public static ValidatorData extractFromSparql(String sparqlQuery) {
         try {
             Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
@@ -48,7 +70,7 @@ public class DocumentValidator {
 
             return new ValidatorData(minPages, font, sizeRange, style);
         } catch (Exception e) {
-            System.err.println("Ошибка выполнения SPARQL запроса: " + e.getMessage());
+            System.err.println(SPARQL_ERROR + e.getMessage());
             e.printStackTrace();
             return null;
         }
@@ -56,7 +78,7 @@ public class DocumentValidator {
     public static void validateDocxFiles(String directoryPath, ValidatorData data) {
         File dir = new File(directoryPath);
         if (!dir.isDirectory()) {
-            System.err.println("Указанный путь не является директорией.");
+            System.err.println(PATH_ERROR);
             return;
         }
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
@@ -66,6 +88,7 @@ public class DocumentValidator {
                 int pageCount = document.getParagraphs().size() / 30;
                 var fontSize = getFontSize(document);
                 String fontStyle = getFontStyle(document);
+                String themeText = extractThemeText(document);
 
                 boolean valid = true;
                 boolean sizeIsValid = Arrays.stream(parseSizeRange(data.sizeRange)).anyMatch(size -> size == fontSize);
@@ -73,23 +96,27 @@ public class DocumentValidator {
 
                 if (pageCount < data.minPages) {
                     valid = false;
-                    errorMessage.append("Недостаточно страниц (ожидалось: ").append(data.minPages).append(", есть: ").append(pageCount).append("). ");
+                    errorMessage.append(PAGES_ERROR).append(data.minPages).append(", есть: ").append(pageCount).append("). ");
                 }
                 if (!sizeIsValid) {
                     valid = false;
-                    errorMessage.append("Неверный размер шрифта (ожидалось: ").append(data.sizeRange).append(", есть: ").append(fontSize).append("). ");
+                    errorMessage.append(FONT_SIZE_ERROR).append(data.sizeRange).append(", есть: ").append(fontSize).append("). ");
                 }
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
-                    errorMessage.append("Неверный стиль (ожидалось: ").append(data.style).append(", есть: ").append(fontStyle).append("). ");
+                    errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). ");
+                }
+                if (!isValidTheme(themeText)) {
+                    valid = false;
+                    errorMessage.append(THEME_ERROR);
                 }
                 if (valid) {
-                    System.out.println("Документ " + file.getName() + " корректен.");
+                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
                 } else {
-                    System.err.println("Документ " + file.getName() + " не корректен: " + errorMessage);
+                    System.out.println(ANSI_RED + file.getName() + DOCUMENT_ERROR + errorMessage);
                 }
             } catch (IOException e) {
-                System.err.println("Ошибка чтения файла " + file.getName() + ": " + e.getMessage());
+                System.err.println(READING_FILE_ERROR + file.getName() + ": " + e.getMessage());
             }
         }
     }
@@ -104,7 +131,7 @@ public class DocumentValidator {
         String mostPopularFont = fontCounts.entrySet().stream()
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey)
-                .orElse("Стиль документа отсутствует, так как документ пуст");
+                .orElse(null);
 
         return mostPopularFont;
     }
@@ -123,14 +150,13 @@ public class DocumentValidator {
 
         return mostPopularSize;
     }
-
     private static double[] parseSizeRange(String sizeRangeStr) {
         if (sizeRangeStr == null || sizeRangeStr.trim().isEmpty()) {
             return new double[0];
         }
         String[] parts = sizeRangeStr.split("-");
         if (parts.length != 2) {
-            System.err.println("Некорректный формат диапазона размеров: " + sizeRangeStr);
+            System.err.println(FORMAT_CONVERTION_ERROR + sizeRangeStr);
             return null;
         }
         try {
@@ -138,8 +164,40 @@ public class DocumentValidator {
             double end = Integer.parseInt(parts[1].trim());
             return DoubleStream.of(start, end).toArray();
         } catch (NumberFormatException e) {
-            System.err.println("Ошибка преобразования размера в число: " + e.getMessage());
+            System.err.println(NUMBER_CONVERTION_ERROR + e.getMessage());
             return null;
+        }
+    }
+    private static String extractThemeText(XWPFDocument document) {
+        String text = document.getParagraphs().stream()
+                .map(XWPFParagraph::getText)
+                .collect(Collectors.joining(" "));
+
+        Pattern pattern = Pattern.compile("Тема задания:(.*?)Место прохождения практики:");
+        Matcher matcher = pattern.matcher(text);
+
+        if (matcher.find()) {
+            return matcher.group(1).trim();
+        } else {
+            return "";
+        }
+    }
+    private static boolean isValidTheme(String themeText) {
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("python", PYTHON_SCRIPT, themeText);
+            processBuilder.environment().put("PYTHONIOENCODING", "UTF-8");
+            Process process = processBuilder.start();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "UTF-8"));
+            String result = reader.readLine();
+            int exitCode = process.waitFor();
+            if (exitCode != 0) {
+                System.err.println(PYTHON_EXECUTION_ERROR + exitCode + ")");
+            }
+            return result != null && result.equals("valid");
+        } catch (IOException | InterruptedException e) {
+            System.err.println(PYTHON_CALL_ERROR + e.getMessage());
+            e.printStackTrace();
+            return false;
         }
     }
     public static class ValidatorData {
