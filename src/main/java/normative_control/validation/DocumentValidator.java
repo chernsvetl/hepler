@@ -18,8 +18,10 @@ import java.io.FileInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.DoubleStream;
 
 public class DocumentValidator {
     private static final String MODEL_FILENAME = "/normocontrol.owl";
@@ -34,17 +36,17 @@ public class DocumentValidator {
             ResultSet results = qexec.execSelect();
             int minPages = 0;
             String font = null;
-            String size = null;
+            String sizeRange = null;
             String style = null;
             while(results.hasNext()){
                 QuerySolution solution = results.next();
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
-                size = solution.getLiteral("Размер").getString();
+                sizeRange = solution.getLiteral("Размер").getString();
                 style = solution.getLiteral("Стиль").getString();
             }
             qexec.close();
 
-            return new ValidatorData(minPages, font, size, style);
+            return new ValidatorData(minPages, font, sizeRange, style);
         } catch (Exception e) {
             System.err.println("Ошибка выполнения SPARQL запроса: " + e.getMessage());
             e.printStackTrace();
@@ -62,19 +64,20 @@ public class DocumentValidator {
                  XWPFDocument document = new XWPFDocument(fis)) {
 
                 int pageCount = document.getParagraphs().size() / 30;
-                String fontSize = getFontSize(document);
+                var fontSize = getFontSize(document);
                 String fontStyle = getFontStyle(document);
 
                 boolean valid = true;
+                boolean sizeIsValid = Arrays.stream(parseSizeRange(data.sizeRange)).anyMatch(size -> size == fontSize);
                 StringBuilder errorMessage = new StringBuilder();
 
                 if (pageCount < data.minPages) {
                     valid = false;
                     errorMessage.append("Недостаточно страниц (ожидалось: ").append(data.minPages).append(", есть: ").append(pageCount).append("). ");
                 }
-                if (!fontSize.equals(data.size)) {
+                if (!sizeIsValid) {
                     valid = false;
-                    errorMessage.append("Неверный размер шрифта (ожидалось: ").append(data.size).append(", есть: ").append(fontSize).append("). ");
+                    errorMessage.append("Неверный размер шрифта (ожидалось: ").append(data.sizeRange).append(", есть: ").append(fontSize).append("). ");
                 }
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
@@ -105,31 +108,50 @@ public class DocumentValidator {
 
         return mostPopularFont;
     }
-    private static String getFontSize(XWPFDocument document) {
-        java.util.Map<Integer, Integer> sizeCounts = new java.util.HashMap<>();
+    private static double getFontSize(XWPFDocument document) {
+        Map<Double, Integer> fontCounts = new HashMap<>();
         for (XWPFParagraph paragraph : document.getParagraphs()) {
             for (XWPFRun run : paragraph.getRuns()) {
-                int size = run.getFontSize();
-                sizeCounts.put(size, sizeCounts.getOrDefault(size, 0) + 1);
+                var size = run.getFontSizeAsDouble();
+                fontCounts.put(size, fontCounts.getOrDefault(size, 0) + 1);
             }
         }
-        return sizeCounts.entrySet().stream()
-                .max(java.util.Map.Entry.comparingByValue())
-                .map(java.util.Map.Entry::getKey)
-                .map(String::valueOf)
-                .orElse("Размер документа отсутствует, так как документ пуст");
+        double mostPopularSize = fontCounts.entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElse(null);
+
+        return mostPopularSize;
     }
 
+    private static double[] parseSizeRange(String sizeRangeStr) {
+        if (sizeRangeStr == null || sizeRangeStr.trim().isEmpty()) {
+            return new double[0];
+        }
+        String[] parts = sizeRangeStr.split("-");
+        if (parts.length != 2) {
+            System.err.println("Некорректный формат диапазона размеров: " + sizeRangeStr);
+            return null;
+        }
+        try {
+            double start = Integer.parseInt(parts[0].trim());
+            double end = Integer.parseInt(parts[1].trim());
+            return DoubleStream.of(start, end).toArray();
+        } catch (NumberFormatException e) {
+            System.err.println("Ошибка преобразования размера в число: " + e.getMessage());
+            return null;
+        }
+    }
     public static class ValidatorData {
         public int minPages;
         public String font;
-        public String size;
+        public String sizeRange;
         public String style;
 
-        public ValidatorData(int minPages, String font, String size, String style) {
+        public ValidatorData(int minPages, String font, String sizeRange, String style) {
             this.minPages = minPages;
             this.font = font;
-            this.size = size;
+            this.sizeRange = sizeRange;
             this.style = style;
         }
     }
