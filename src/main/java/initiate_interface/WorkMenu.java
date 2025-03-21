@@ -9,7 +9,7 @@ import initiate_interface.Show.MastersShow;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import normative_control.validation.Main;
+import normative_control.validation.runners.ReportMain;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.*;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.MasterApplicationForPracticeMDA;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.MasterApplicationForPracticeTRPS;
@@ -601,7 +601,7 @@ public class WorkMenu {
                     frame14.setVisible(true);
                 }
                 else if (button == validateButton){
-                    Main.main(null);
+                    ReportMain.main(null);
                 }
                 else if  (button == practiceReportBtn)
                 {
