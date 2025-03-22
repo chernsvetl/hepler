@@ -1,4 +1,4 @@
-package normative_control.validation.service.impl;
+package normative_control.validation.service.impl.masters.trps.second_year_student.fouth_semester;
 
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
@@ -20,11 +20,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 
-import static normative_control.notifications.Notifications.*;
+import static normative_control.notifications.Notifications.DOCUMENT_ERROR;
+import static normative_control.notifications.Notifications.DOCUMENT_SUCCESS;
+import static normative_control.notifications.Notifications.FONT_SIZE_ERROR;
+import static normative_control.notifications.Notifications.PAGES_ERROR;
+import static normative_control.notifications.Notifications.READING_FILE_ERROR;
+import static normative_control.notifications.Notifications.SPARQL_ERROR;
+import static normative_control.notifications.Notifications.STYLE_ERROR;
+import static normative_control.notifications.Notifications.THEME_ERROR;
+import static normative_control.notifications.Notifications.VALIDATION_END;
 import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
+import static normative_control.utils.Files.TRPS_4_REPORT_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.extractThemeText;
 import static normative_control.validation.validators.CommonValidator.getFontSize;
@@ -33,6 +42,8 @@ import static normative_control.validation.validators.CommonValidator.isValidThe
 import static normative_control.validation.validators.CommonValidator.parseSizeRange;
 
 public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
+    private final String loggerInfo = "";
+
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataReport data) {
         File dir = new File(directoryPath);
@@ -52,37 +63,42 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                 boolean valid = true;
                 boolean sizeIsValid = Arrays.stream(parseSizeRange(data.sizeRange)).anyMatch(size -> size == fontSize);
                 StringBuilder errorMessage = new StringBuilder();
+                var loggerInfo = new StringBuilder();
 
                 if (pageCount < data.minPages) {
                     valid = false;
-                    errorMessage.append(PAGES_ERROR).append(data.minPages).append(", есть: ").append(pageCount).append("). ");
+                    errorMessage.append(PAGES_ERROR).append(data.minPages).append(", есть: ").append(pageCount).append("). \n");
+                    loggerInfo.append(PAGES_ERROR).append(data.minPages).append(", есть: ").append(pageCount).append("). \n");
                 }
                 if (!sizeIsValid) {
                     valid = false;
-                    errorMessage.append(FONT_SIZE_ERROR).append(data.sizeRange).append(", есть: ").append(fontSize).append("). ");
+                    errorMessage.append(FONT_SIZE_ERROR).append(data.sizeRange).append(", есть: ").append(fontSize).append("). \n");
+                    loggerInfo.append(FONT_SIZE_ERROR).append(data.sizeRange).append(", есть: ").append(fontSize).append("). \n");
                 }
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
-                    errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). ");
+                    errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
+                    loggerInfo.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
                 }
                 if (!isValidTheme(themeText)) {
                     valid = false;
                     errorMessage.append(THEME_ERROR);
+                    loggerInfo.append(THEME_ERROR);
                 }
                 if (valid) {
-                    var info = ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n";
-                    System.out.println(info);
-                    writeValidationLogs(info);
+                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n");
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS + "\n", TRPS_4_REPORT_FILE);
                 } else {
-                    var info = ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n";
-                    System.out.println(info);
-                    writeValidationLogs(info);
+                    System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
+                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", TRPS_4_REPORT_FILE);
                 }
             } catch (IOException e) {
                 System.err.println(READING_FILE_ERROR + file.getName() + ": " + e.getMessage());
             }
+            writeValidationLogs(loggerInfo, TRPS_4_REPORT_FILE);
         }
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
+        writeValidationLogs(VALIDATION_END + "\n", TRPS_4_REPORT_FILE);
     }
     @Override
     public ValidatorDataReport extractFromSparql(String sparqlQuery) {

@@ -1,4 +1,4 @@
-package normative_control.validation.service.impl;
+package normative_control.validation.service.impl.bachelors.piikn.fourth_year_student.eight_semester;
 
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
@@ -25,11 +25,13 @@ import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
+import static normative_control.utils.Files.PIIKN_8_INDIVIDUAL_TASK_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
 
 public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocumentValidator {
+    private final String loggerInfo = "";
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataIndividualTask data) {
         File dir = new File(directoryPath);
@@ -44,11 +46,13 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 String fontStyle = getFontStyle(document);
 
                 boolean valid = true;
-                StringBuilder errorMessage = new StringBuilder();
+                var errorMessage = new StringBuilder();
+                var loggerInfo = new StringBuilder();
 
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
                     errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
+                    loggerInfo.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
                 }
                 for (XWPFTable table : document.getTables()) {
                     boolean flag = false;
@@ -60,6 +64,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     if (flag) {
                         valid = false;
                         errorMessage.append(data.orgStepEndDate).append(" не изменено в таблице. \n");
+                        loggerInfo.append(data.orgStepEndDate).append(" не изменено в таблице. \n");
                     }
                 }
                 for (XWPFTable table : document.getTables()) {
@@ -74,7 +79,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
                         }
                         if (flag) {
-                            errorMessage.append(data.orgStepEndDate).append(" не изменено в таблице. \n");
+                            errorMessage.append(data.prepareAndDefendStepEndDate).append(" не изменено в таблице. \n");
+                            loggerInfo.append(data.prepareAndDefendStepEndDate).append(" не изменено в таблице. \n");
                             break;
                         }
                     }
@@ -89,6 +95,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     if (flag) {
                         valid = false;
                         errorMessage.append("Срок завершения этапа индивидуального задания пуст. \n");
+                        loggerInfo.append("Срок завершения этапа индивидуального задания пуст. \n");
                     }
                 }
                 for (XWPFTable table : document.getTables()) {
@@ -101,6 +108,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     if (flag) {
                         valid = false;
                         errorMessage.append("Содержание работы индивидуального этапа").append(" не изменено в таблице. \n");
+                        loggerInfo.append("Содержание работы индивидуального этапа").append(" не изменено в таблице. \n");
                     }
                 }
                 for (XWPFTable table : document.getTables()) {
@@ -116,26 +124,28 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                         }
                         if (flag) {
                             errorMessage.append("Содержание работы этапа защиты материалов").append(" не изменено в таблице. \n");
+                            loggerInfo.append("Содержание работы этапа защиты материалов").append(" не изменено в таблице. \n");
                             break;
                         }
                     }
                 }
-                writeValidationLogs(String.valueOf(errorMessage));
                 if (valid) {
-                    var info = ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n";
-                    System.out.println(info);
-                    writeValidationLogs(info);
+                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n");
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS + "\n", PIIKN_8_INDIVIDUAL_TASK_FILE);
                 } else {
-                    var info = ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n";
-                    System.out.println(info);
-                    writeValidationLogs(info);
+                    System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
+                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", PIIKN_8_INDIVIDUAL_TASK_FILE);
                 }
             } catch (IOException e) {
                 System.err.println(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage());
+                writeValidationLogs(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage(), PIIKN_8_INDIVIDUAL_TASK_FILE);
             }
+            writeValidationLogs(loggerInfo, PIIKN_8_INDIVIDUAL_TASK_FILE);
         }
+        writeValidationLogs(VALIDATION_END  + "\n", PIIKN_8_INDIVIDUAL_TASK_FILE);
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
     }
+
     @Override
     public ValidatorDataIndividualTask extractFromSparql(String sparqlQuery) {
         try {
