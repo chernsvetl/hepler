@@ -31,13 +31,13 @@ import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
+import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Files.IIIDS_4_INDIVIDUAL_TASK_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
 
 public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocumentValidator {
-    private final String loggerInfo = "";
 
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataIndividualTask data) {
@@ -137,8 +137,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                 }
                 if (valid) {
-                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n");
-                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS + "\n", IIIDS_4_INDIVIDUAL_TASK_FILE);
+                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, IIIDS_4_INDIVIDUAL_TASK_FILE);
                 } else {
                     System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
                     writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", IIIDS_4_INDIVIDUAL_TASK_FILE);
@@ -147,9 +147,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 System.err.println(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage());
                 writeValidationLogs(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage(), IIIDS_4_INDIVIDUAL_TASK_FILE);
             }
-            writeValidationLogs(loggerInfo, IIIDS_4_INDIVIDUAL_TASK_FILE);
+            writeValidationLogs(SPACE, IIIDS_4_INDIVIDUAL_TASK_FILE);
         }
-        writeValidationLogs(VALIDATION_END  + "\n", IIIDS_4_INDIVIDUAL_TASK_FILE);
+        writeValidationLogs(VALIDATION_END, IIIDS_4_INDIVIDUAL_TASK_FILE);
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
     }
 

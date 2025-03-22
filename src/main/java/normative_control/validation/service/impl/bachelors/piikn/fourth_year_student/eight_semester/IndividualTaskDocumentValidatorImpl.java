@@ -25,13 +25,14 @@ import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
+import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Files.PIIKN_8_INDIVIDUAL_TASK_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
 
 public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocumentValidator {
-    private final String loggerInfo = "";
+
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataIndividualTask data) {
         File dir = new File(directoryPath);
@@ -130,8 +131,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                 }
                 if (valid) {
-                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n");
-                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS + "\n", PIIKN_8_INDIVIDUAL_TASK_FILE);
+                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, PIIKN_8_INDIVIDUAL_TASK_FILE);
                 } else {
                     System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
                     writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", PIIKN_8_INDIVIDUAL_TASK_FILE);
@@ -140,9 +141,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 System.err.println(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage());
                 writeValidationLogs(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage(), PIIKN_8_INDIVIDUAL_TASK_FILE);
             }
-            writeValidationLogs(loggerInfo, PIIKN_8_INDIVIDUAL_TASK_FILE);
+            writeValidationLogs(SPACE, PIIKN_8_INDIVIDUAL_TASK_FILE);
         }
-        writeValidationLogs(VALIDATION_END  + "\n", PIIKN_8_INDIVIDUAL_TASK_FILE);
+        writeValidationLogs(VALIDATION_END, PIIKN_8_INDIVIDUAL_TASK_FILE);
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
     }
 

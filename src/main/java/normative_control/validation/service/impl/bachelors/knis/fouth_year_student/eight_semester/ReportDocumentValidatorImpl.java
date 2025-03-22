@@ -33,6 +33,7 @@ import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
+import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Files.KNIS_8_REPORT_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.extractThemeText;
@@ -42,7 +43,6 @@ import static normative_control.validation.validators.CommonValidator.isValidThe
 import static normative_control.validation.validators.CommonValidator.parseSizeRange;
 
 public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
-    private final String loggerInfo = "";
 
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataReport data) {
@@ -86,8 +86,8 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                     loggerInfo.append(THEME_ERROR);
                 }
                 if (valid) {
-                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS + "\n");
-                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS + "\n", KNIS_8_REPORT_FILE);
+                    System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, KNIS_8_REPORT_FILE);
                 } else {
                     System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
                     writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", KNIS_8_REPORT_FILE);
@@ -95,10 +95,10 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             } catch (IOException e) {
                 System.err.println(READING_FILE_ERROR + file.getName() + ": " + e.getMessage());
             }
-            writeValidationLogs(loggerInfo, KNIS_8_REPORT_FILE);
+            writeValidationLogs(SPACE, KNIS_8_REPORT_FILE);
         }
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
-        writeValidationLogs(VALIDATION_END  + "\n", KNIS_8_REPORT_FILE);
+        writeValidationLogs(VALIDATION_END, KNIS_8_REPORT_FILE);
     }
     @Override
     public ValidatorDataReport extractFromSparql(String sparqlQuery) {
