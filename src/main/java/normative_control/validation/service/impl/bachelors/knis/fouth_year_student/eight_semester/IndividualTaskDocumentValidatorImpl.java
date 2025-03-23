@@ -19,19 +19,25 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDateTime;
 
-import static normative_control.notifications.Notifications.DOCUMENT_ERROR;
-import static normative_control.notifications.Notifications.DOCUMENT_SUCCESS;
-import static normative_control.notifications.Notifications.PATH_ERROR;
-import static normative_control.notifications.Notifications.READING_FILE_ERROR;
-import static normative_control.notifications.Notifications.SPARQL_ERROR;
-import static normative_control.notifications.Notifications.STYLE_ERROR;
-import static normative_control.notifications.Notifications.VALIDATION_END;
+import static normative_control.notifications.Errors.CONTENT_STEP_DEFEND_TASK_NOT_CHANGED;
+import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
+import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY;
+import static normative_control.notifications.Errors.DOCUMENT_ERROR;
+import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
+import static normative_control.notifications.Errors.NEXT_LINE;
+import static normative_control.notifications.Errors.PATH_ERROR;
+import static normative_control.notifications.Errors.READING_FILE_ERROR;
+import static normative_control.notifications.Errors.SPARQL_ERROR;
+import static normative_control.notifications.Errors.STYLE_ERROR;
+import static normative_control.notifications.Errors.VALIDATION_END;
 import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
+import static normative_control.utils.Constants.formatter;
 import static normative_control.utils.Files.KNIS_8_INDIVIDUAL_TASK_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
@@ -46,6 +52,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
             System.err.println(PATH_ERROR);
             return;
         }
+        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", KNIS_8_INDIVIDUAL_TASK_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
@@ -101,8 +108,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                     if (flag) {
                         valid = false;
-                        errorMessage.append("Срок завершения этапа индивидуального задания пуст. \n");
-                        loggerInfo.append("Срок завершения этапа индивидуального задания пуст. \n");
+                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
+                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
                     }
                 }
                 for (XWPFTable table : document.getTables()) {
@@ -114,8 +121,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                     if (flag) {
                         valid = false;
-                        errorMessage.append("Содержание работы индивидуального этапа").append(" не изменено в таблице. \n");
-                        loggerInfo.append("Содержание работы индивидуального этапа").append(" не изменено в таблице. \n");
+                        errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                        loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                     }
                 }
                 for (XWPFTable table : document.getTables()) {
@@ -130,8 +137,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
                         }
                         if (flag) {
-                            errorMessage.append("Содержание работы этапа защиты материалов").append(" не изменено в таблице. \n");
-                            loggerInfo.append("Содержание работы этапа защиты материалов").append(" не изменено в таблице. \n");
+                            errorMessage.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                            loggerInfo.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                             break;
                         }
                     }
@@ -151,6 +158,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
         }
         writeValidationLogs(VALIDATION_END, KNIS_8_INDIVIDUAL_TASK_FILE);
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
+        writeValidationLogs(NEXT_LINE, KNIS_8_INDIVIDUAL_TASK_FILE);
     }
 
     @Override

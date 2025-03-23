@@ -144,12 +144,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Введение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Введение">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Структура_отчета"/>
+    </owl:DatatypeProperty>
+
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Вид_практики -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Вид_практики">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов -->
@@ -157,7 +165,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания -->
@@ -165,7 +173,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Выполнение_этапов_индивидуального_задания"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа -->
@@ -173,7 +181,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Организационный_этап"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты -->
@@ -181,7 +189,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Подготовка_и_защита_отчетных_материалов"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_работ_и_требования_к_их_выполнению -->
@@ -189,7 +197,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_работ_и_требования_к_их_выполнению">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Выполнение_этапов_индивидуального_задания -->
@@ -197,7 +205,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Выполнение_этапов_индивидуального_задания">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Совместный_рабочий_план_график"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Год_прохождения -->
@@ -205,7 +213,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Год_прохождения">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_защиты -->
@@ -213,7 +221,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_защиты">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаБакРук3 -->
@@ -221,7 +229,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаБакРук3">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаБакРук4 -->
@@ -229,7 +237,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаБакРук4">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаМаг1 -->
@@ -237,7 +245,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаМаг1">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаМаг2 -->
@@ -245,7 +253,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ДатаМаг2">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность -->
@@ -253,7 +261,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_в_НГУ -->
@@ -261,7 +269,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_в_НГУ">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_в_организации -->
@@ -269,7 +277,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_в_организации">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР -->
@@ -277,7 +285,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР_кратко -->
@@ -285,7 +293,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Должность_руководителя_ВКР_кратко">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заведующий_кафедры -->
@@ -293,7 +301,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заведующий_кафедры">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заключение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заключение">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Структура_отчета"/>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Курс -->
@@ -301,7 +317,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Курс">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_практики_полное_наименование -->
@@ -309,7 +325,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_практики_полное_наименование">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_прохождения_практики -->
@@ -317,7 +333,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Место_прохождения_практики">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Минимальное_количество_страниц_отчета -->
@@ -325,7 +341,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Минимальное_количество_страниц_отчета">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Наименование_организации -->
@@ -333,7 +349,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Наименование_организации">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Номер_группы -->
@@ -341,7 +357,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Номер_группы">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Организационный_этап -->
@@ -349,7 +365,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Организационный_этап">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Совместный_рабочий_план_график"/>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Основной_текст_отчета -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Основной_текст_отчета">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Структура_отчета"/>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Подготовка_и_защита_отчетных_материалов -->
@@ -357,7 +381,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Подготовка_и_защита_отчетных_материалов">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Совместный_рабочий_план_график"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Приказ_на_прохождение_практики -->
@@ -365,7 +389,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Приказ_на_прохождение_практики">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Профиль_обучения -->
@@ -373,7 +397,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Профиль_обучения">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Размер -->
@@ -381,7 +405,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Размер">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Шрифт"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Распоряжение_об_корректировки_тем_и_научнх_руководителей -->
@@ -389,7 +413,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Распоряжение_об_корректировки_тем_и_научнх_руководителей">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Распоряжение_об_утверждении_тем_и_научных_руководителей -->
@@ -397,7 +421,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Распоряжение_об_утверждении_тем_и_научных_руководителей">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Распоряжение_тема -->
@@ -405,7 +429,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Распоряжение_тема">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Совместный_рабочий_план_график -->
@@ -413,7 +437,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Совместный_рабочий_план_график">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы -->
@@ -421,7 +445,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания -->
@@ -429,7 +453,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Выполнение_этапов_индивидуального_задания"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа -->
@@ -437,7 +461,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Организационный_этап"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов -->
@@ -445,7 +469,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Подготовка_и_защита_отчетных_материалов"/>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Список_литературы -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Список_литературы">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Структура_отчета"/>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа -->
@@ -455,12 +487,13 @@
     </owl:DatatypeProperty>
 
 
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Подготовка_и_защита_отчетных_материалов"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Стиль -->
@@ -468,7 +501,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Стиль">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Шрифт"/>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Структура_отчета -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Структура_отчета">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Тема -->
@@ -476,7 +517,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Тема">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Ученая_степень_руководителя_ВКР -->
@@ -484,7 +525,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Ученая_степень_руководителя_ВКР">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО -->
@@ -492,7 +533,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО_для_подписи -->
@@ -500,7 +541,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ФИО_для_подписи">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности -->
@@ -508,7 +549,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_ознакомлен -->
@@ -516,7 +557,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_ознакомлен">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_принял -->
@@ -524,7 +565,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_слова_принял">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет -->
@@ -532,7 +573,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Шрифт"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Шрифт -->
@@ -540,7 +581,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Шрифт">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#группа -->
@@ -548,10 +589,10 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#группа">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -559,7 +600,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Акт_распорядительный -->
@@ -567,7 +608,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Акт_распорядительный">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Бакалавриат -->
@@ -575,19 +616,19 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Бакалавриат">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Учащиеся"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВКР -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ВКР"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заявление_о_направлении_на_практику -->
@@ -595,7 +636,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Заявление_о_направлении_на_практику">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику -->
@@ -603,7 +644,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_производственная_научно-исследовательская -->
@@ -611,7 +652,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_производственная_научно-исследовательская">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_производственная_технологическая -->
@@ -619,7 +660,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_производственная_технологическая">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_учебная_технологическая_1 -->
@@ -627,7 +668,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_учебная_технологическая_1">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_учебная_технологическая_2 -->
@@ -635,7 +676,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КМиАД_учебная_технологическая_2">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КНиС_производственная_научно-исследовательская -->
@@ -643,7 +684,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КНиС_производственная_научно-исследовательская">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КНиС_производственная_технологическая -->
@@ -651,7 +692,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КНиС_производственная_технологическая">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КНиС_учебная_ознакомительная -->
@@ -659,13 +700,13 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#КНиС_учебная_ознакомительная">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Кафедра -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Кафедра"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Консультант -->
@@ -673,7 +714,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Консультант">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_ВКР"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Корректировка_ВКР -->
@@ -681,7 +722,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Корректировка_ВКР">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Магистратура -->
@@ -689,7 +730,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Магистратура">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Учащиеся"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отзыв_руководителя_ВКР -->
@@ -697,7 +738,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отзыв_руководителя_ВКР">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отзыв_руководителя_практики -->
@@ -705,7 +746,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отзыв_руководителя_практики">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике -->
@@ -713,7 +754,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_производственная_научно-исследовательская -->
@@ -721,7 +762,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_производственная_научно-исследовательская">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_производственная_преддипломная -->
@@ -729,7 +770,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_производственная_преддипломная">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_учебная_научно-исследовательская -->
@@ -737,7 +778,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_учебная_научно-исследовательская">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_учебная_эксплутационная -->
@@ -745,19 +786,19 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ПКиИН_учебная_эксплутационная">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензент"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензия -->
@@ -765,13 +806,13 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Рецензия">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_ВКР -->
@@ -779,7 +820,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_ВКР">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_практики -->
@@ -787,7 +828,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_практики">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР -->
@@ -795,7 +836,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_ВКР">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_ВКР"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ -->
@@ -803,7 +844,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_НГУ">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_практики"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации -->
@@ -811,7 +852,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководитель_от_организации">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_практики"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР -->
@@ -819,7 +860,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Соруководитель_ВКР">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Руководители_ВКР"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_производственная_научно-исследовательская -->
@@ -827,7 +868,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_производственная_научно-исследовательская">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_производственная_технологическая -->
@@ -835,7 +876,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_производственная_технологическая">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_учебная_ознакомительная_1 -->
@@ -843,7 +884,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_учебная_ознакомительная_1">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_учебная_ознакомительная_2 -->
@@ -851,7 +892,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ТРПС_учебная_ознакомительная_2">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Практика"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Утверждение_ВКР -->
@@ -859,13 +900,13 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Утверждение_ВКР">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Документы"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Учащиеся -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Учащиеся"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#общей_информатики -->
@@ -873,10 +914,10 @@
     <owl:Class rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#общей_информатики">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Кафедра"/>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -884,12 +925,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+
+
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_IoT_4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_IoT_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
         <кафедра:Виды_отчетных_материалов>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
         <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
         <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
         <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
@@ -922,15 +965,15 @@
         <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
         <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
         <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
+        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ИИиDS_4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ИИиDS_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
         <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
         <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
         <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
@@ -962,15 +1005,15 @@
         <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
         <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
         <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
+        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_КНИС_8 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_КНИС_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
         <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
         <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
         <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
@@ -985,9 +1028,9 @@
 Уметь оценить степень актуальности, достоверности и релевантности найденной информации в контексте решаемой профессиональной задачи.
 
 УК – 1.3 - Владеть: методами поиска, сбора и обработки, критического анализа и синтеза информации; методикой системного подхода для решения поставленных задач
-Уметь систематизировать информацию в соответствии со спецификой решаемой задачи. 
+Уметь систематизировать информацию в соответствии со спецификой решаемой задачи.
 
-ОПК-1.3. Владеть: навыками теоретического и экспериментального исследования объектов профессиональной деятельности. 
+ОПК-1.3. Владеть: навыками теоретического и экспериментального исследования объектов профессиональной деятельности.
 Уметь применять на практике методы теоретического и экспериментального моделирования в контексте решаемой задачи профессиональной области.
 
 ОПК-3.1 Знать: принципы, методы и средства решения стандартных задач профессиональной деятельности на основе информационной и библиографической культуры с применением информационно- коммуникационных технологий и с учетом основных требований информационной безопасности.
@@ -1005,15 +1048,15 @@
         <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
         <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
         <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
+        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_8 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
         <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
         <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
         <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
@@ -1029,15 +1072,15 @@
         <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
         <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
         <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
+        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ТРПС_4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ТРПС_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
         <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
         <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
         <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
@@ -1046,7 +1089,7 @@
 Для магистратуры – обязательно включить посещение конкретного научного семинара.
 
 Индикаторы достижения компетенций из программы практики:
-УК-6.1 Знать: методики самооценки, самоконтроля и саморазвития с использованием подходов здоровьесбережения 
+УК-6.1 Знать: методики самооценки, самоконтроля и саморазвития с использованием подходов здоровьесбережения
 УК-6.2 Уметь: решать задачи собственного личностного и профессионального развития, определять и реализовывать приоритеты совершенствования собственной деятельности; применять методики самооценки и самоконтроля; применять методики, позволяющие улучшить и сохранить здоровье в процессе жизнедеятельности
 УК-6.3 Владеть: технологиями и навыками управления своей познавательной деятельностью и ее совершенствования на основе самооценки, самоконтроля и принципов самообразования в течение всей жизни, в том числе с использованием здоровьесберегающих подходов и методик
 ОПК-3.1. Знать: принципы, методы и средства анализа и структурирования профессиональной информации;
@@ -1062,8 +1105,9 @@
         <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
         <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
         <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
+        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_IoT_4 -->
@@ -1071,59 +1115,68 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_IoT_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике"/>
         <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Основной_текст_отчета>1.Описание профессиональных задач, решаемых студентом на практике, приобретаемых практических навыков (в соответствии с целями и задачами программы практики и индивидуальным заданием), описание методов, применявшихся в практической работе.
+2.Описание проделанной работы и результатов выполненного индивидуального задания, результаты анализа изучаемой проблемы в организации.</кафедра:Основной_текст_отчета>
         <кафедра:Размер>12-14</кафедра:Размер>
         <кафедра:Стиль rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Times New Roman</кафедра:Стиль>
         <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_ИИиDS_4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_ИИиDS_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике"/>
-        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Основной_текст_отчета>1.Описание профессиональных задач, решаемых студентом на практике, приобретаемых практических навыков (в соответствии с целями и задачами программы практики и индивидуальным заданием), описание методов, применявшихся в практической работе.
+2.Описание проделанной работы и результатов выполненного индивидуального задания, результаты анализа изучаемой проблемы в организации.</кафедра:Основной_текст_отчета>
         <кафедра:Размер>12-14</кафедра:Размер>
         <кафедра:Стиль rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Times New Roman</кафедра:Стиль>
         <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_КНИС_8 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_КНИС_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике"/>
-        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Основной_текст_отчета>1.Описание профессиональных задач, решаемых студентом на практике, приобретаемых практических навыков (в соответствии с целями и задачами программы практики и индивидуальным заданием), описание методов, применявшихся в практической работе.
+2.Описание проделанной работы и результатов выполненного индивидуального задания, результаты анализа изучаемой проблемы в организации.</кафедра:Основной_текст_отчета>
         <кафедра:Размер>12-14</кафедра:Размер>
         <кафедра:Стиль rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Times New Roman</кафедра:Стиль>
         <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_ПИиКН_8 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_ПИиКН_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике"/>
-        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Основной_текст_отчета>1.Описание профессиональных задач, решаемых студентом на практике, приобретаемых практических навыков (в соответствии с целями и задачами программы практики и индивидуальным заданием), описание методов, применявшихся в практической работе.
+2.Описание проделанной работы и результатов выполненного индивидуального задания, результаты анализа изучаемой проблемы в организации.</кафедра:Основной_текст_отчета>
         <кафедра:Размер>12-14</кафедра:Размер>
         <кафедра:Стиль rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Times New Roman</кафедра:Стиль>
         <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_ТРПС_4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_ТРПС_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Отчет_о_практике"/>
-        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Минимальное_количество_страниц_отчета rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</кафедра:Минимальное_количество_страниц_отчета>
+        <кафедра:Основной_текст_отчета>1.Описание профессиональных задач, решаемых студентом на практике, приобретаемых практических навыков (в соответствии с целями и задачами программы практики и индивидуальным заданием), описание методов, применявшихся в практической работе.
+2.Описание проделанной работы и результатов выполненного индивидуального задания, результаты анализа изучаемой проблемы в организации.</кафедра:Основной_текст_отчета>
         <кафедра:Размер>12-14</кафедра:Размер>
         <кафедра:Стиль rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Times New Roman</кафедра:Стиль>
         <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
     </owl:NamedIndividual>
-
 </rdf:RDF>
 
 

@@ -18,16 +18,20 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
-import static normative_control.notifications.Notifications.*;
+import static normative_control.notifications.Errors.*;
 import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
+import static normative_control.utils.Constants.formatter;
 import static normative_control.utils.Files.PIIKN_8_REPORT_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
+import static normative_control.validation.validators.CommonValidator.containsSection;
+import static normative_control.validation.validators.CommonValidator.containsSectionWithSimilarity;
 import static normative_control.validation.validators.CommonValidator.extractThemeText;
 import static normative_control.validation.validators.CommonValidator.getFontSize;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
@@ -40,9 +44,10 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
     public void validateDocxFiles(String directoryPath, ValidatorDataReport data) {
         File dir = new File(directoryPath);
         if (!dir.isDirectory()) {
-            System.err.println("Указанный путь не является директорией.");
+            System.err.println(PATH_ERROR);
             return;
         }
+        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", PIIKN_8_REPORT_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
@@ -77,6 +82,26 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                     errorMessage.append(THEME_ERROR);
                     loggerInfo.append(THEME_ERROR + "\n");
                 }
+                if (containsSectionWithSimilarity(document, data.full_text)) {
+                    valid = false;
+                    errorMessage.append(REPORT_TEXT_NOT_CHANGED);
+                    loggerInfo.append(REPORT_TEXT_NOT_CHANGED);
+                }
+                if (!containsSection(document, INTRODUCTION_NAME)) {
+                    valid = false;
+                    errorMessage.append(INTRODUCTION_NAME_NOT_EXIST);
+                    loggerInfo.append(INTRODUCTION_NAME_NOT_EXIST);
+                }
+                if (!containsSection(document, CONSCLUSION_NAME)) {
+                    valid = false;
+                    errorMessage.append(CONSCLUSION_NAME_NOT_EXIST);
+                    loggerInfo.append(CONSCLUSION_NAME_NOT_EXIST);
+                }
+                if (!containsSection(document, LIBRARY_NAME)) {
+                    valid = false;
+                    errorMessage.append(LIBRARY_NAME_NOT_EXIST);
+                    loggerInfo.append(LIBRARY_NAME_NOT_EXIST);
+                }
                 if (valid) {
                     System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
                     writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, PIIKN_8_REPORT_FILE);
@@ -91,6 +116,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
         }
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
         writeValidationLogs(VALIDATION_END, PIIKN_8_REPORT_FILE);
+        writeValidationLogs(NEXT_LINE, PIIKN_8_REPORT_FILE);
     }
     @Override
     public ValidatorDataReport extractFromSparql(String sparqlQuery) {
@@ -106,15 +132,17 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             String font = null;
             String sizeRange = null;
             String style = null;
+            String full_text = null;
             while(results.hasNext()){
                 QuerySolution solution = results.next();
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
                 sizeRange = solution.getLiteral("Размер").getString();
                 style = solution.getLiteral("Стиль").getString();
+                full_text = solution.getLiteral("Основной_текст_отчета").getString();
             }
             qexec.close();
 
-            return new ValidatorDataReport(minPages, font, sizeRange, style);
+            return new ValidatorDataReport(minPages, font, sizeRange, style, full_text);
         } catch (Exception e) {
             System.err.println(SPARQL_ERROR + e.getMessage());
             e.printStackTrace();

@@ -9,7 +9,16 @@ import initiate_interface.Show.MastersShow;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.piikn.ReportMain;
+import normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.knis.IndividualTaskMainKnis8;
+import normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.knis.ReportMainKnis8;
+import normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.piikn.IndividualTaskMainPiikn8;
+import normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.piikn.ReportMainPiikn8;
+import normative_control.validation.runners.masters.second_year_students.iiids.IndividualTaskMainIiids4;
+import normative_control.validation.runners.masters.second_year_students.iiids.ReportMainIiids4;
+import normative_control.validation.runners.masters.second_year_students.iot.IndividualTaskMainIot4;
+import normative_control.validation.runners.masters.second_year_students.iot.ReportMainIot4;
+import normative_control.validation.runners.masters.second_year_students.trps.IndividualTaskMainTrps4;
+import normative_control.validation.runners.masters.second_year_students.trps.ReportMainTrps4;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.core.*;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.mda.MasterApplicationForPracticeMDA;
 import ru.nsu.fit.chernyavtseva.assistant.complete_documents.type.course2.trps.MasterApplicationForPracticeTRPS;
@@ -39,11 +48,13 @@ public class WorkMenu {
     public JFrame frame12;
     public JFrame frame13;
     public JFrame frame14;
+    public JFrame frame15;
     private ActionListener action;
     private JButton deleteButtonbach4, exitButton, createButton, menuButton, backButtonMenu, watchButton, backButton, thirdCourseButton, forthCourseButton,
             allDocsView, bachelors, masters, mastersDelete, bachelorsDelete, deleteButton, deleteButtonMag2,
             bachWatch, mastersWatch, backButtonDelete, createMasterButton, createBachelorButton, createMasterButtonTRPS, backBtnFromGen,
-    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn, applicationPractice, backBtnApp, validateButton;
+    izBtn, practiceFeedBackBtn, practiceReportBtn, reviewerFeedbackBtn, supervisorFeedbackBtn, backButtonMenuBtn, allDocsCreateBtn, applicationPractice, backBtnApp, validateButton,
+    validateButtonIot4, validateButtonIiids4, validateButtonTrps4, validateButtonPiikn8, validateButtonKnis8;
     private JLabel label;
 
     private String title = "Интеллектуальный помощник секретаря кафедры";
@@ -110,6 +121,10 @@ public class WorkMenu {
         frame14.setSize(1200, 800);
         frame14.setLocationRelativeTo(null);
 
+        frame15 = new JFrame(title);
+        frame15.setSize(1200, 800);
+        frame15.setLocationRelativeTo(null);
+
         JPanel contentPane3 = new JPanel();
         contentPane3.setBackground(Color.decode("#FFE4C4"));
 
@@ -151,6 +166,9 @@ public class WorkMenu {
 
         JPanel contentPane15 = new JPanel();
         contentPane15.setBackground(Color.decode("#FFE4C4"));
+
+        JPanel contentPane16 = new JPanel();
+        contentPane16.setBackground(Color.decode("#FFE4C4"));
 
         label = new JLabel("Выберите действие, которое хотите выполнить");
         label.setFont(new Font("Arial", Font.BOLD, 30));;
@@ -299,6 +317,42 @@ public class WorkMenu {
         validateButton.setBounds(450,460,325,70);
         validateButton.setBorder(new RoundedBorder(30));
         validateButton.setForeground(Color.BLUE);
+
+
+        validateButtonIot4 = new JButton("IoT 4 семестр");
+        validateButtonIot4.setForeground(Color.decode("#000000"));
+        validateButtonIot4.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        validateButtonIot4.setBounds(450,190,325,70);
+        validateButtonIot4.setBorder(new RoundedBorder(30));
+        validateButtonIot4.setForeground(Color.BLUE);
+
+        validateButtonIiids4 = new JButton("ИИиDS 4 семестр");
+        validateButtonIiids4.setForeground(Color.decode("#000000"));
+        validateButtonIiids4.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        validateButtonIiids4.setBounds(450,280,325,70);
+        validateButtonIiids4.setBorder(new RoundedBorder(30));
+        validateButtonIiids4.setForeground(Color.BLUE);
+
+        validateButtonTrps4 = new JButton("ТРПС 4 семестр");
+        validateButtonTrps4.setForeground(Color.decode("#000000"));
+        validateButtonTrps4.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        validateButtonTrps4.setBounds(450,370,325,70);
+        validateButtonTrps4.setBorder(new RoundedBorder(30));
+        validateButtonTrps4.setForeground(Color.BLUE);
+
+        validateButtonPiikn8 = new JButton("ПИиКН 8 семестр");
+        validateButtonPiikn8.setForeground(Color.decode("#000000"));
+        validateButtonPiikn8.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        validateButtonPiikn8.setBounds(450,460,325,70);
+        validateButtonPiikn8.setBorder(new RoundedBorder(30));
+        validateButtonPiikn8.setForeground(Color.BLUE);
+
+        validateButtonKnis8 = new JButton("КНиС 8 семестр");
+        validateButtonKnis8.setForeground(Color.decode("#000000"));
+        validateButtonKnis8.setFont(new Font("Times New Roman", Font.PLAIN, textSize));
+        validateButtonKnis8.setBounds(450,550,325,70);
+        validateButtonKnis8.setBorder(new RoundedBorder(30));
+        validateButtonKnis8.setForeground(Color.BLUE);
 
         forthCourseButton = new JButton("2 курс");
         forthCourseButton.setForeground(Color.decode("#000000"));
@@ -600,9 +654,39 @@ public class WorkMenu {
                     System.out.println("Документы с названием \"Заявление на практику\" сгенерированы"); //  Documents intro practice generated!
                     frame14.setVisible(true);
                 }
-                else if (button == validateButton){
-                    ReportMain.main(null);
+                else if (button == validateButton)
+                {
+                    frame15.setVisible(true);
                 }
+
+                else if (button == validateButtonIiids4)
+                {
+                    IndividualTaskMainIiids4.main(null);
+                    ReportMainIiids4.main(null);
+                }
+                else if (button == validateButtonIot4)
+                {
+                    IndividualTaskMainIot4.main(null);
+                    ReportMainIot4.main(null);
+                }
+                else if (button == validateButtonTrps4)
+                {
+                    IndividualTaskMainTrps4.main(null);
+                    ReportMainTrps4.main(null);
+                }
+                else if (button == validateButtonKnis8)
+                {
+                    IndividualTaskMainKnis8.main(null);
+                    ReportMainKnis8.main(null);
+                }
+                else if (button == validateButtonPiikn8)
+                {
+                    IndividualTaskMainPiikn8.main(null);
+                    ReportMainPiikn8.main(null);
+                }
+
+
+
                 else if  (button == practiceReportBtn)
                 {
                     try {
@@ -743,6 +827,11 @@ public class WorkMenu {
         exitButton.addActionListener((event) -> System.exit(0));
         createButton.addActionListener(action);
         validateButton.addActionListener(action);
+        validateButtonKnis8.addActionListener(action);
+        validateButtonPiikn8.addActionListener(action);
+        validateButtonIot4.addActionListener(action);
+        validateButtonIiids4.addActionListener(action);
+        validateButtonTrps4.addActionListener(action);
         menuButton.addActionListener(action);
         backButtonMenu.addActionListener(action);
         backButton.addActionListener(action);
@@ -830,6 +919,13 @@ public class WorkMenu {
 
         frame14.add(backBtnApp);
         frame14.getContentPane().add(contentPane15);
+
+        frame15.add(validateButtonIot4);
+        frame15.add(validateButtonPiikn8);
+        frame15.add(validateButtonIiids4);
+        frame15.add(validateButtonKnis8);
+        frame15.add(validateButtonTrps4);
+        frame15.getContentPane().add(contentPane16);
     }
     public static void main(String... args)
     {

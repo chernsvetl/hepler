@@ -18,24 +18,37 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
-import static normative_control.notifications.Notifications.DOCUMENT_ERROR;
-import static normative_control.notifications.Notifications.DOCUMENT_SUCCESS;
-import static normative_control.notifications.Notifications.FONT_SIZE_ERROR;
-import static normative_control.notifications.Notifications.PAGES_ERROR;
-import static normative_control.notifications.Notifications.READING_FILE_ERROR;
-import static normative_control.notifications.Notifications.SPARQL_ERROR;
-import static normative_control.notifications.Notifications.STYLE_ERROR;
-import static normative_control.notifications.Notifications.THEME_ERROR;
-import static normative_control.notifications.Notifications.VALIDATION_END;
+import static normative_control.notifications.Errors.CONSCLUSION_NAME;
+import static normative_control.notifications.Errors.CONSCLUSION_NAME_NOT_EXIST;
+import static normative_control.notifications.Errors.DOCUMENT_ERROR;
+import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
+import static normative_control.notifications.Errors.FONT_SIZE_ERROR;
+import static normative_control.notifications.Errors.INTRODUCTION_NAME;
+import static normative_control.notifications.Errors.INTRODUCTION_NAME_NOT_EXIST;
+import static normative_control.notifications.Errors.LIBRARY_NAME;
+import static normative_control.notifications.Errors.LIBRARY_NAME_NOT_EXIST;
+import static normative_control.notifications.Errors.NEXT_LINE;
+import static normative_control.notifications.Errors.PAGES_ERROR;
+import static normative_control.notifications.Errors.PATH_ERROR;
+import static normative_control.notifications.Errors.READING_FILE_ERROR;
+import static normative_control.notifications.Errors.REPORT_TEXT_NOT_CHANGED;
+import static normative_control.notifications.Errors.SPARQL_ERROR;
+import static normative_control.notifications.Errors.STYLE_ERROR;
+import static normative_control.notifications.Errors.THEME_ERROR;
+import static normative_control.notifications.Errors.VALIDATION_END;
 import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
+import static normative_control.utils.Constants.formatter;
 import static normative_control.utils.Files.IIIDS_4_REPORT_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
+import static normative_control.validation.validators.CommonValidator.containsSection;
+import static normative_control.validation.validators.CommonValidator.containsSectionWithSimilarity;
 import static normative_control.validation.validators.CommonValidator.extractThemeText;
 import static normative_control.validation.validators.CommonValidator.getFontSize;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
@@ -48,9 +61,10 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
     public void validateDocxFiles(String directoryPath, ValidatorDataReport data) {
         File dir = new File(directoryPath);
         if (!dir.isDirectory()) {
-            System.err.println("Указанный путь не является директорией.");
+            System.err.println(PATH_ERROR);
             return;
         }
+        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", IIIDS_4_REPORT_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
@@ -85,6 +99,26 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                     errorMessage.append(THEME_ERROR);
                     loggerInfo.append(THEME_ERROR);
                 }
+                if (containsSectionWithSimilarity(document, data.full_text)) {
+                    valid = false;
+                    errorMessage.append(REPORT_TEXT_NOT_CHANGED);
+                    loggerInfo.append(REPORT_TEXT_NOT_CHANGED);
+                }
+                if (!containsSection(document, INTRODUCTION_NAME)) {
+                    valid = false;
+                    errorMessage.append(INTRODUCTION_NAME_NOT_EXIST);
+                    loggerInfo.append(INTRODUCTION_NAME_NOT_EXIST);
+                }
+                if (!containsSection(document, CONSCLUSION_NAME)) {
+                    valid = false;
+                    errorMessage.append(CONSCLUSION_NAME_NOT_EXIST);
+                    loggerInfo.append(CONSCLUSION_NAME_NOT_EXIST);
+                }
+                if (!containsSection(document, LIBRARY_NAME)) {
+                    valid = false;
+                    errorMessage.append(LIBRARY_NAME_NOT_EXIST);
+                    loggerInfo.append(LIBRARY_NAME_NOT_EXIST);
+                }
                 if (valid) {
                     System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
                     writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, IIIDS_4_REPORT_FILE);
@@ -99,6 +133,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
         }
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
         writeValidationLogs(VALIDATION_END, IIIDS_4_REPORT_FILE);
+        writeValidationLogs(NEXT_LINE, IIIDS_4_REPORT_FILE);
     }
     @Override
     public ValidatorDataReport extractFromSparql(String sparqlQuery) {
@@ -114,15 +149,17 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             String font = null;
             String sizeRange = null;
             String style = null;
+            String full_text = null;
             while(results.hasNext()){
                 QuerySolution solution = results.next();
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
                 sizeRange = solution.getLiteral("Размер").getString();
                 style = solution.getLiteral("Стиль").getString();
+                full_text = solution.getLiteral("Основной_текст_отчета").getString();
             }
             qexec.close();
 
-            return new ValidatorDataReport(minPages, font, sizeRange, style);
+            return new ValidatorDataReport(minPages, font, sizeRange, style, full_text);
         } catch (Exception e) {
             System.err.println(SPARQL_ERROR + e.getMessage());
             e.printStackTrace();

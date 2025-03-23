@@ -14,11 +14,12 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
-import static normative_control.notifications.Notifications.FORMAT_CONVERTION_ERROR;
-import static normative_control.notifications.Notifications.NUMBER_CONVERTION_ERROR;
-import static normative_control.notifications.Notifications.PYTHON_CALL_ERROR;
-import static normative_control.notifications.Notifications.PYTHON_EXECUTION_ERROR;
+import static normative_control.notifications.Errors.FORMAT_CONVERTION_ERROR;
+import static normative_control.notifications.Errors.NUMBER_CONVERTION_ERROR;
+import static normative_control.notifications.Errors.PYTHON_CALL_ERROR;
+import static normative_control.notifications.Errors.PYTHON_EXECUTION_ERROR;
 import static normative_control.utils.Paths.PYTHON_SCRIPT;
+import static normative_control.utils.TextSimilarity.areTextsSimilar;
 
 public class CommonValidator {
     public static String getFontStyle(XWPFDocument document) {
@@ -47,7 +48,7 @@ public class CommonValidator {
         double mostPopularSize = fontCounts.entrySet().stream()
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey)
-                .orElse(null);
+                .orElse(0.0);
 
         return mostPopularSize;
     }
@@ -100,5 +101,24 @@ public class CommonValidator {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public static boolean containsSection(XWPFDocument document, String sectionTitle) {
+        for (XWPFParagraph paragraph : document.getParagraphs()) {
+            if (paragraph.getText().contains(sectionTitle)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean containsSectionWithSimilarity(XWPFDocument document, String sectionTitle) {
+        for (XWPFParagraph paragraph : document.getParagraphs()) {
+            String paragraphText = paragraph.getText();
+            if (areTextsSimilar(paragraphText, sectionTitle)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
