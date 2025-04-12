@@ -67,8 +67,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                     if (flag) {
                         valid = false;
-                        errorMessage.append(data.orgStepEndDate).append(" не изменено в таблице. \n");
-                        loggerInfo.append(data.orgStepEndDate).append(" не изменено в таблице. \n");
+                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                     }
                 }
                 for (XWPFTable table : document.getTables()) {
@@ -83,8 +83,8 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
                         }
                         if (flag) {
-                            errorMessage.append(data.prepareAndDefendStepEndDate).append(" не изменено в таблице. \n");
-                            loggerInfo.append(data.prepareAndDefendStepEndDate).append(" не изменено в таблице. \n");
+                            errorMessage.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                            loggerInfo.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                             break;
                         }
                     }
