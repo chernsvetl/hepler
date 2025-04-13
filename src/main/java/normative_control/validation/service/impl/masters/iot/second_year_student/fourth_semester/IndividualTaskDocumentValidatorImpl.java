@@ -1,4 +1,4 @@
-package normative_control.validation.service.impl.masters.trps.second_year_student.fouth_semester;
+package normative_control.validation.service.impl.masters.iot.second_year_student.fourth_semester;
 
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
@@ -40,7 +40,7 @@ import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Constants.formatter;
-import static normative_control.utils.Files.TRPS_4_INDIVIDUAL_TASK_FILE;
+import static normative_control.utils.Files.IOT_4_INDIVIDUAL_TASK_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
@@ -54,7 +54,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
             System.err.println(PATH_ERROR);
             return;
         }
-        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", TRPS_4_INDIVIDUAL_TASK_FILE);
+        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", IOT_4_INDIVIDUAL_TASK_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
@@ -147,20 +147,20 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 }
                 if (valid) {
                     System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
-                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, TRPS_4_INDIVIDUAL_TASK_FILE);
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, IOT_4_INDIVIDUAL_TASK_FILE);
                 } else {
                     System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
-                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", TRPS_4_INDIVIDUAL_TASK_FILE);
+                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", IOT_4_INDIVIDUAL_TASK_FILE);
                 }
             } catch (IOException e) {
                 System.err.println(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage());
-                writeValidationLogs(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage(), TRPS_4_INDIVIDUAL_TASK_FILE);
+                writeValidationLogs(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage(), IOT_4_INDIVIDUAL_TASK_FILE);
             }
-            writeValidationLogs(SPACE, TRPS_4_INDIVIDUAL_TASK_FILE);
+            writeValidationLogs(SPACE, IOT_4_INDIVIDUAL_TASK_FILE);
         }
-        writeValidationLogs(VALIDATION_END, TRPS_4_INDIVIDUAL_TASK_FILE);
+        writeValidationLogs(VALIDATION_END, IOT_4_INDIVIDUAL_TASK_FILE);
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
-        writeValidationLogs(NEXT_LINE, TRPS_4_INDIVIDUAL_TASK_FILE);
+        writeValidationLogs(NEXT_LINE, IOT_4_INDIVIDUAL_TASK_FILE);
     }
 
     @Override
@@ -187,11 +187,11 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
                 sizeRange = solution.getLiteral("Размер").getString();
                 style = solution.getLiteral("Стиль").getString();
-                orgStepEndDate = solution.getLiteral("Срок_завершения_организационного_этапа_из_трпс_4").toString();
-                prepareAndDefendStepEndDate = solution.getLiteral("Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_4").toString();
-                prepareAndDefendStepContent = solution.getLiteral("Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_4").toString();
-                orgStepContent = solution.getLiteral("Содержание_работы_организационного_этапа_из_трпс_4").toString();
-                individualStepContent = solution.getLiteral("Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_4").toString();
+                orgStepEndDate = solution.getLiteral("Срок_завершения_организационного_этапа_из_iot_4").toString();
+                prepareAndDefendStepEndDate = solution.getLiteral("Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_4").toString();
+                prepareAndDefendStepContent = solution.getLiteral("Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_4").toString();
+                orgStepContent = solution.getLiteral("Содержание_работы_организационного_этапа_из_iot_4").toString();
+                individualStepContent = solution.getLiteral("Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_4").toString();
             }
             qexec.close();
 

@@ -1,4 +1,4 @@
-package normative_control.validation.service.impl.masters.iot.second_year_student.fouth_semester;
+package normative_control.validation.service.impl.masters.iiids.first_year_student.second_semester;
 
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
@@ -45,7 +45,7 @@ import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Constants.formatter;
-import static normative_control.utils.Files.IOT_4_REPORT_FILE;
+import static normative_control.utils.Files.IIIDS_2_REPORT_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.containsSection;
 import static normative_control.validation.validators.CommonValidator.containsSectionWithSimilarity;
@@ -64,7 +64,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             System.err.println(PATH_ERROR);
             return;
         }
-        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", IOT_4_REPORT_FILE);
+        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", IIIDS_2_REPORT_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
@@ -121,19 +121,19 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                 }
                 if (valid) {
                     System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
-                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, IOT_4_REPORT_FILE);
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, IIIDS_2_REPORT_FILE);
                 } else {
                     System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
-                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", IOT_4_REPORT_FILE);
+                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", IIIDS_2_REPORT_FILE);
                 }
             } catch (IOException e) {
                 System.err.println(READING_FILE_ERROR + file.getName() + ": " + e.getMessage());
             }
-            writeValidationLogs(SPACE, IOT_4_REPORT_FILE);
+            writeValidationLogs(    SPACE, IIIDS_2_REPORT_FILE);
         }
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
-        writeValidationLogs(VALIDATION_END, IOT_4_REPORT_FILE);
-        writeValidationLogs(NEXT_LINE, IOT_4_REPORT_FILE);
+        writeValidationLogs(VALIDATION_END, IIIDS_2_REPORT_FILE);
+        writeValidationLogs(NEXT_LINE, IIIDS_2_REPORT_FILE);
     }
     @Override
     public ValidatorDataReport extractFromSparql(String sparqlQuery) {

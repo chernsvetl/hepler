@@ -1,7 +1,7 @@
 package normative_control.validation.runners.masters.second_year_students.trps;
 
 import normative_control.validation.service.ReportDocumentValidator;
-import normative_control.validation.service.impl.masters.trps.second_year_student.fouth_semester.ReportDocumentValidatorImpl;
+import normative_control.validation.service.impl.masters.trps.second_year_student.fourth_semester.ReportDocumentValidatorImpl;
 import normative_control.validation.validators.ValidatorDataReport;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
