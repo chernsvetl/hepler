@@ -105,7 +105,7 @@ public class CommonValidator {
 
     public static boolean containsSection(XWPFDocument document, String sectionTitle) {
         for (XWPFParagraph paragraph : document.getParagraphs()) {
-            if (paragraph.getText().contains(sectionTitle)) {
+            if (paragraph.getText().toLowerCase().contains(sectionTitle.toLowerCase())) {
                 return true;
             }
         }

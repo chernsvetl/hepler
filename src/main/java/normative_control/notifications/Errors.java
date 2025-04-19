@@ -6,7 +6,7 @@ public class Errors {
     public static final String PAGES_ERROR = "Недостаточно страниц (ожидалось: ";
     public static final String FONT_SIZE_ERROR = "Неверный размер шрифта (ожидалось: ";
     public static final String STYLE_ERROR = "Неверный стиль (ожидалось: ";
-    public static final String THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова.";
+    public static final String THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова.\n";
     public static final String DOCUMENT_SUCCESS = " документ корректен.\n";
     public static final String DOCUMENT_ERROR = " документ содержит ошибки: \n";
     public static final String READING_FILE_ERROR = "Ошибка чтения файла ";
@@ -27,5 +27,14 @@ public class Errors {
     public static final String DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED = "Срок завершения организационного этапа";
     public static final String DATE_STEP_DEFEND_TASK_NOT_CHANGED = "Срок завершения этапа защиты материалов";
     public static final String DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY = "Срок завершения этапа индивидуального задания пуст.\n";
+    public static final String JSON_VALIDATION_END = "Нормоконтроль завершен";
+    public static final String JSON_DATE_END_INDIVIDUAL_TASK_EMPTY_ERROR = "Срок завершения этапа индивидуального задания пуст.";
+    public static final String JSON_REPORT_TEXT_NOT_CHANGED_ERROR = "Текст отчета не изменен.";
+    public static final String JSON_INTRODUCTION_NAME_NOT_EXIST_ERROR = "Введение не найдено.";
+    public static final String JSON_CONSCLUSION_NAME_NOT_EXIST_ERROR = "Заключение не найдено.";
+    public static final String JSON_LIBRARY_NAME_NOT_EXIST_ERROR = "Список литературы не найден.";
+    public static final String JSON_READ_ERROR = "Ошибка чтения файла: ";
+    public static final String JSON_WRITE_ERROR = "Ошибка при записи JSON файла: ";
+    public static final String JSON_THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова.";
     public static final String NEXT_LINE = "\n";
 }

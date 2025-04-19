@@ -1,5 +1,8 @@
 package normative_control.validation.service.impl.bachelors.knis.fouth_year_student.eight_semester;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -17,9 +20,12 @@ import ru.nsu.fit.chernyavtseva.assistant.Main;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static normative_control.notifications.Errors.CONTENT_STEP_DEFEND_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
@@ -28,6 +34,10 @@ import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_I
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DOCUMENT_ERROR;
 import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
+import static normative_control.notifications.Errors.JSON_DATE_END_INDIVIDUAL_TASK_EMPTY_ERROR;
+import static normative_control.notifications.Errors.JSON_READ_ERROR;
+import static normative_control.notifications.Errors.JSON_VALIDATION_END;
+import static normative_control.notifications.Errors.JSON_WRITE_ERROR;
 import static normative_control.notifications.Errors.NEXT_LINE;
 import static normative_control.notifications.Errors.PATH_ERROR;
 import static normative_control.notifications.Errors.READING_FILE_ERROR;
@@ -47,6 +57,8 @@ import static normative_control.validation.validators.CommonValidator.getFontSty
 
 public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocumentValidator {
 
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataIndividualTask data) {
         File dir = new File(directoryPath);
@@ -54,13 +66,21 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
             System.err.println(PATH_ERROR);
             return;
         }
+
+        List<JsonObject> validationResults = new ArrayList<>();
+        JsonObject validationSession = new JsonObject();
+        validationSession.addProperty("validationStartTime", LocalDateTime.now().format(formatter));
+
         writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", KNIS_8_INDIVIDUAL_TASK_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
+            JsonObject documentResult = new JsonObject();
+            documentResult.addProperty("fileName", file.getName());
+            List<String> errors = new ArrayList<>();
+
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
 
                 String fontStyle = getFontStyle(document);
-
                 boolean valid = true;
                 var errorMessage = new StringBuilder();
                 var loggerInfo = new StringBuilder();
@@ -69,20 +89,20 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     valid = false;
                     errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
                     loggerInfo.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
+                    errors.add(String.format("Ошибка стиля: ожидается '%s', фактически '%s'", data.style, fontStyle));
                 }
+
                 for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
                     var row = table.getRow(1);
                     var cellValue = row.getCell(2).getText().trim();
                     if (cellValue.equals(data.orgStepEndDate.trim())) {
-                        flag = true;
-                    }
-                    if (flag) {
                         valid = false;
+                        errors.add(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " не изменено в таблице.");
                         errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                         loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                     }
                 }
+
                 for (XWPFTable table : document.getTables()) {
                     boolean flag = false;
                     for (int rowIndex = 0; rowIndex < table.getRows().size(); rowIndex++) {
@@ -95,12 +115,14 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
                         }
                         if (flag) {
+                            errors.add(DATE_STEP_DEFEND_TASK_NOT_CHANGED + " не изменено в таблице.");
                             errorMessage.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                             loggerInfo.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                             break;
                         }
                     }
                 }
+
                 for (XWPFTable table : document.getTables()) {
                     boolean flag = false;
                     var row = table.getRow(2);
@@ -110,23 +132,26 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                     if (flag) {
                         valid = false;
+                        errors.add(JSON_DATE_END_INDIVIDUAL_TASK_EMPTY_ERROR);
                         errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
                         loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
                     }
                 }
+
                 for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
                     var row = table.getRow(2);
+                    boolean flag = false;
                     var cellValue = row.getCell(3).getText().trim();
                     if (areTextsSimilar(cellValue, data.individualStepContent)) {
                         flag = true;
-                    }
-                    if (flag) {
+                    } if (flag) {
                         valid = false;
+                        errors.add(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " не изменено в таблице.");
                         errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                         loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                     }
                 }
+
                 for (XWPFTable table : document.getTables()) {
                     boolean flag = false;
                     for (int rowIndex = 0; rowIndex < table.getRows().size(); rowIndex++) {
@@ -139,24 +164,45 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
                         }
                         if (flag) {
+                            errors.add(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED + " не изменено в таблице.");
                             errorMessage.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                             loggerInfo.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                             break;
                         }
                     }
                 }
+
+                documentResult.addProperty("isValid", valid);
+                if (!errors.isEmpty()) {
+                    documentResult.add("errors", gson.toJsonTree(errors));
+                }
+
                 if (valid) {
                     System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
                     writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, KNIS_8_INDIVIDUAL_TASK_FILE);
                 } else {
-                    System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + "\n");
+                    System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED +
+                            String.join("\n", errors) + "\n");
                     writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + "\n", KNIS_8_INDIVIDUAL_TASK_FILE);
                 }
+
             } catch (IOException e) {
-                System.err.println(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage());
+                documentResult.addProperty("error", JSON_READ_ERROR + e.getMessage());
+                System.err.println(READING_FILE_ERROR + file.getName() + ": " + "\n" + e.getMessage());
                 writeValidationLogs(READING_FILE_ERROR + file.getName() + ": "  + "\n" + e.getMessage(), KNIS_8_INDIVIDUAL_TASK_FILE);
             }
             writeValidationLogs(SPACE, KNIS_8_INDIVIDUAL_TASK_FILE);
+            validationResults.add(documentResult);
+        }
+
+        validationSession.add("documents", gson.toJsonTree(validationResults));
+        validationSession.addProperty("validationEndTime", LocalDateTime.now().format(formatter));
+        validationSession.addProperty("status", JSON_VALIDATION_END);
+
+        try (FileWriter writer = new FileWriter(KNIS_8_INDIVIDUAL_TASK_FILE + ".json")) {
+            gson.toJson(validationSession, writer);
+        } catch (IOException e) {
+            System.err.println(JSON_WRITE_ERROR + e.getMessage());
         }
         writeValidationLogs(VALIDATION_END, KNIS_8_INDIVIDUAL_TASK_FILE);
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
