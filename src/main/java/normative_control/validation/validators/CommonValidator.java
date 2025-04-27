@@ -4,9 +4,6 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -16,9 +13,6 @@ import java.util.stream.DoubleStream;
 
 import static normative_control.notifications.Errors.FORMAT_CONVERTION_ERROR;
 import static normative_control.notifications.Errors.NUMBER_CONVERTION_ERROR;
-import static normative_control.notifications.Errors.PYTHON_CALL_ERROR;
-import static normative_control.notifications.Errors.PYTHON_EXECUTION_ERROR;
-import static normative_control.utils.Paths.PYTHON_SCRIPT;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
 
 public class CommonValidator {
@@ -85,22 +79,13 @@ public class CommonValidator {
         }
     }
     public static boolean isValidTheme(String themeText) {
-        try {
-            ProcessBuilder processBuilder = new ProcessBuilder("python", PYTHON_SCRIPT, themeText);
-            processBuilder.environment().put("PYTHONIOENCODING", "UTF-8");
-            Process process = processBuilder.start();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "UTF-8"));
-            String result = reader.readLine();
-            int exitCode = process.waitFor();
-            if (exitCode != 0) {
-                System.err.println(PYTHON_EXECUTION_ERROR + exitCode + ")");
-            }
-            return result != null && result.equals("valid");
-        } catch (IOException | InterruptedException e) {
-            System.err.println(PYTHON_CALL_ERROR + e.getMessage());
-            e.printStackTrace();
-            return false;
+        var text = themeText.toLowerCase();
+        var result = false;
+        if (text.contains("разработка") || text.contains("исследование") || text.contains("реализация")
+                || text.contains("анализ")) {
+           result = true;
         }
+        return result;
     }
 
     public static boolean containsSection(XWPFDocument document, String sectionTitle) {

@@ -36,8 +36,10 @@ import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Constants.formatter;
 import static normative_control.utils.Files.PIIKN_8_INDIVIDUAL_TASK_FILE;
 import static normative_control.utils.Paths.MODEL_FILENAME;
+import static normative_control.validation.validators.CommonValidator.extractThemeText;
 import static normative_control.validation.validators.CommonValidator.getFontStyle;
 import static normative_control.utils.TextSimilarity.areTextsSimilar;
+import static normative_control.validation.validators.CommonValidator.isValidTheme;
 
 public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocumentValidator {
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -67,12 +69,20 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 boolean valid = true;
                 var errorMessage = new StringBuilder();
                 var loggerInfo = new StringBuilder();
+                String themeText = extractThemeText(document);
 
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
                     errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
                     loggerInfo.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
                     errors.add(String.format("Ошибка стиля: ожидается '%s', фактически '%s'", data.style, fontStyle));
+                }
+
+                if (!isValidTheme(themeText)) {
+                    valid = false;
+                    errorMessage.append(THEME_ERROR);
+                    loggerInfo.append(THEME_ERROR);
+                    errors.add(JSON_THEME_ERROR);
                 }
 
                 for (XWPFTable table : document.getTables()) {
