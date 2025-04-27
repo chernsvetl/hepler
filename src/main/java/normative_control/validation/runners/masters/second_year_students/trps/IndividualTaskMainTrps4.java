@@ -6,7 +6,7 @@ import normative_control.validation.validators.ValidatorDataIndividualTask;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
 import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
-import static normative_control.utils.Paths.TRPS_4_INDIVIDUAL_TASK_PATH;
+import static normative_control.utils.ValidationPaths.TRPS_4_INDIVIDUAL_TASK_PATH;
 
 public class IndividualTaskMainTrps4 {
     public static void main(String[] args) {

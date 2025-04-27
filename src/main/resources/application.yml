@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: koi-reminders
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reminders_db
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: validate
+
+  mail:
+    host: mail.nsu.ru
+    port: 465
+    username: "info.koi.fit@nsu.ru"
+    password: 'a%@9w"$%QjK'
+    nickname: "Информационная система КОИ ФИТ НГУ"
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: admin
+    default-serialization-format: application/json
+    job-execution:
+      enabled: true
+    default-history-time-to-live: 365
+

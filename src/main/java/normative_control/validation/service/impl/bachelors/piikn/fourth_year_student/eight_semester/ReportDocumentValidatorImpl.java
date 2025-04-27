@@ -35,7 +35,7 @@ import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Constants.formatter;
 import static normative_control.utils.Files.PIIKN_8_REPORT_FILE;
-import static normative_control.utils.Paths.MODEL_FILENAME;
+import static normative_control.utils.ValidationPaths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.containsSection;
 import static normative_control.validation.validators.CommonValidator.containsSectionWithSimilarity;
 import static normative_control.validation.validators.CommonValidator.extractThemeText;
@@ -70,7 +70,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
 
-                int pageCount = document.getParagraphs().size() / 30;
+                int pageCount = document.getParagraphs().size() / 25;
                 var fontSize = getFontSize(document);
                 String fontStyle = getFontStyle(document);
                 String themeText = extractThemeText(document);

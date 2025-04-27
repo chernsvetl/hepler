@@ -6,7 +6,7 @@ import normative_control.validation.validators.ValidatorDataReport;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
 import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
-import static normative_control.utils.Paths.IIIDS_4_REPORT_PATH;
+import static normative_control.utils.ValidationPaths.IIIDS_4_REPORT_PATH;
 
 public class ReportMainIiids4 {
     public static void main(String[] args) {
