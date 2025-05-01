@@ -31,11 +31,13 @@ import static normative_control.notifications.Errors.CONTENT_STEP_DEFEND_TASK_NO
 import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_STEP_DEFEND_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY;
+import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DOCUMENT_ERROR;
 import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
-import static normative_control.notifications.Errors.JSON_DATE_END_INDIVIDUAL_TASK_EMPTY_ERROR;
+import static normative_control.notifications.Errors.JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR;
 import static normative_control.notifications.Errors.JSON_READ_ERROR;
+import static normative_control.notifications.Errors.JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED;
 import static normative_control.notifications.Errors.JSON_THEME_ERROR;
 import static normative_control.notifications.Errors.JSON_VALIDATION_END;
 import static normative_control.notifications.Errors.JSON_WRITE_ERROR;
@@ -43,6 +45,7 @@ import static normative_control.notifications.Errors.NEXT_LINE;
 import static normative_control.notifications.Errors.PATH_ERROR;
 import static normative_control.notifications.Errors.READING_FILE_ERROR;
 import static normative_control.notifications.Errors.SPARQL_ERROR;
+import static normative_control.notifications.Errors.STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED;
 import static normative_control.notifications.Errors.STYLE_ERROR;
 import static normative_control.notifications.Errors.THEME_ERROR;
 import static normative_control.notifications.Errors.VALIDATION_END;
@@ -117,6 +120,21 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
 
                 for (XWPFTable table : document.getTables()) {
                     boolean flag = false;
+                    var row = table.getRow(1);
+                    var cellValue = row.getCell(2).getText().trim();
+                    if (cellValue.isEmpty()) {
+                        flag = true;
+                    }
+                    if (flag) {
+                        valid = false;
+                        errors.add(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пуст.");
+                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                    }
+                }
+
+                for (XWPFTable table : document.getTables()) {
+                    boolean flag = false;
                     for (int rowIndex = 0; rowIndex < table.getRows().size(); rowIndex++) {
                         var row = table.getRow(rowIndex);
                         for (int cellIndex = 0; cellIndex < row.getTableCells().size(); cellIndex++) {
@@ -144,9 +162,23 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                     if (flag) {
                         valid = false;
-                        errors.add(JSON_DATE_END_INDIVIDUAL_TASK_EMPTY_ERROR);
+                        errors.add(JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR);
                         errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
                         loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
+                    }
+                }
+
+                for (XWPFTable table : document.getTables()) {
+                    var row = table.getRow(2);
+                    boolean flag = false;
+                    var cellValue = row.getCell(2).getText().trim();
+                    if (areTextsSimilar(cellValue, data.individualStepDate)) {
+                        flag = true;
+                    } if (flag) {
+                        valid = false;
+                        errors.add(JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED);
+                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED);
+                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED);
                     }
                 }
 
@@ -161,6 +193,50 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                         errors.add(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " не изменено в таблице.");
                         errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
                         loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                    }
+                }
+
+                for (XWPFTable table : document.getTables()) {
+                    boolean flag = false;
+                    var row = table.getRow(2);
+                    var cellValue = row.getCell(3).getText().trim();
+                    if (cellValue.isEmpty()) {
+                        flag = true;
+                    }
+                    if (flag) {
+                        valid = false;
+                        errors.add(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пусто.");
+                        errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пусто. \n");
+                        loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пусто. \n");
+                    }
+                }
+
+                for (XWPFTable table : document.getTables()) {
+                    var row = table.getRow(2);
+                    boolean flag = false;
+                    var cellValue = row.getCell(4).getText().trim();
+                    if (areTextsSimilar(cellValue, data.individualStepForm)) {
+                        flag = true;
+                    } if (flag) {
+                        valid = false;
+                        errors.add(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + " не изменена в таблице.");
+                        errorMessage.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED).append(" не изменена в таблице. \n");
+                        loggerInfo.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED).append(" не изменена в таблице. \n");
+                    }
+                }
+
+                for (XWPFTable table : document.getTables()) {
+                    boolean flag = false;
+                    var row = table.getRow(2);
+                    var cellValue = row.getCell(4).getText().trim();
+                    if (cellValue.isEmpty()) {
+                        flag = true;
+                    }
+                    if (flag) {
+                        valid = false;
+                        errors.add(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + "пустая.");
+                        errorMessage.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + "пустая. \n");
+                        loggerInfo.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + "пустая. \n");
                     }
                 }
 
@@ -240,6 +316,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
             String prepareAndDefendStepContent = null;
             String orgStepContent = null;
             String individualStepContent = null;
+            String individualStepDate = null;
+            String individualStepForm = null;
+
             while(results.hasNext()){
                 QuerySolution solution = results.next();
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
@@ -250,11 +329,14 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 prepareAndDefendStepContent = solution.getLiteral("Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_8").toString();
                 orgStepContent = solution.getLiteral("Содержание_работы_организационного_этапа_из_книс_8").toString();
                 individualStepContent = solution.getLiteral("Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_8").toString();
+                individualStepDate = solution.getLiteral("Срок_завершения_индивидуального_этапа_из_книс_8").toString();
+                individualStepForm = solution.getLiteral("Форма_отчетности_индивидуального_этапа_из_книс_8").toString();
             }
             qexec.close();
 
             return new ValidatorDataIndividualTask(minPages, font, sizeRange, style, orgStepEndDate,
-                    prepareAndDefendStepEndDate, prepareAndDefendStepContent, orgStepContent, individualStepContent);
+                    prepareAndDefendStepEndDate, prepareAndDefendStepContent, orgStepContent, individualStepContent,
+                    individualStepDate, individualStepForm);
         } catch (Exception e) {
             System.err.println(SPARQL_ERROR + e.getMessage());
             e.printStackTrace();

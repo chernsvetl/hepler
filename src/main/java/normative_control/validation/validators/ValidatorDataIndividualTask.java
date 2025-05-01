@@ -10,10 +10,13 @@ public class ValidatorDataIndividualTask {
     public String prepareAndDefendStepContent;
     public String orgStepContent;
     public String individualStepContent;
+    public String individualStepDate;
+    public String individualStepForm;
 
     public ValidatorDataIndividualTask(int minPages, String font, String sizeRange, String style, String orgStepEndDate,
-                                       String prepareAndDefendStepEndDate, String prepareAndDefendStepContent, String orgStepContent,
-                                       String individualStepContent) {
+                                       String prepareAndDefendStepEndDate, String prepareAndDefendStepContent,
+                                       String orgStepContent, String individualStepContent,
+                                       String individualStepDate, String individualStepForm) {
         this.minPages = minPages;
         this.font = font;
         this.sizeRange = sizeRange;
@@ -23,5 +26,7 @@ public class ValidatorDataIndividualTask {
         this.prepareAndDefendStepContent = prepareAndDefendStepContent;
         this.orgStepContent = orgStepContent;
         this.individualStepContent = individualStepContent;
+        this.individualStepDate = individualStepDate;
+        this.individualStepForm = individualStepForm;
     }
 }
