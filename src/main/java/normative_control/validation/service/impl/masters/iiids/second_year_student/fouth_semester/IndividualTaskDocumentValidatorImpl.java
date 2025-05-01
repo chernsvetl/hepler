@@ -32,7 +32,7 @@ import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TAS
 import static normative_control.notifications.Errors.DATE_STEP_DEFEND_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY;
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED;
-import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
+import static normative_control.notifications.Errors.DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DOCUMENT_ERROR;
 import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
 import static normative_control.notifications.Errors.JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR;
@@ -111,9 +111,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     var cellValue = row.getCell(2).getText().trim();
                     if (cellValue.equals(data.orgStepEndDate.trim())) {
                         valid = false;
-                        errors.add(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " не изменено в таблице.");
-                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
-                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                        errors.add(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + " не изменен в таблице.");
+                        errorMessage.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменен в таблице. \n");
+                        loggerInfo.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменен в таблице. \n");
                     }
                 }
 
@@ -126,9 +126,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                     if (flag) {
                         valid = false;
-                        errors.add(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пуст.");
-                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
-                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                        errors.add(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст.");
+                        errorMessage.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                        loggerInfo.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
                     }
                 }
 
