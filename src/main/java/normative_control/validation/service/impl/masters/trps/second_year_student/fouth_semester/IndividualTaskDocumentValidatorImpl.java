@@ -23,12 +23,16 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static normative_control.notifications.Errors.CONTENT_STEP_DEFEND_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
+import static normative_control.notifications.Errors.DATE_END_INDIVIDUAL_TASK_ERROR;
 import static normative_control.notifications.Errors.DATE_STEP_DEFEND_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY;
 import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED;
@@ -107,28 +111,48 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 }
 
                 for (XWPFTable table : document.getTables()) {
-                    var row = table.getRow(1);
-                    var cellValue = row.getCell(2).getText().trim();
-                    if (cellValue.equals(data.orgStepEndDate.trim())) {
-                        valid = false;
-                        errors.add(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + " не изменен в таблице.");
-                        errorMessage.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменен в таблице. \n");
-                        loggerInfo.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменен в таблице. \n");
-                    }
-                }
+                    try {
+                        var row = table.getRow(1);
+                        var cell = row.getCell(2);
+                        var cellValue = cell.getText() != null ? cell.getText().trim() : "";
 
-                for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
-                    var row = table.getRow(1);
-                    var cellValue = row.getCell(2).getText().trim();
-                    if (cellValue.isEmpty()) {
-                        flag = true;
-                    }
-                    if (flag) {
+                        if (cellValue.isEmpty()) {
+                            valid = false;
+                            errors.add(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст.");
+                            errorMessage.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                            loggerInfo.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                        }
+                        var dateOrgStart1 = "10.02.2025";
+                        var dateOrgStart2 = "12.02.2025";
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+                        try {
+                            LocalDate cellDate = LocalDate.parse(cellValue, formatter);
+                            LocalDate startDate1 = LocalDate.parse(dateOrgStart1, formatter);
+                            LocalDate startDate2 = LocalDate.parse(dateOrgStart2, formatter);
+
+                            if (cellDate.isBefore(startDate1) || cellDate.isAfter(startDate2)) {
+                                valid = false;
+                                String errorMsg = DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED +
+                                        " некорректен: дата должна быть в диапазоне от " + dateOrgStart1 + " до " + dateOrgStart2;
+                                errors.add(errorMsg);
+                                errorMessage.append(errorMsg).append("\n");
+                                loggerInfo.append(errorMsg).append("\n");
+                            }
+                        } catch (DateTimeParseException e) {
+                            valid = false;
+                            String errorMsg = DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED +
+                                    " некорректен: не соответствует формату дд.мм.гггг";
+                            errors.add(errorMsg);
+                            errorMessage.append(errorMsg).append("\n");
+                            loggerInfo.append(errorMsg).append("\n");
+                        }
+                    } catch (Exception e) {
                         valid = false;
-                        errors.add(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст.");
-                        errorMessage.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
-                        loggerInfo.append(DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + "пуст. \n");
+                        String errorMsg = "Ошибка при обработке таблицы: " + e.getMessage();
+                        errors.add(errorMsg);
+                        errorMessage.append(errorMsg).append("\n");
+                        loggerInfo.append(errorMsg).append("\n");
                     }
                 }
 
@@ -153,31 +177,48 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 }
 
                 for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
-                    var row = table.getRow(2);
-                    var cellValue = row.getCell(2).getText().trim();
-                    if (cellValue.isEmpty()) {
-                        flag = true;
-                    }
-                    if (flag) {
-                        valid = false;
-                        errors.add(JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR);
-                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
-                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY);
-                    }
-                }
+                    try {
+                        var row = table.getRow(2);
+                        var cell = row.getCell(2);
+                        var cellValue = cell.getText() != null ? cell.getText().trim() : "";
 
-                for (XWPFTable table : document.getTables()) {
-                    var row = table.getRow(2);
-                    boolean flag = false;
-                    var cellValue = row.getCell(2).getText().trim();
-                    if (areTextsSimilar(cellValue, data.individualStepDate)) {
-                        flag = true;
-                    } if (flag) {
+                        if (cellValue.isEmpty()) {
+                            valid = false;
+                            errors.add(JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR + "пуст.");
+                            errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY + "пуст. \n");
+                            loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY + "пуст. \n");
+                        }
+                        var dateOrgStart1 = "13.05.2025";
+                        var dateOrgStart1Start = "10.02.2025";
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+                        try {
+                            LocalDate cellDate = LocalDate.parse(cellValue, formatter);
+                            LocalDate startDate1 = LocalDate.parse(dateOrgStart1, formatter);
+                            LocalDate dateOrgStart1StartStart = LocalDate.parse(dateOrgStart1Start, formatter);
+
+                            if (cellDate.isAfter(startDate1) || cellDate.isBefore(dateOrgStart1StartStart)) {
+                                valid = false;
+                                String errorMsg = DATE_END_INDIVIDUAL_TASK_ERROR +
+                                        " некорректен: последним максимальным днем данного этапа является дата " + dateOrgStart1;
+                                errors.add(errorMsg);
+                                errorMessage.append(errorMsg).append("\n");
+                                loggerInfo.append(errorMsg).append("\n");
+                            }
+                        } catch (DateTimeParseException e) {
+                            valid = false;
+                            String errorMsg = DATE_END_INDIVIDUAL_TASK_ERROR +
+                                    " некорректен: не соответствует формату дд.мм.гггг";
+                            errors.add(errorMsg);
+                            errorMessage.append(errorMsg).append("\n");
+                            loggerInfo.append(errorMsg).append("\n");
+                        }
+                    } catch (Exception e) {
                         valid = false;
-                        errors.add(JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED);
-                        errorMessage.append(DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED);
-                        loggerInfo.append(DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED);
+                        String errorMsg = "Ошибка при обработке таблицы: " + e.getMessage();
+                        errors.add(errorMsg);
+                        errorMessage.append(errorMsg).append("\n");
+                        loggerInfo.append(errorMsg).append("\n");
                     }
                 }
 

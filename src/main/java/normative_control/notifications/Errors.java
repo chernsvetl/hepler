@@ -28,8 +28,8 @@ public class Errors {
     public static final String DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY = "Срок завершения этапа индивидуального задания пуст.\n";
     public static final String STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED = "Форма отчетности в этапе индивидуального задания";
     public static final String JSON_VALIDATION_END = "Нормоконтроль завершен";
-    public static final String JSON_DATE_END_INDIVIDUAL_TASK_NOT_CHANGED_ERROR = "Срок завершения этапа индивидуального задания не изменен.";
-    public static final String JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR = "Срок завершения этапа индивидуального задания пуст.";
+    public static final String DATE_END_INDIVIDUAL_TASK_ERROR = "Срок завершения этапа индивидуального задания";
+    public static final String JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR = "Срок завершения этапа индивидуального задания ";
     public static final String JSON_REPORT_TEXT_NOT_CHANGED_ERROR = "Текст отчета не изменен.";
     public static final String JSON_INTRODUCTION_NAME_NOT_EXIST_ERROR = "Введение не найдено.";
     public static final String JSON_CONSCLUSION_NAME_NOT_EXIST_ERROR = "Заключение не найдено.";
@@ -37,7 +37,6 @@ public class Errors {
     public static final String JSON_READ_ERROR = "Ошибка чтения файла: ";
     public static final String JSON_WRITE_ERROR = "Ошибка при записи JSON файла: ";
     public static final String JSON_THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова.";
-    public static final String JSON_STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED = "Форма отчетности в этапе индивидуального задания не изменена.";
     public static final String JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED = "Срок завершения этапа индивидуального задания не изменен.";
     public static final String NEXT_LINE = "\n";
 }
