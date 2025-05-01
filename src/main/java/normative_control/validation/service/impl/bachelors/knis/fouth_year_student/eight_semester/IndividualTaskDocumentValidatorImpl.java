@@ -145,9 +145,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
                         }
                         if (flag) {
-                            errors.add(DATE_STEP_DEFEND_TASK_NOT_CHANGED + " не изменено в таблице.");
-                            errorMessage.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
-                            loggerInfo.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                            errors.add(DATE_STEP_DEFEND_TASK_NOT_CHANGED + " не изменен в таблице.");
+                            errorMessage.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменен в таблице. \n");
+                            loggerInfo.append(DATE_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменен в таблице. \n");
                             break;
                         }
                     }
@@ -240,25 +240,25 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                 }
 
-                for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
-                    for (int rowIndex = 0; rowIndex < table.getRows().size(); rowIndex++) {
-                        var row = table.getRow(rowIndex);
-                        for (int cellIndex = 0; cellIndex < row.getTableCells().size(); cellIndex++) {
-                            var cellValue = row.getCell(cellIndex).getText().trim();
-                            if (cellValue.equals(data.prepareAndDefendStepContent.trim())) {
-                                flag = true;
-                                break;
-                            }
-                        }
-                        if (flag) {
-                            errors.add(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED + " не изменено в таблице.");
-                            errorMessage.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
-                            loggerInfo.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
-                            break;
-                        }
-                    }
-                }
+//                for (XWPFTable table : document.getTables()) {
+//                    boolean flag = false;
+//                    for (int rowIndex = 0; rowIndex < table.getRows().size(); rowIndex++) {
+//                        var row = table.getRow(rowIndex);
+//                        for (int cellIndex = 0; cellIndex < row.getTableCells().size(); cellIndex++) {
+//                            var cellValue = row.getCell(cellIndex).getText().trim();
+//                            if (cellValue.equals(data.prepareAndDefendStepContent.trim())) {
+//                                flag = true;
+//                                break;
+//                            }
+//                        }
+//                        if (flag) {
+//                            errors.add(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED + " не изменено в таблице.");
+//                            errorMessage.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+//                            loggerInfo.append(CONTENT_STEP_DEFEND_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+//                            break;
+//                        }
+//                    }
+//                }
 
                 documentResult.addProperty("isValid", valid);
                 if (!errors.isEmpty()) {
