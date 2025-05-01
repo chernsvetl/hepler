@@ -12,8 +12,11 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import fr.opensagres.poi.xwpf.converter.pdf.PdfConverter;
 import normative_control.validation.service.ReportDocumentValidator;
 import normative_control.validation.validators.ValidatorDataReport;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
 
@@ -95,7 +98,11 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             try (FileInputStream fis = new FileInputStream(file);
                  XWPFDocument document = new XWPFDocument(fis)) {
 
-                int pageCount = document.getParagraphs().size() / 25;
+                int totalChars = document.getParagraphs().stream()
+                        .mapToInt(p -> p.getText().length())
+                        .sum();
+                int pageCount = (int) Math.ceil(totalChars / 1700.0);
+
                 var fontSize = getFontSize(document);
                 String fontStyle = getFontStyle(document);
                 String themeText = extractThemeText(document);
