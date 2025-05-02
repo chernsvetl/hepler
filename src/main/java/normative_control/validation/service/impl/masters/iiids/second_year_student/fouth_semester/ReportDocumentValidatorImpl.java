@@ -137,6 +137,12 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                     loggerInfo.append(REPORT_TEXT_NOT_CHANGED);
                     errors.add(JSON_REPORT_TEXT_NOT_CHANGED_ERROR);
                 }
+                if (containsSection(document, data.full_text2)) {
+                    valid = false;
+                    errorMessage.append(REPORT_TEXT_NOT_CHANGED);
+                    loggerInfo.append(REPORT_TEXT_NOT_CHANGED);
+                    errors.add(JSON_REPORT_TEXT_NOT_CHANGED_ERROR);
+                }
                 if (!containsSection(document, INTRODUCTION_NAME)) {
                     valid = false;
                     errorMessage.append(INTRODUCTION_NAME_NOT_EXIST);
@@ -206,16 +212,18 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
             String sizeRange = null;
             String style = null;
             String full_text = null;
+            String full_text2 = null;
             while(results.hasNext()){
                 QuerySolution solution = results.next();
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
                 sizeRange = solution.getLiteral("Размер").getString();
                 style = solution.getLiteral("Стиль").getString();
                 full_text = solution.getLiteral("Основной_текст_отчета").getString();
+                full_text2 = solution.getLiteral("Основной_текст_отчета2").getString();
             }
             qexec.close();
 
-            return new ValidatorDataReport(minPages, font, sizeRange, style, full_text);
+            return new ValidatorDataReport(minPages, font, sizeRange, style, full_text, full_text2);
         } catch (Exception e) {
             System.err.println(SPARQL_ERROR + e.getMessage());
             e.printStackTrace();
