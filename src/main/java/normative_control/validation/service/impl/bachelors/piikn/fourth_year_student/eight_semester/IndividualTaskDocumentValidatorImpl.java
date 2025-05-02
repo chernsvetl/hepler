@@ -223,7 +223,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     var row = table.getRow(2);
                     boolean flag = false;
                     var cellValue = row.getCell(4).getText().trim();
-                    if (areTextsSimilar(cellValue, data.individualStepForm)) {
+                    if (cellValue.contains(data.individualStepForm)) {
                         flag = true;
                     } if (flag) {
                         valid = false;

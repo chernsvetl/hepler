@@ -69,7 +69,7 @@ public class CommonValidator {
                 .map(XWPFParagraph::getText)
                 .collect(Collectors.joining(" "));
 
-        Pattern pattern = Pattern.compile("Тема задания:(.*?)Место прохождения практики:");
+        Pattern pattern = Pattern.compile("Тема задания(.*?)Место прохождения практики");
         Matcher matcher = pattern.matcher(text);
 
         if (matcher.find()) {

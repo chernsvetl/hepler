@@ -34,14 +34,11 @@ import static normative_control.notifications.Errors.CONTENT_STEP_DEFEND_TASK_NO
 import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_END_INDIVIDUAL_TASK_ERROR;
 import static normative_control.notifications.Errors.DATE_STEP_DEFEND_TASK_NOT_CHANGED;
-import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY;
-import static normative_control.notifications.Errors.DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED;
 import static normative_control.notifications.Errors.DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.DOCUMENT_ERROR;
 import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
 import static normative_control.notifications.Errors.JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR;
 import static normative_control.notifications.Errors.JSON_READ_ERROR;
-import static normative_control.notifications.Errors.JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED;
 import static normative_control.notifications.Errors.JSON_THEME_ERROR;
 import static normative_control.notifications.Errors.JSON_VALIDATION_END;
 import static normative_control.notifications.Errors.JSON_WRITE_ERROR;
@@ -246,7 +243,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     var row = table.getRow(2);
                     boolean flag = false;
                     var cellValue = row.getCell(4).getText().trim();
-                    if (areTextsSimilar(cellValue, data.individualStepForm)) {
+                    if (cellValue.contains(data.individualStepForm)) {
                         flag = true;
                     } if (flag) {
                         valid = false;
