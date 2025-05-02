@@ -123,16 +123,19 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             if (cellValue.isEmpty()) {
                                 valid = false;
                                 if (rowIndex == 1) {
+                                    valid = false;
                                     String errorMsg = DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED + " пуст.";
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
                                 } else if (rowIndex == (table.getRows().size() - 1)) {
+                                    valid = false;
                                     String errorMsg = DATE_STEP_DEFEND_TASK_NOT_CHANGED + " пуст.";
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
                                 } else {
+                                    valid = false;
                                     String errorMsg = JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR + " в строке " + rowIndex
                                             + " и столбце " + dateColumnIndex + " пуст.";
                                     errors.add(errorMsg);
@@ -189,12 +192,14 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
 
                             } catch (DateTimeParseException e) {
                                 if (rowIndex == 1) {
+                                    valid = false;
                                 String errorMsg = DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED +
                                         " некорректен: не соответствует формату дд.мм.гггг";
                                 errors.add(errorMsg);
                                 errorMessage.append(errorMsg).append("\n");
                                 loggerInfo.append(errorMsg).append("\n");
-                            } else if (rowIndex == table.getRows().size()){
+                            } else if (rowIndex == table.getRows().size() -  1){
+                                    valid = false;
                                     String errorMsg = DATE_STEP_DEFEND_TASK_NOT_CHANGED +
                                             " некорректен: не соответствует формату дд.мм.гггг";
                                     errors.add(errorMsg);
@@ -202,6 +207,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                     loggerInfo.append(errorMsg).append("\n");
                                 }
                                 else {
+                                    valid = false;
                                     String errorMsg = DATE_END_INDIVIDUAL_TASK_ERROR + " в строке " + rowIndex + " и" + " столбце " + dateColumnIndex +
                                             " не соответствует формату дд.мм.гггг.";
                                     errors.add(errorMsg);
@@ -225,16 +231,19 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             if (cellValue.isEmpty()) {
                                 valid = false;
                                 if (rowIndex == 1) {
+                                    valid = false;
                                     String errorMsg = CONTENT_STEP_ORG_TASK_NOT_CHANGED + " пусто.";
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
                                 } else if (rowIndex == (table.getRows().size() - 1)) {
+                                    valid = false;
                                     String errorMsg = CONTENT_STEP_DEFEND_TASK_NOT_CHANGED + " пусто.";
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
                                 } else {
+                                    valid = false;
                                     String errorMsg = CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " в строке " + rowIndex
                                             + " и столбце " + dateColumnIndex + " пусто.";
                                     errors.add(errorMsg);
