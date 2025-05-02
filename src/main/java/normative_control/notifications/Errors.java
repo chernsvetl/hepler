@@ -29,6 +29,7 @@ public class Errors {
     public static final String DATE_STEP_INDIVIDUAL_TASK_IS_EMPTY = "Срок завершения этапа индивидуального задания пуст.\n";
     public static final String STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED = "Форма отчетности в этапе индивидуального задания";
     public static final String STEP_INDIVIDUAL_TASK_NAME_IS_EMPTY = "Наименование этапа индивидуального задания";
+    public static final String STEP_INDIVIDUAL_TASK_NUMBER_IS_EMPTY = "№ этапа";
     public static final String JSON_VALIDATION_END = "Нормоконтроль завершен";
     public static final String DATE_END_INDIVIDUAL_TASK_ERROR = "Срок завершения этапа индивидуального задания";
     public static final String JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR = "Срок завершения этапа индивидуального задания ";

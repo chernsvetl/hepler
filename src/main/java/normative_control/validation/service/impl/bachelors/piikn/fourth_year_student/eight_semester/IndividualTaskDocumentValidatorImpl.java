@@ -285,6 +285,26 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                     }
                 }
 
+                for (XWPFTable table : document.getTables()) {
+                    for (int rowIndex = 2; rowIndex < table.getRows().size(); rowIndex++) {
+                        var row = table.getRow(rowIndex);
+                        int dateColumnIndex = 0;
+
+                        if (row.getTableCells().size() > dateColumnIndex) {
+                            var cell = row.getCell(dateColumnIndex);
+                            var cellValue = cell.getText() != null ? cell.getText().trim() : "";
+
+                            if (cellValue.isEmpty()) {
+                                valid = false;
+                                String errorMsg = STEP_INDIVIDUAL_TASK_NUMBER_IS_EMPTY + " в строке " + rowIndex + " пуст.";
+                                errors.add(errorMsg);
+                                errorMessage.append(errorMsg).append("\n");
+                                loggerInfo.append(errorMsg).append("\n");
+                            }
+                        }
+                    }
+                }
+
 //                for (XWPFTable table : document.getTables()) {
 //                    boolean flag = false;
 //                    for (int rowIndex = 0; rowIndex < table.getRows().size(); rowIndex++) {

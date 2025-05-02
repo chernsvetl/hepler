@@ -49,6 +49,7 @@ import static normative_control.notifications.Errors.READING_FILE_ERROR;
 import static normative_control.notifications.Errors.SPARQL_ERROR;
 import static normative_control.notifications.Errors.STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED;
 import static normative_control.notifications.Errors.STEP_INDIVIDUAL_TASK_NAME_IS_EMPTY;
+import static normative_control.notifications.Errors.STEP_INDIVIDUAL_TASK_NUMBER_IS_EMPTY;
 import static normative_control.notifications.Errors.STYLE_ERROR;
 import static normative_control.notifications.Errors.THEME_ERROR;
 import static normative_control.notifications.Errors.VALIDATION_END;
@@ -299,6 +300,26 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                 valid = false;
                                 String errorMsg = STEP_INDIVIDUAL_TASK_NAME_IS_EMPTY + " в строке " + rowIndex +
                                         " и столбце " + dateColumnIndex + " пустое.";
+                                errors.add(errorMsg);
+                                errorMessage.append(errorMsg).append("\n");
+                                loggerInfo.append(errorMsg).append("\n");
+                            }
+                        }
+                    }
+                }
+
+                for (XWPFTable table : document.getTables()) {
+                    for (int rowIndex = 2; rowIndex < table.getRows().size(); rowIndex++) {
+                        var row = table.getRow(rowIndex);
+                        int dateColumnIndex = 0;
+
+                        if (row.getTableCells().size() > dateColumnIndex) {
+                            var cell = row.getCell(dateColumnIndex);
+                            var cellValue = cell.getText() != null ? cell.getText().trim() : "";
+
+                            if (cellValue.isEmpty()) {
+                                valid = false;
+                                String errorMsg = STEP_INDIVIDUAL_TASK_NUMBER_IS_EMPTY + " в строке " + rowIndex + " пуст.";
                                 errors.add(errorMsg);
                                 errorMessage.append(errorMsg).append("\n");
                                 loggerInfo.append(errorMsg).append("\n");
