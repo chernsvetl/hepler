@@ -131,7 +131,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                     loggerInfo.append(THEME_ERROR);
                     errors.add(JSON_THEME_ERROR);
                 }
-                if (containsSectionWithSimilarity(document, data.full_text)) {
+                if (containsSection(document, data.full_text)) {
                     valid = false;
                     errorMessage.append(REPORT_TEXT_NOT_CHANGED);
                     loggerInfo.append(REPORT_TEXT_NOT_CHANGED);
