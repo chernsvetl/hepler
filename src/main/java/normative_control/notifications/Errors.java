@@ -39,7 +39,7 @@ public class Errors {
     public static final String JSON_LIBRARY_NAME_NOT_EXIST_ERROR = "Список литературы не найден.";
     public static final String JSON_READ_ERROR = "Ошибка чтения файла: ";
     public static final String JSON_WRITE_ERROR = "Ошибка при записи JSON файла: ";
-    public static final String JSON_THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова. Отсутствуют ключевые слова (разработка, исследование, реализация, анализ). Необходимо хотя бы одно из перечисленных.";
+    public static final String JSON_THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова (разработка, исследование, реализация, анализ). Необходимо хотя бы одно из перечисленных.";
     public static final String JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED = "Срок завершения этапа индивидуального задания не изменен.";
     public static final String NEXT_LINE = "\n";
 }
