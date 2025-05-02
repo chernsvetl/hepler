@@ -108,7 +108,11 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                 String themeText = extractThemeText(document);
 
                 boolean valid = true;
-                boolean sizeIsValid = Arrays.stream(parseSizeRange(data.sizeRange)).anyMatch(size -> size == fontSize);
+                boolean sizeIsValid = false;
+                double[] range = parseSizeRange(data.sizeRange);
+                if (range != null && range.length == 2) {
+                    sizeIsValid = (fontSize >= range[0] && fontSize <= range[1]);
+                }
                 StringBuilder errorMessage = new StringBuilder();
                 var loggerInfo = new StringBuilder();
 
