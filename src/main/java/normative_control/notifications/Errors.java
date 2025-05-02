@@ -6,7 +6,7 @@ public class Errors {
     public static final String PAGES_ERROR = "Недостаточно страниц (ожидалось: ";
     public static final String FONT_SIZE_ERROR = "Неверный размер шрифта (ожидалось: ";
     public static final String STYLE_ERROR = "Неверный стиль (ожидалось: ";
-    public static final String THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова.\n";
+    public static final String THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова (разработка, исследование, реализация, анализ). Необходимо хотя бы одно из перечисленных.\n";
     public static final String DOCUMENT_SUCCESS = " документ корректен.\n";
     public static final String DOCUMENT_ERROR = " документ содержит ошибки: \n";
     public static final String READING_FILE_ERROR = "Ошибка чтения файла ";
