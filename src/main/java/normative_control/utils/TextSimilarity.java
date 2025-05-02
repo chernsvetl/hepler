@@ -12,7 +12,7 @@ public class TextSimilarity {
         JaroWinklerSimilarity similarity = new JaroWinklerSimilarity();
         double similarityScore = similarity.apply(text1, text2);
 
-        return similarityScore >= 0.8;
+        return similarityScore >= 0.6;
     }
 }
 

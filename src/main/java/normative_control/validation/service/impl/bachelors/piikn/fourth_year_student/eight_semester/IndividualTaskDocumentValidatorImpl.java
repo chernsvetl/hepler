@@ -191,60 +191,76 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 }
 
                 for (XWPFTable table : document.getTables()) {
-                    var row = table.getRow(2);
-                    boolean flag = false;
-                    var cellValue = row.getCell(3).getText().trim();
-                    if (areTextsSimilar(cellValue, data.individualStepContent)) {
-                        flag = true;
-                    } if (flag) {
-                        valid = false;
-                        errors.add(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " не изменено в таблице.");
-                        errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
-                        loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" не изменено в таблице. \n");
+                    for (int rowIndex = 1; rowIndex < table.getRows().size(); rowIndex++) {
+                        var row = table.getRow(rowIndex);
+                        int dateColumnIndex = 3;
+
+                        if (row.getTableCells().size() > dateColumnIndex) {
+                            var cell = row.getCell(dateColumnIndex);
+                            var cellValue = cell.getText() != null ? cell.getText().trim() : "";
+
+                            if (cellValue.isEmpty()) {
+                                valid = false;
+                                if (rowIndex == 1) {
+                                    String errorMsg = CONTENT_STEP_ORG_TASK_NOT_CHANGED + " пусто.";
+                                    errors.add(errorMsg);
+                                    errorMessage.append(errorMsg).append("\n");
+                                    loggerInfo.append(errorMsg).append("\n");
+                                } else if (rowIndex == (table.getRows().size() - 1)) {
+                                    String errorMsg = CONTENT_STEP_DEFEND_TASK_NOT_CHANGED + " пусто.";
+                                    errors.add(errorMsg);
+                                    errorMessage.append(errorMsg).append("\n");
+                                    loggerInfo.append(errorMsg).append("\n");
+                                } else {
+                                    String errorMsg = CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " пусто.";
+                                    errors.add(errorMsg);
+                                    errorMessage.append(errorMsg).append("\n");
+                                    loggerInfo.append(errorMsg).append("\n");
+                                }
+                            } else {
+                                if (areTextsSimilar(cellValue, data.individualStepContent)) {
+                                    valid = false;
+                                    errors.add(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + " в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " не изменено в таблице.");
+                                    errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " не изменено в таблице. \n");
+                                    loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED).append(" в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " не изменено в таблице. \n");
+                                }
+                            }
+                        }
                     }
                 }
 
                 for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
-                    var row = table.getRow(2);
-                    var cellValue = row.getCell(3).getText().trim();
-                    if (cellValue.isEmpty()) {
-                        flag = true;
-                    }
-                    if (flag) {
-                        valid = false;
-                        errors.add(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пусто.");
-                        errorMessage.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пусто. \n");
-                        loggerInfo.append(CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED + "пусто. \n");
-                    }
-                }
+                    for (int rowIndex = 1; rowIndex < table.getRows().size(); rowIndex++) {
+                        var row = table.getRow(rowIndex);
+                        int dateColumnIndex = 4;
 
-                for (XWPFTable table : document.getTables()) {
-                    var row = table.getRow(2);
-                    boolean flag = false;
-                    var cellValue = row.getCell(4).getText().trim();
-                    if (cellValue.contains(data.individualStepForm)) {
-                        flag = true;
-                    } if (flag) {
-                        valid = false;
-                        errors.add(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + " не изменена в таблице.");
-                        errorMessage.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED).append(" не изменена в таблице. \n");
-                        loggerInfo.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED).append(" не изменена в таблице. \n");
-                    }
-                }
+                        if (row.getTableCells().size() > dateColumnIndex) {
+                            var cell = row.getCell(dateColumnIndex);
+                            var cellValue = cell.getText() != null ? cell.getText().trim() : "";
 
-                for (XWPFTable table : document.getTables()) {
-                    boolean flag = false;
-                    var row = table.getRow(2);
-                    var cellValue = row.getCell(4).getText().trim();
-                    if (cellValue.isEmpty()) {
-                        flag = true;
-                    }
-                    if (flag) {
-                        valid = false;
-                        errors.add(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + "пустая.");
-                        errorMessage.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + "пустая. \n");
-                        loggerInfo.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + "пустая. \n");
+                            if (cellValue.isEmpty()) {
+                                valid = false;
+                                String errorMsg = STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + " в строке " + rowIndex +
+                                        " и столбце " + dateColumnIndex + " пустая.";
+                                errors.add(errorMsg);
+                                errorMessage.append(errorMsg).append("\n");
+                                loggerInfo.append(errorMsg).append("\n");
+                            } else {
+                                if (cellValue.contains(data.individualStepForm)) {
+                                    valid = false;
+                                    errors.add(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED + " в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " не изменена в таблице.");
+                                    errorMessage.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED).append(" в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " не изменена в таблице. \n");
+                                    loggerInfo.append(STEP_INDIVIDUAL_TASK_FORM_NOT_CHANGED).append(" в строке " + rowIndex
+                                            + " и столбце " + dateColumnIndex + " не изменена в таблице. \n");
+                                }
+                            }
+                        }
                     }
                 }
 

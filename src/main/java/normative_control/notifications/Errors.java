@@ -22,6 +22,7 @@ public class Errors {
     public static final String LIBRARY_NAME = "Список литературы";
     public static final String CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED = "Содержание работы индивидуального этапа";
     public static final String CONTENT_STEP_DEFEND_TASK_NOT_CHANGED = "Содержание работы этапа защиты материалов";
+    public static final String CONTENT_STEP_ORG_TASK_NOT_CHANGED = "Содержание работы организационного этапа";
     public static final String DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED = "Срок завершения организационного этапа";
     public static final String DATE_STEP_DEFEND_TASK_NOT_CHANGED = "Срок завершения этапа защиты материалов";
     public static final String DATE_STEP_INDIVIDUAL_TASK_IS_NOT_CHANGED = "Срок завершения этапа индивидуального задания не изменен.\n";
