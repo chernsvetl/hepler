@@ -101,9 +101,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
 
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
-                    errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
-                    loggerInfo.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
-                    errors.add(String.format("Ошибка стиля: ожидается '%s', фактически '%s'", data.style, fontStyle));
+                    errorMessage.append(STYLE_ERROR).append(data.style).append("). \n");
+                    loggerInfo.append(STYLE_ERROR).append(data.style).append("). \n");
+                    errors.add(String.format("Ошибка стиля: ожидается '%s'", data.style));
                 }
 
                 if (!isValidTheme(themeText)) {

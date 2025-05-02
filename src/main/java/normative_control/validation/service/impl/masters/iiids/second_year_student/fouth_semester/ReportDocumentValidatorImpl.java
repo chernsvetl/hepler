@@ -97,7 +97,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                 int totalChars = document.getParagraphs().stream()
                         .mapToInt(p -> p.getText().length())
                         .sum();
-                int pageCount = (int) Math.ceil(totalChars / 1700.0);
+                int pageCount = (int) Math.ceil(totalChars / 1600.0);
                 var fontSize = getFontSize(document);
                 String fontStyle = getFontStyle(document);
                 String themeText = extractThemeText(document);
@@ -115,15 +115,15 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                 }
                 if (!sizeIsValid) {
                     valid = false;
-                    errorMessage.append(FONT_SIZE_ERROR).append(data.sizeRange).append(", есть: ").append(fontSize).append("). \n");
-                    loggerInfo.append(FONT_SIZE_ERROR).append(data.sizeRange).append(", есть: ").append(fontSize).append("). \n");
-                    errors.add(String.format("Неверный размер шрифта (ожидалось: %s, есть: %.1f)", data.sizeRange, fontSize));
+                    errorMessage.append(FONT_SIZE_ERROR).append(data.sizeRange).append("). \n");
+                    loggerInfo.append(FONT_SIZE_ERROR).append(data.sizeRange).append("). \n");
+                    errors.add(String.format("Неверный размер шрифта (ожидалось: %s)", data.sizeRange));
                 }
                 if (!fontStyle.equals(data.style)) {
                     valid = false;
-                    errorMessage.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
-                    loggerInfo.append(STYLE_ERROR).append(data.style).append(", есть: ").append(fontStyle).append("). \n");
-                    errors.add(String.format("Неверный стиль шрифта (ожидалось: %s, есть: %s)", data.style, fontStyle));
+                    errorMessage.append(STYLE_ERROR).append(data.style).append("). \n");
+                    loggerInfo.append(STYLE_ERROR).append(data.style).append("). \n");
+                    errors.add(String.format("Неверный стиль шрифта (ожидалось: %s)", data.style));
                 }
                 if (!isValidTheme(themeText)) {
                     valid = false;
