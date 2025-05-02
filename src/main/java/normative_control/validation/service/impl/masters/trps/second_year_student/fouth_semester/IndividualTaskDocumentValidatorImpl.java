@@ -111,7 +111,6 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 }
 
                 for (XWPFTable table : document.getTables()) {
-                    System.out.println(table.getRows().size());
                     for (int rowIndex = 1; rowIndex < table.getRows().size(); rowIndex++) {
                         var row = table.getRow(rowIndex);
                         int dateColumnIndex = 2;

@@ -197,7 +197,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
-                                } else if (rowIndex == table.getRows().size()){
+                                } else if (rowIndex == table.getRows().size() - 1){
                                     valid = false;
                                     String errorMsg = DATE_STEP_DEFEND_TASK_NOT_CHANGED +
                                             " некорректен: не соответствует формату дд.мм.гггг";
