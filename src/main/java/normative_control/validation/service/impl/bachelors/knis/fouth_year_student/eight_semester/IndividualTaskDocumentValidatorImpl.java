@@ -145,13 +145,13 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                 continue;
                             }
 
-                            var dateOrgStart1 = "17.03.2025";
-                            var dateStart1IndividualPlan = "18.03.2025";
-                            var dateStart2IndividualPlan = "09.05.2025";
-                            var dateOrgStart2 = "19.03.2025";
-                            var dateDefendStart1 = "01.05.2025";
-                            var dateDefendStart2 = "10.05.2025";
-                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+                            var dateOrgStart1 = "17.03.25";
+                            var dateStart1IndividualPlan = "18.03.25";
+                            var dateStart2IndividualPlan = "09.05.25";
+                            var dateOrgStart2 = "19.03.25";
+                            var dateDefendStart1 = "01.05.25";
+                            var dateDefendStart2 = "10.05.25";
+                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
                             try {
                                 LocalDate cellDate = LocalDate.parse(cellValue, formatter);
                                 LocalDate startDate1 = LocalDate.parse(dateOrgStart1, formatter);
@@ -194,14 +194,14 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                 if (rowIndex == 1) {
                                     valid = false;
                                 String errorMsg = DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED +
-                                        " некорректен: не соответствует формату дд.мм.гггг";
+                                        " некорректен: не соответствует формату дд.мм.гг";
                                 errors.add(errorMsg);
                                 errorMessage.append(errorMsg).append("\n");
                                 loggerInfo.append(errorMsg).append("\n");
                             } else if (rowIndex == table.getRows().size() -  1){
                                     valid = false;
                                     String errorMsg = DATE_STEP_DEFEND_TASK_NOT_CHANGED +
-                                            " некорректен: не соответствует формату дд.мм.гггг";
+                                            " некорректен: не соответствует формату дд.мм.гг";
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
@@ -209,7 +209,7 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                 else {
                                     valid = false;
                                     String errorMsg = DATE_END_INDIVIDUAL_TASK_ERROR + " в строке " + rowIndex + " и" + " столбце " + dateColumnIndex +
-                                            " не соответствует формату дд.мм.гггг.";
+                                            " не соответствует формату дд.мм.гг.";
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
