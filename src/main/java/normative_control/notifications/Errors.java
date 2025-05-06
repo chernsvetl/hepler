@@ -14,9 +14,9 @@ public class Errors {
     public static final String NUMBER_CONVERTION_ERROR = "Ошибка преобразования размера в число: ";
     public static final String VALIDATION_END = "Нормоконтроль завершен.\n";
     public static final String REPORT_TEXT_NOT_CHANGED = "Текст отчета не изменен. \n";
-    public static final String INTRODUCTION_NAME_NOT_EXIST = "Введение не найдено. \n";
-    public static final String CONSCLUSION_NAME_NOT_EXIST = "Заключение не найдено. \n";
-    public static final String LIBRARY_NAME_NOT_EXIST = "Список литературы не найден. \n";
+    public static final String INTRODUCTION_NAME_NOT_EXIST = "Введение не найдено. Название заголовка должно быть именно Введение и никак иначе.\n";
+    public static final String CONSCLUSION_NAME_NOT_EXIST = "Заключение не найдено. Название заголовка должно быть именно Заключение и никак иначе.\n";
+    public static final String LIBRARY_NAME_NOT_EXIST = "Список литературы не найден. Название заголовка должно быть именно Список литературы и никак иначе.\n";
     public static final String INTRODUCTION_NAME = "Введение";
     public static final String CONSCLUSION_NAME = "Заключение";
     public static final String LIBRARY_NAME = "Список литературы";
@@ -34,9 +34,9 @@ public class Errors {
     public static final String DATE_END_INDIVIDUAL_TASK_ERROR = "Срок завершения этапа индивидуального задания";
     public static final String JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR = "Срок завершения этапа индивидуального задания ";
     public static final String JSON_REPORT_TEXT_NOT_CHANGED_ERROR = "Текст отчета не изменен.";
-    public static final String JSON_INTRODUCTION_NAME_NOT_EXIST_ERROR = "Введение не найдено.";
-    public static final String JSON_CONSCLUSION_NAME_NOT_EXIST_ERROR = "Заключение не найдено.";
-    public static final String JSON_LIBRARY_NAME_NOT_EXIST_ERROR = "Список литературы не найден.";
+    public static final String JSON_INTRODUCTION_NAME_NOT_EXIST_ERROR = "Введение не найдено. Название заголовка должно быть именно Введение и никак иначе.";
+    public static final String JSON_CONSCLUSION_NAME_NOT_EXIST_ERROR = "Заключение не найдено. Название заголовка должно быть именно Заключение и никак иначе.";
+    public static final String JSON_LIBRARY_NAME_NOT_EXIST_ERROR = "Список литературы не найден. Название заголовка должно быть именно Список литературы и никак иначе.";
     public static final String JSON_READ_ERROR = "Ошибка чтения файла: ";
     public static final String JSON_WRITE_ERROR = "Ошибка при записи JSON файла: ";
     public static final String JSON_THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова (разработка, исследование, реализация, анализ). Необходимо хотя бы одно из перечисленных.";
