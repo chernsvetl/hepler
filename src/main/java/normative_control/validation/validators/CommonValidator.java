@@ -82,7 +82,7 @@ public class CommonValidator {
         var text = themeText.toLowerCase();
         var result = false;
         if (text.contains("разработка") || text.contains("исследование") || text.contains("реализация")
-                || text.contains("анализ")) {
+                || text.contains("анализ") || text.contains("проведение")) {
            result = true;
         }
         return result;
