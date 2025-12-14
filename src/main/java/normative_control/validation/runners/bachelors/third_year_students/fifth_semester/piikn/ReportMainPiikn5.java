@@ -5,13 +5,13 @@ import normative_control.validation.service.impl.bachelors.piikn.third_year_stud
 import normative_control.validation.validators.ValidatorDataReport;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
+import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_PIIKN_5;
 import static normative_control.utils.ValidationPaths.PIIKN_5_REPORT_PATH;
 
 public class ReportMainPiikn5 {
     public static void main(String[] args) {
         ReportDocumentValidator reportDocumentValidator = new ReportDocumentValidatorImpl();
-        ValidatorDataReport data = reportDocumentValidator.extractFromSparql(QUERY_REPORT);
+        ValidatorDataReport data = reportDocumentValidator.extractFromSparql(QUERY_REPORT_PIIKN_5);
         if (data != null) {
             reportDocumentValidator.validateDocxFiles(PIIKN_5_REPORT_PATH, data);
         } else {
