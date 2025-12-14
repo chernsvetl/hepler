@@ -1,4 +1,4 @@
-package normative_control.validation.service.impl.bachelors.knis.fouth_year_student.eight_semester;
+package normative_control.validation.service.impl.bachelors.piikn.fourth_year_students.eight_semester;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,11 +12,8 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import fr.opensagres.poi.xwpf.converter.pdf.PdfConverter;
 import normative_control.validation.service.ReportDocumentValidator;
 import normative_control.validation.validators.ValidatorDataReport;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
 
@@ -30,39 +27,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static normative_control.notifications.Errors.CONSCLUSION_NAME;
-import static normative_control.notifications.Errors.CONSCLUSION_NAME_NOT_EXIST;
-import static normative_control.notifications.Errors.DOCUMENT_ERROR;
-import static normative_control.notifications.Errors.DOCUMENT_SUCCESS;
-import static normative_control.notifications.Errors.FONT_SIZE_ERROR;
-import static normative_control.notifications.Errors.INTRODUCTION_NAME;
-import static normative_control.notifications.Errors.INTRODUCTION_NAME_NOT_EXIST;
-import static normative_control.notifications.Errors.JSON_CONSCLUSION_NAME_NOT_EXIST_ERROR;
-import static normative_control.notifications.Errors.JSON_INTRODUCTION_NAME_NOT_EXIST_ERROR;
-import static normative_control.notifications.Errors.JSON_LIBRARY_NAME_NOT_EXIST_ERROR;
-import static normative_control.notifications.Errors.JSON_READ_ERROR;
-import static normative_control.notifications.Errors.JSON_REPORT_TEXT_NOT_CHANGED_ERROR;
-import static normative_control.notifications.Errors.JSON_THEME_ERROR;
-import static normative_control.notifications.Errors.JSON_VALIDATION_END;
-import static normative_control.notifications.Errors.JSON_WRITE_ERROR;
-import static normative_control.notifications.Errors.LIBRARY_NAME;
-import static normative_control.notifications.Errors.LIBRARY_NAME_NOT_EXIST;
-import static normative_control.notifications.Errors.NEXT_LINE;
-import static normative_control.notifications.Errors.PAGES_ERROR;
-import static normative_control.notifications.Errors.PATH_ERROR;
-import static normative_control.notifications.Errors.READING_FILE_ERROR;
-import static normative_control.notifications.Errors.REPORT_TEXT_NOT_CHANGED;
-import static normative_control.notifications.Errors.SPARQL_ERROR;
-import static normative_control.notifications.Errors.STYLE_ERROR;
-import static normative_control.notifications.Errors.THEME_ERROR;
-import static normative_control.notifications.Errors.VALIDATION_END;
+import static normative_control.notifications.Errors.*;
 import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
 import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Constants.formatter;
-import static normative_control.utils.Files.KNIS_8_REPORT_FILE;
+import static normative_control.utils.Files.PIIKN_8_REPORT_FILE;
 import static normative_control.utils.ValidationPaths.MODEL_FILENAME;
 import static normative_control.validation.validators.CommonValidator.containsSection;
 import static normative_control.validation.validators.CommonValidator.containsSectionWithSimilarity;
@@ -89,7 +61,7 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
 
         List<JsonObject> documents = new ArrayList<>();
 
-        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", KNIS_8_REPORT_FILE);
+        writeValidationLogs(LocalDateTime.now().format(formatter) + "\n", PIIKN_8_REPORT_FILE);
         for (File file : dir.listFiles((d, name) -> name.toLowerCase().endsWith(".docx"))) {
             JsonObject documentInfo = new JsonObject();
             documentInfo.addProperty("fileName", file.getName());
@@ -102,7 +74,6 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                         .mapToInt(p -> p.getText().length())
                         .sum();
                 int pageCount = (int) Math.ceil(totalChars / 1600.0);
-
                 var fontSize = getFontSize(document);
                 String fontStyle = getFontStyle(document);
                 String themeText = extractThemeText(document);
@@ -178,32 +149,32 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
 
                 if (valid) {
                     System.out.println(ANSI_GREEN + file.getName() + DOCUMENT_SUCCESS);
-                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, KNIS_8_REPORT_FILE);
-                    writeValidationLogs(NEXT_LINE, KNIS_8_REPORT_FILE);
+                    writeValidationLogs(file.getName() + DOCUMENT_SUCCESS, PIIKN_8_REPORT_FILE);
+                    writeValidationLogs(NEXT_LINE, PIIKN_8_REPORT_FILE);
                 } else {
                     System.out.println(ANSI_BLACK + file.getName() + DOCUMENT_ERROR + ANSI_BLACK + ANSI_RED + errorMessage + NEXT_LINE);
-                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + NEXT_LINE, KNIS_8_REPORT_FILE);
+                    writeValidationLogs(file.getName() + DOCUMENT_ERROR + loggerInfo + NEXT_LINE, PIIKN_8_REPORT_FILE);
                 }
             } catch (IOException e) {
                 documentInfo.addProperty("error", JSON_READ_ERROR + e.getMessage());
                 System.err.println(READING_FILE_ERROR + file.getName() + ": " + e.getMessage());
             }
             documents.add(documentInfo);
-            writeValidationLogs(SPACE, KNIS_8_REPORT_FILE);
+            writeValidationLogs(SPACE, PIIKN_8_REPORT_FILE);
         }
         validationResult.add("documents", gson.toJsonTree(documents));
         validationResult.addProperty("validationEndTime", LocalDateTime.now().format(formatter));
         validationResult.addProperty("status", JSON_VALIDATION_END);
 
-        try (FileWriter writer = new FileWriter(KNIS_8_REPORT_FILE + ".json")) {
+        try (FileWriter writer = new FileWriter(PIIKN_8_REPORT_FILE + ".json")) {
             gson.toJson(validationResult, writer);
         } catch (IOException e) {
             System.err.println(JSON_WRITE_ERROR + e.getMessage());
         }
 
         System.out.println(ANSI_BLACK + VALIDATION_END + ANSI_BLACK);
-        writeValidationLogs(VALIDATION_END, KNIS_8_REPORT_FILE);
-        writeValidationLogs(NEXT_LINE, KNIS_8_REPORT_FILE);
+        writeValidationLogs(VALIDATION_END, PIIKN_8_REPORT_FILE);
+        writeValidationLogs(NEXT_LINE, PIIKN_8_REPORT_FILE);
     }
 
     @Override

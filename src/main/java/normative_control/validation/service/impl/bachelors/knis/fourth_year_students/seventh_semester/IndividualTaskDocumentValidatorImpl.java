@@ -146,9 +146,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
 
                             var dateOrgStart1 = "29.09.25";
-                            var dateStart1IndividualPlan = "30.10.25";
+                            var dateStart1IndividualPlan = "30.09.25";
                             var dateStart2IndividualPlan = "22.12.25";
-                            var dateOrgStart2 = "31.10.25";
+                            var dateOrgStart2 = "31.09.25";
                             var dateDefendStart1 = "14.12.25";
                             var dateDefendStart2 = "23.12.25";
 
@@ -402,13 +402,13 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                 minPages = solution.getLiteral("Минимальное_количество_страниц_отчета").getInt();
                 sizeRange = solution.getLiteral("Размер").getString();
                 style = solution.getLiteral("Стиль").getString();
-                orgStepEndDate = solution.getLiteral("Срок_завершения_организационного_этапа_из_книс_8").toString();
-                prepareAndDefendStepEndDate = solution.getLiteral("Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_8").toString();
-                prepareAndDefendStepContent = solution.getLiteral("Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_8").toString();
-                orgStepContent = solution.getLiteral("Содержание_работы_организационного_этапа_из_книс_8").toString();
-                individualStepContent = solution.getLiteral("Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_8").toString();
-                individualStepDate = solution.getLiteral("Срок_завершения_индивидуального_этапа_из_книс_8").toString();
-                individualStepForm = solution.getLiteral("Форма_отчетности_индивидуального_этапа_из_книс_8").toString();
+                orgStepEndDate = solution.getLiteral("Срок_завершения_организационного_этапа_из_книс_7").toString();
+                prepareAndDefendStepEndDate = solution.getLiteral("Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_7").toString();
+                prepareAndDefendStepContent = solution.getLiteral("Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_7").toString();
+                orgStepContent = solution.getLiteral("Содержание_работы_организационного_этапа_из_книс_7").toString();
+                individualStepContent = solution.getLiteral("Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_7").toString();
+                individualStepDate = solution.getLiteral("Срок_завершения_индивидуального_этапа_из_книс_7").toString();
+                individualStepForm = solution.getLiteral("Форма_отчетности_индивидуального_этапа_из_книс_7").toString();
             }
             qexec.close();
 

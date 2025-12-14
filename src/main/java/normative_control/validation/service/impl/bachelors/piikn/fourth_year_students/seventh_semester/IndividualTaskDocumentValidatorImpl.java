@@ -145,9 +145,9 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                             }
 
                             var dateOrgStart1 = "29.09.25";
-                            var dateStart1IndividualPlan = "30.10.25";
+                            var dateStart1IndividualPlan = "30.09.25";
                             var dateStart2IndividualPlan = "22.12.25";
-                            var dateOrgStart2 = "31.10.25";
+                            var dateOrgStart2 = "31.09.25";
                             var dateDefendStart1 = "14.12.25";
                             var dateDefendStart2 = "23.12.25";
 

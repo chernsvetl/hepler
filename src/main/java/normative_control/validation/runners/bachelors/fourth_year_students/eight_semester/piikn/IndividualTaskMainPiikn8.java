@@ -1,7 +1,7 @@
 package normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.piikn;
 
 import normative_control.validation.service.IndividualTaskDocumentValidator;
-import normative_control.validation.service.impl.bachelors.piikn.fourth_year_student.eight_semester.IndividualTaskDocumentValidatorImpl;
+import normative_control.validation.service.impl.bachelors.piikn.fourth_year_students.eight_semester.IndividualTaskDocumentValidatorImpl;
 import normative_control.validation.validators.ValidatorDataIndividualTask;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;

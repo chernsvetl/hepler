@@ -1,7 +1,7 @@
 package normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.knis;
 
 import normative_control.validation.service.ReportDocumentValidator;
-import normative_control.validation.service.impl.bachelors.knis.fouth_year_student.eight_semester.ReportDocumentValidatorImpl;
+import normative_control.validation.service.impl.bachelors.knis.fourth_year_students.eight_semester.ReportDocumentValidatorImpl;
 import normative_control.validation.validators.ValidatorDataReport;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;

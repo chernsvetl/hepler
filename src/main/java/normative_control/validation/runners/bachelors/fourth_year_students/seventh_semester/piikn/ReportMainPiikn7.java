@@ -1,4 +1,4 @@
-package normative_control.validation.runners.bachelors.fourth_year_students.eight_semester.piikn;
+package normative_control.validation.runners.bachelors.fourth_year_students.seventh_semester.piikn;
 
 import normative_control.validation.service.ReportDocumentValidator;
 import normative_control.validation.service.impl.bachelors.piikn.fourth_year_students.seventh_semester.ReportDocumentValidatorImpl;

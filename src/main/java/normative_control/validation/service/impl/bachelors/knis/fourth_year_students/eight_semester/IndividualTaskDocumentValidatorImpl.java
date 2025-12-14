@@ -1,4 +1,4 @@
-package normative_control.validation.service.impl.bachelors.knis.fouth_year_student.eight_semester;
+package normative_control.validation.service.impl.bachelors.knis.fourth_year_students.eight_semester;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
