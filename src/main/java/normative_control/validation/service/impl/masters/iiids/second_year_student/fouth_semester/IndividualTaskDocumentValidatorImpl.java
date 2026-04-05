@@ -13,6 +13,7 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import normative_control.validation.service.IndividualTaskDocumentValidator;
+import normative_control.validation.validators.ValidatorDataDatesIndividualTask;
 import normative_control.validation.validators.ValidatorDataIndividualTask;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
@@ -57,6 +58,8 @@ import static normative_control.notifications.Errors.STYLE_ERROR;
 import static normative_control.notifications.Errors.THEME_ERROR;
 import static normative_control.notifications.Errors.VALIDATION_END;
 import static normative_control.output.FileLogger.writeValidationLogs;
+import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_IIDS_4;
+import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_IOT_4;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
@@ -147,46 +150,45 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                 continue;
                             }
 
-                            var dateOrgStart1 = "05.02.25";
-                            var dateStart1IndividualPlan = "06.02.25";
-                            var dateStart2IndividualPlan = "13.05.25";
-                            var dateOrgStart2 = "07.02.25";
-                            var dateDefendStart1 = "04.05.25";
-                            var dateDefendStart2 = "14.05.25";
+                            var result  = extractFromSparqlDates(QUERY_REPORT_IIDS_4);
+
                             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
                             try {
+                                LocalDate startDate1 = LocalDate.parse(result.dateOrgStart1, formatter);
+                                var startDate2 = startDate1.plusDays(2);
+
+                                LocalDate dateDefendStart2 = LocalDate.parse(result.dateDefendStart2, formatter);
+                                var dateDefendStart1 = dateDefendStart2.minusDays(10);
+
+                                var dateStart1IndividualPlan = startDate1.plusDays(1);
+                                var dateStart2IndividualPlan = dateDefendStart2.minusDays(1);
+
                                 LocalDate cellDate = LocalDate.parse(cellValue, formatter);
-                                LocalDate startDate1 = LocalDate.parse(dateOrgStart1, formatter);
-                                LocalDate startDate2 = LocalDate.parse(dateOrgStart2, formatter);
-                                LocalDate dateOrgStart1StartStart = LocalDate.parse(dateDefendStart2, formatter);
-                                LocalDate dateOrgStart2StartStart = LocalDate.parse(dateDefendStart1, formatter);
-                                LocalDate dateStart1IndividualPlan1 = LocalDate.parse(dateStart1IndividualPlan, formatter);
-                                LocalDate dateStart1IndividualPlan2 = LocalDate.parse(dateStart2IndividualPlan, formatter);
 
                                 if (rowIndex == 1 && (cellDate.isBefore(startDate1) || cellDate.isAfter(startDate2))) {
                                     valid = false;
                                     String errorMsg = DATE_STEP_ORG_INDIVIDUAL_TASK_NOT_CHANGED +
-                                            " некорректен: дата должна быть в диапазоне от " + dateOrgStart1 + " до " + dateOrgStart2;
+                                            " некорректен: дата должна быть в диапазоне от " + result.dateOrgStart1 + " до " + startDate2.format(formatter);
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
                                 }
 
-                                if (rowIndex == (table.getRows().size() - 1) && (cellDate.isBefore(dateOrgStart2StartStart) || cellDate.isAfter(dateOrgStart1StartStart))) {
+                                if (rowIndex == (table.getRows().size() - 1) && (cellDate.isBefore(dateDefendStart1) || cellDate.isAfter(dateDefendStart2))) {
                                     valid = false;
                                     String errorMsg = DATE_STEP_DEFEND_TASK_NOT_CHANGED +
-                                            " некорректен: дата должна быть в диапазоне от " + dateDefendStart1 + " до " + dateDefendStart2;
+                                            " некорректен: дата должна быть в диапазоне от " + dateDefendStart1.format(formatter) + " до " + result.dateDefendStart2;
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
                                 }
 
                                 if ((rowIndex != (table.getRows().size() - 1) && rowIndex != 1)
-                                        && (cellDate.isBefore(dateStart1IndividualPlan1) || cellDate.isAfter(dateStart1IndividualPlan2))) {
+                                        && (cellDate.isBefore(dateStart1IndividualPlan) || cellDate.isAfter(dateStart2IndividualPlan))) {
                                     valid = false;
                                     String errorMsg = JSON_DATE_END_INDIVIDUAL_TASK_IS_EMPTY_ERROR + "в строке " + rowIndex + " и столбце " +
-                                            dateColumnIndex + " некорректен: дата начала должна быть не раньше " + dateStart1IndividualPlan
-                                            + ", а последним максимальным днем данного этапа является дата " + dateStart2IndividualPlan;
+                                            dateColumnIndex + " некорректен: дата начала должна быть не раньше " + dateStart1IndividualPlan.format(formatter)
+                                            + ", а последним максимальным днем данного этапа является дата " + dateStart2IndividualPlan.format(formatter);
                                     errors.add(errorMsg);
                                     errorMessage.append(errorMsg).append("\n");
                                     loggerInfo.append(errorMsg).append("\n");
@@ -435,6 +437,34 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
             return new ValidatorDataIndividualTask(minPages, font, sizeRange, style, orgStepEndDate,
                     prepareAndDefendStepEndDate, prepareAndDefendStepContent, orgStepContent, individualStepContent,
                     individualStepDate, individualStepForm);
+        } catch (Exception e) {
+            System.err.println(SPARQL_ERROR + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public ValidatorDataDatesIndividualTask extractFromSparqlDates(String sparqlQuery) {
+        try {
+            Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+            try (InputStream in = Main.class.getResourceAsStream(MODEL_FILENAME)) {
+                model.read(in, "RDF/XML");
+            }
+            Query query = QueryFactory.create(sparqlQuery);
+            QueryExecution qexec = QueryExecutionFactory.create(query, model);
+            ResultSet results = qexec.execSelect();
+            String dateOrgStart1 = null;
+            String dateDefendStart2 = null;
+
+            while(results.hasNext()){
+                QuerySolution solution = results.next();
+                dateOrgStart1 = solution.getLiteral("Дата_начала_организационного_этапа_из_иииds_4").toString();
+                dateDefendStart2 = solution.getLiteral("Дата_окончания_этапа_защиты_работы_из_иииds_4").toString();
+            }
+            qexec.close();
+
+            return new ValidatorDataDatesIndividualTask(dateOrgStart1, dateDefendStart2);
         } catch (Exception e) {
             System.err.println(SPARQL_ERROR + e.getMessage());
             e.printStackTrace();
