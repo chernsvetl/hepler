@@ -199,12 +199,6 @@ public class ReviewDocumentValidatorImpl implements ReviewDocumentValidator {
                                 loggerInfo.append(errorMsg).append("\n");
                             }
                         }
-                    } else {
-                        valid = false;
-                        String errorMsg = "Не найдены маркеры для определения даты отзыва: '(подпись*, расшифровка Ф.И.О.)' и '* Подпись руководителя практики'.";
-                        errors.add(errorMsg);
-                        errorMessage.append(errorMsg).append("\n");
-                        loggerInfo.append(errorMsg).append("\n");
                     }
                 }
 

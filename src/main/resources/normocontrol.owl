@@ -634,6 +634,1176 @@
 
 
 
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_7 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_книс_7 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_книс_7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_книс_7 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_книс_7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_книс_7 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_книс_7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_книс_7 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_книс_7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_7 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_книс_7 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_книс_7">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+
+
+
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_8 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_8">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_книс_8 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_книс_8">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_книс_8 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_книс_8">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_книс_8 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_книс_8">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_книс_8 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_книс_8">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_8 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_8">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_книс_8 -->
+
+        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_книс_8">
+            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_8 -->
+
+            <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_8">
+                <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+            </owl:DatatypeProperty>
+
+            <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_пиикн_8 -->
+
+            <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_пиикн_8">
+                <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+            </owl:DatatypeProperty>
+
+
+            <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_пиикн_8 -->
+
+            <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_пиикн_8">
+                <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+            </owl:DatatypeProperty>
+
+            <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_пиикн_8 -->
+
+            <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_пиикн_8">
+                <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+            </owl:DatatypeProperty>
+
+
+            <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_8 -->
+
+            <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_8">
+                <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+            </owl:DatatypeProperty>
+
+
+            <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_8 -->
+
+            <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_8">
+                <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+            </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_пиикн_8 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_пиикн_8">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_7 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_7">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_пиикн_7 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_пиикн_7">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_пиикн_7 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_пиикн_7">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_пиикн_7 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_пиикн_7">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_7 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_7">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_7 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_7">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+                        <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_пиикн_7 -->
+
+                        <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_пиикн_7">
+                            <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                        </owl:DatatypeProperty>
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_6 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_6">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_пиикн_6 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_пиикн_6">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_пиикн_6 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_пиикн_6">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_пиикн_6 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_пиикн_6">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_6 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_6">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_6 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_6">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_пиикн_6 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_пиикн_6">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_iot_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_iot_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_iot_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_iot_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_iot_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_iot_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_iot_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_iot_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_iot_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_iot_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_iot_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_iot_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_iot_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_iot_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_iot_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_iot_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_iot_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_iot_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_iot_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_iot_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_iot_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_iot_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_iot_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_iot_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_трпс_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_трпс_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_трпс_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_трпс_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_трпс_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_трпс_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_трпс_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_трпс_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_трпс_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_трпс_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_трпс_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_трпс_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_трпс_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_трпс_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_трпс_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_трпс_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_иииds_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_иииds_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_иииds_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_иииds_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_иииds_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_иииds_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_2 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_2">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_иииds_2 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_иииds_2">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_иииds_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_иииds_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_иииds_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Цвет_из_иииds_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_иииds_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_организационного_этапа_из_иииds_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_4 -->
+
+                <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_4">
+                    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_организационного_этапа_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_организационного_этапа_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Срок_завершения_индивидуального_этапа_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Форма_отчетности_индивидуального_этапа_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_начала_организационного_этапа_из_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+                    <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_иииds_4 -->
+
+                    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Дата_окончания_этапа_защиты_работы_иииds_4">
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                    </owl:DatatypeProperty>
+
+
+
+
+
+
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -974,12 +2144,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_IoT_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
+        <кафедра:Виды_отчетных_материалов_из_iot_4>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_из_iot_4>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_iot_4>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_iot_4>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_iot_4>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_iot_4>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_iot_4>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_iot_4>
         <кафедра:Виды_работ_и_требования_к_их_выполнению>литературный обзор предметной области (требования: отбор актуальных информационных источников, наличие к концу практики реферата, который представляет собой краткий обзор пройденной практики и отражает все основные тезисы задания)</кафедра:Виды_работ_и_требования_к_их_выполнению>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_4>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
 Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики.
 Для магистратуры – обязательно включить посещение конкретного научного семинара.
 
@@ -1002,16 +2172,16 @@
 
 ОПК-6.1 Знать: аппаратные средства и платформы инфраструктуры информационных технологий, виды, назначение, архитектуру, методы разработки и администрирования программно-аппаратных комплексов объекта профессиональной деятельности;
 ОПК-6.2 Уметь: анализировать техническое задание, разрабатывать и оптимизировать программный код для решения задач обработки информации и автоматизированного проектирования;
-ОПК-6.3 Владеть: навыками составления технической документации по использованию и настройке компонентов программно-аппаратного комплекса.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>02.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>13.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+ОПК-6.3 Владеть: навыками составления технической документации по использованию и настройке компонентов программно-аппаратного комплекса.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_4>
+        <кафедра:Содержание_работы_организационного_этапа_из_iot_4>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_iot_4>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_4>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_4>
+        <кафедра:Срок_завершения_организационного_этапа_из_iot_4>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_iot_4>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_4>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_4>
+        <кафедра:Цвет_из_iot_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_iot_4>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_iot_4>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_iot_4>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_iot_4>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_iot_4>
+        <кафедра:Дата_начала_организационного_этапа_из_iot_4>02.02.26</кафедра:Дата_начала_организационного_этапа_из_iot_4>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_iot_4>13.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_iot_4>
     </owl:NamedIndividual>
 
 
@@ -1019,12 +2189,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_IoT_2">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Виды_работ_и_требования_к_их_выполнению>литературный обзор предметной области (требования: отбор актуальных информационных источников, наличие к концу практики реферата, который представляет собой краткий обзор пройденной практики и отражает все основные тезисы задания)</кафедра:Виды_работ_и_требования_к_их_выполнению>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        <кафедра:Виды_отчетных_материалов_iot_2>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_iot_2>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_iot_2>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_iot_2>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_iot_2>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_iot_2>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_iot_2>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_iot_2>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_2>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
          Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики.
          Для магистратуры – обязательно включить посещение конкретного научного семинара.
 
@@ -1060,16 +2229,16 @@
          ОПК-4.1. Знать: новые научные принципы и методы исследований:
          -знать актуальные достижения исследований в рамках предметной области;
          ОПК-4.2. Умеет: применять на практике новые научные принципы и методы исследований:
-         -уметь использовать актуальные методы решения профессиональной задачи в рамках практики.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>09.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>30.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+         -уметь использовать актуальные методы решения профессиональной задачи в рамках практики.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_iot_2>
+        <кафедра:Содержание_работы_организационного_этапа_из_iot_2>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_iot_2>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_2>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_iot_2>
+        <кафедра:Срок_завершения_организационного_этапа_из_iot_2>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_iot_2>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_2>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_iot_2>
+        <кафедра:Цвет_из_iot_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_iot_2>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_iot_2>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_iot_2>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_iot_2>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_iot_2>
+        <кафедра:Дата_начала_организационного_этапа_из_iot_2>09.02.26</кафедра:Дата_начала_организационного_этапа_из_iot_2>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_iot_2>30.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_iot_2>
     </owl:NamedIndividual>
 
 
@@ -1077,10 +2246,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ИИиDS_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        <кафедра:Виды_отчетных_материалов_иииds_4>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_иииds_4>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_4>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_4>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_иииds_4>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_иииds_4>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_4>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_4>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_4>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
 Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики.
 Для магистратуры – обязательно включить посещение конкретного научного семинара.
 
@@ -1103,16 +2273,16 @@
 
 ОПК-6.1 Знать: аппаратные средства и платформы инфраструктуры информационных технологий, виды, назначение, архитектуру, методы разработки и администрирования программно-аппаратных комплексов объекта профессиональной деятельности;
 ОПК-6.2 Уметь: анализировать техническое задание, разрабатывать и оптимизировать программный код для решения задач обработки информации и автоматизированного проектирования;
-ОПК-6.3 Владеть: навыками составления технической документации по использованию и настройке компонентов программно-аппаратного комплекса.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>02.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>13.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+ОПК-6.3 Владеть: навыками составления технической документации по использованию и настройке компонентов программно-аппаратного комплекса.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_4>
+        <кафедра:Содержание_работы_организационного_этапа_из_иииds_4>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_иииds_4>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_4>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_4>
+        <кафедра:Срок_завершения_организационного_этапа_из_иииds_4>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_иииds_4>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_4>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_4>
+        <кафедра:Цвет_из_иииds_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_иииds_4>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_иииds_4>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_иииds_4>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_иииds_4>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_иииds_4>
+        <кафедра:Дата_начала_организационного_этапа_из_иииds_4>02.02.26</кафедра:Дата_начала_организационного_этапа_из_иииds_4>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_иииds_4>13.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_иииds_4>
     </owl:NamedIndividual>
 
 
@@ -1123,10 +2293,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ИИиDS_2">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики. Для магистратуры – обязательно включить посещение конкретного научного семинара. Индикаторы достижения компетенций из программы практики:
+        <кафедра:Виды_отчетных_материалов_иииds_2>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_иииds_2>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_2>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_иииds_2>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_иииds_2>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_иииds_2>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_2>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_иииds_2>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_2>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики. Для магистратуры – обязательно включить посещение конкретного научного семинара. Индикаторы достижения компетенций из программы практики:
         УК-1.1 Выявляет проблемную ситуацию, определяет этапы ее разрешения;
         УК-1.2 Находит, критически анализирует и выбирает информацию, необходимую для выработки стратегии действий по разрешению проблемной ситуации;
         УК-1.3 Рассматривает варианты решения проблемной ситуации на основе системного подхода и разрабатывает стратегию действий.
@@ -1134,16 +2305,16 @@
         УК-6.2 Определяет приоритеты собственной деятельности, выстраивает планы их достижения;
         УК-6.3 Оценивает имеющиеся ресурсы и использует их для решения задач самоорганизации и саморазвития.
         ПКС-1.1Разрабатывать программные решения на основе аналитики больших данных в области профессиональной деятельности;
-        ПКС-1.2 Разрабатывать новые и адаптировать существующие методы, модели, алгоритмы, технологии и инструментальные средства работы с большими данными.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>09.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>06.06.26</кафедра:Дата_окончания_этапа_защиты_работы>
+        ПКС-1.2 Разрабатывать новые и адаптировать существующие методы, модели, алгоритмы, технологии и инструментальные средства работы с большими данными.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_иииds_2>
+        <кафедра:Содержание_работы_организационного_этапа_из_иииds_2>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_иииds_2>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_2>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_иииds_2>
+        <кафедра:Срок_завершения_организационного_этапа_из_иииds_2>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_иииds_2>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_2>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_иииds_2>
+        <кафедра:Цвет_из_иииds_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_иииds_2>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_иииds_2>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_иииds_2>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_иииds_2>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_иииds_2>
+        <кафедра:Дата_начала_организационного_этапа_из_иииds_2>09.02.26</кафедра:Дата_начала_организационного_этапа_из_иииds_2>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_иииds_2>06.06.26</кафедра:Дата_окончания_этапа_защиты_работы_из_иииds_2>
     </owl:NamedIndividual>
 
 
@@ -1152,10 +2323,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_КНИС_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        <кафедра:Виды_отчетных_материалов_книс_8>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_книс_8>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_8>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_8>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_книс_8>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_книс_8>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_книс_8>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_книс_8>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_8>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
 
 Индикаторы достижения компетенций и результаты обучения из программы практики:
 
@@ -1181,17 +2353,18 @@
 Уметь подготовить обзор, аннотацию, библиографический список с учетом требований информационной безопасности.
 
 ОПК-9.3 Владеть: способами описания методики использования программного средства для решения конкретной задачи в виде документа, презентации или видеоролика.
-Уметь разработать материалы в соответствии с заданными требованиями для использования конкретного разрабатываемого программного средства.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>16.03.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>08.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+Уметь разработать материалы в соответствии с заданными требованиями для использования конкретного разрабатываемого программного средства.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_8>
+        <кафедра:Содержание_работы_организационного_этапа_из_книс_8>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_книс_8>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_8>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_8>
+        <кафедра:Срок_завершения_организационного_этапа_из_книс_8>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_книс_8>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_8>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_8>
+        <кафедра:Цвет_из_книс_8 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_книс_8>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_книс_8>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_книс_8>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_книс_8>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_книс_8>
+        <кафедра:Дата_начала_организационного_этапа_из_книс_8>16.03.26</кафедра:Дата_начала_организационного_этапа_из_книс_8>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_книс_8>08.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_книс_8>
     </owl:NamedIndividual>
+
 
 
 
@@ -1201,37 +2374,41 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_КНИС_7">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
-Индикаторы достижения компетенций и результаты обучения из программы практики:
-УК -1.1 - Знать: методики сбора и обработки информации; актуальные российские и зарубежные источники информации в сфере профессиональной деятельности; метод системного анализа
-Знать основные актуальные российские и зарубежные источники информации в предметной области, состояние исследований в рамках предметной области, основные аналоги решения поставленной задачи
-УК -1.2 - Уметь: применять методики поиска, сбора и обработки информации; осуществлять критический анализ и синтез информации, полученной из разных источников
-Уметь грамотно и обоснованно сделать обзор существующих решений для конкретной задачи профессиональной области.
-УК – 1.3 - Владеть: методами поиска, сбора и обработки, критического анализа и синтеза информации; методикой системного подхода для решения поставленных задач
-Уметь произвести сравнение разрабатываемого решения для задачи в предметной области с аналогами, используя информацию из достоверных источников.
-УК – 6.1 - Знать: основные приемы эффективного управления собственным временем; основные методики самоконтроля, саморазвития и самообразования на протяжении всей жизни
-Способен оценивать и планировать ресурсы для решения поставленных задач.
-УК – 6.2 - Уметь: эффективно планировать и контролировать собственное время; использовать методы саморегуляции, саморазвития и самообучения
-Уметь сформировать и предоставить необходимые отчетные материалы по практике в соответствии с требованиями по срокам и содержанию, указанным в индивидуальном задании на практику.
-УК – 6.3 - Владеть: методами управления собственным временем; технологиями приобретения, использования и обновления социо-культурных и профессиональных знаний, умений, и навыков; методиками саморазвития и самообразования в течение всей жизни
-Уметь самостоятельно выполнить объем работ, указанных в индивидуальном задании на практику, в соответствии с заданными сроками и требованиями к содержанию
-ПКС – 2.1 - Уметь применять современные инструментальные средства для разработки компонентов аппаратно-программных комплексов и баз данных
-Уметь применять на практике инструментальные средства, необходимые для решения конкретных задач, сформулированных в индивидуальном задании на практику.
- ПКС – 2.2. - уметь применять современные технологии программирования для разработки компонентов аппаратно-программных комплексов и баз данных
-Уметь применять на практике актуальные технологии программирования, необходимые для решения конкретных задач, в соответствии с индивидуальным заданием на практику.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>29.09.25</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>23.12.25</кафедра:Дата_окончания_этапа_защиты_работы>
+        <кафедра:Виды_отчетных_материалов_книс_7>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_книс_7>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_7>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_книс_7>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_книс_7>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_книс_7>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_книс_7>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_книс_7>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_7>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+           Индикаторы достижения компетенций и результаты обучения из программы практики:
+           УК -1.1 - Знать: методики сбора и обработки информации; актуальные российские и зарубежные источники информации в сфере профессиональной деятельности; метод системного анализа
+           Знать основные актуальные российские и зарубежные источники информации в предметной области, состояние исследований в рамках предметной области, основные аналоги решения поставленной задачи
+           УК -1.2 - Уметь: применять методики поиска, сбора и обработки информации; осуществлять критический анализ и синтез информации, полученной из разных источников
+           Уметь грамотно и обоснованно сделать обзор существующих решений для конкретной задачи профессиональной области.
+           УК – 1.3 - Владеть: методами поиска, сбора и обработки, критического анализа и синтеза информации; методикой системного подхода для решения поставленных задач
+           Уметь произвести сравнение разрабатываемого решения для задачи в предметной области с аналогами, используя информацию из достоверных источников.
+           УК – 6.1 - Знать: основные приемы эффективного управления собственным временем; основные методики самоконтроля, саморазвития и самообразования на протяжении всей жизни
+           Способен оценивать и планировать ресурсы для решения поставленных задач.
+           УК – 6.2 - Уметь: эффективно планировать и контролировать собственное время; использовать методы саморегуляции, саморазвития и самообучения
+           Уметь сформировать и предоставить необходимые отчетные материалы по практике в соответствии с требованиями по срокам и содержанию, указанным в индивидуальном задании на практику.
+           УК – 6.3 - Владеть: методами управления собственным временем; технологиями приобретения, использования и обновления социо-культурных и профессиональных знаний, умений, и навыков; методиками саморазвития и самообразования в течение всей жизни
+           Уметь самостоятельно выполнить объем работ, указанных в индивидуальном задании на практику, в соответствии с заданными сроками и требованиями к содержанию
+           ПКС – 2.1 - Уметь применять современные инструментальные средства для разработки компонентов аппаратно-программных комплексов и баз данных
+           Уметь применять на практике инструментальные средства, необходимые для решения конкретных задач, сформулированных в индивидуальном задании на практику.
+            ПКС – 2.2. - уметь применять современные технологии программирования для разработки компонентов аппаратно-программных комплексов и баз данных
+           Уметь применять на практике актуальные технологии программирования, необходимые для решения конкретных задач, в соответствии с индивидуальным заданием на практику.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_книс_7>
+        <кафедра:Содержание_работы_организационного_этапа_из_книс_7>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_книс_7>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_7>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_книс_7>
+        <кафедра:Срок_завершения_организационного_этапа_из_книс_7>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_книс_7>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_7>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_книс_7>
+        <кафедра:Цвет_из_книс_7 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_книс_7>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_книс_7>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_книс_7>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_книс_7>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_книс_7>
+        <кафедра:Дата_начала_организационного_этапа_из_книс_7>16.03.26</кафедра:Дата_начала_организационного_этапа_из_книс_7>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_книс_7>08.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_книс_7>
     </owl:NamedIndividual>
+
+
+
 
 
 
@@ -1239,26 +2416,27 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        <кафедра:Виды_отчетных_материалов_пиикн_8>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_пиикн_8>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_8>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_8>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_8>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_8>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_8>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_8>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_8>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
 
 Индикаторы достижения компетенций и результаты обучения из программы практики:
 УК-1.1. Знать: методики сбора и обработки информации; актуальные российские и зарубежные источники информации в сфере профессиональной деятельности; метод системного анализа;
 УК-6.1. Знать: основные приемы эффективного управления собственным временем; основные методики самоконтроля, саморазвития и самообразования на протяжении всей жизни
 УК-6.2. Уметь: эффективно планировать и контролировать собственное время; использовать методы саморегуляции, саморазвития и самообучения;
 УК-6.3. Владеть: методами управления собственным временем; технологиями приобретения, использования и обновления социокультурных и профессиональных знаний, умений, и навыков; методиками саморазвития и самообразования в течение всей жизни.
-ПКС-2.3. Уметь применять знания в области разработки ПО в предметной области</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>02.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>02.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+ПКС-2.3. Уметь применять знания в области разработки ПО в предметной области</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_8>
+        <кафедра:Содержание_работы_организационного_этапа_из_пиикн_8>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_пиикн_8>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_8>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_8>
+        <кафедра:Срок_завершения_организационного_этапа_из_пиикн_8>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа_из_пиикн_8>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_8>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_8>
+        <кафедра:Цвет_из_пиикн_8 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_пиикн_8>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_8>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_8>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_8>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_8>
+        <кафедра:Дата_начала_организационного_этапа_из_пиикн_8>02.02.26</кафедра:Дата_начала_организационного_этапа_из_пиикн_8>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_8>02.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_8>
     </owl:NamedIndividual>
 
 
@@ -1266,89 +2444,96 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_6">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Индикаторы достижения компетенций и результаты обучения из программы практики:
+        <кафедра:Виды_отчетных_материалов_пиикн_6>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_пиикн_6>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_6>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_6>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_6>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_6>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_6>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_6>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_6>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Индикаторы достижения компетенций и результаты обучения из программы практики:
         ОПК-5.3. Владеть: навыками инсталляции программного и аппаратного обеспечения информационных и автоматизированных систем;
         ОПК-7.1 Знать: методы настройки, наладки программно-аппаратных комплексов;
         ОПК-7.2 Уметь: анализировать техническую документацию, производить настройку, наладку и тестирование программно-аппаратных комплексов;
-        ОПК-7.3 Владеть: навыками проверки работоспособности программно-аппаратных комплексов.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней от начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>02.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>28.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+        ОПК-7.3 Владеть: навыками проверки работоспособности программно-аппаратных комплексов.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_6>
+        <кафедра:Содержание_работы_организационного_этапа_из_пиикн_6>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_пиикн_6>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_6>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_6>
+        <кафедра:Срок_завершения_организационного_этапа_из_пиикн_6>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа_из_пиикн_6>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_6>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_6>
+        <кафедра:Цвет_из_пиикн_6 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_пиикн_6>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_6>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_6>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_6>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_6>
+        <кафедра:Дата_начала_организационного_этапа_из_пиикн_6>02.02.26</кафедра:Дата_начала_организационного_этапа_из_пиикн_6>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_6>28.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_6>
     </owl:NamedIndividual>
+
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_5 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_5">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Изучение основных функций подразделения, изучение объекта исследования (ОПК-1.3), составление аналитического обзора по предметной области, подготовка обзоров, аннотаций, рефератов в соответствии с программой практики (ОПК -3.3). Выбор и обоснование методик и средств решения поставленной задачи (ОПК-1.3).
+        <кафедра:Виды_отчетных_материалов_пиикн_5>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_пиикн_5>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_5>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_5>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_5>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_5>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_5>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_5>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_5>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Изучение основных функций подразделения, изучение объекта исследования (ОПК-1.3), составление аналитического обзора по предметной области, подготовка обзоров, аннотаций, рефератов в соответствии с программой практики (ОПК -3.3). Выбор и обоснование методик и средств решения поставленной задачи (ОПК-1.3).
 
 Индикаторы достижения компетенций и результаты обучения из программы практики:
 ОПК-1.3 - Владеть: навыками теоретического и экспериментального исследования объектов профессиональной деятельности:
 -владеет навыками теоретического и экспериментального исследования объектов профессиональной деятельности в рамках предметной области.
 ОПК-3.3 - Владеть: навыками подготовки обзоров, аннотаций, составления рефератов, научных докладов, публикаций и библиографии по научно- исследовательской работе с учетом требований информационной безопасности:
--владеет навыками подготовки обзоров и аннотаций статей, рефератов, списков литературы.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>06.10.25</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>23.12.25</кафедра:Дата_окончания_этапа_защиты_работы>
+-владеет навыками подготовки обзоров и аннотаций статей, рефератов, списков литературы.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_5>
+        <кафедра:Содержание_работы_организационного_этапа_из_пиикн_5>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_пиикн_5>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_5>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_5>
+        <кафедра:Срок_завершения_организационного_этапа_из_пиикн_5>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа_из_пиикн_5>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_5>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_5>
+        <кафедра:Цвет_из_пиикн_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_пиикн_5>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_5>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_5>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_5>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_5>
+        <кафедра:Дата_начала_организационного_этапа_из_пиикн_5>06.10.25</кафедра:Дата_начала_организационного_этапа_из_пиикн_5>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_5>23.12.25</кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_5>
     </owl:NamedIndividual>
-
-
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_7 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ПИиКН_7">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
- Индикаторы достижения компетенций и результаты обучения из программы практики:
-УК-1.2. Уметь: применять методики поиска, сбора и обработки информации; осуществлять критический анализ и синтез информации, полученной из разных источников - умеет грамотно и обоснованно сделать обзор существующих решений для конкретной задачи профессиональной области;
-УК-1.3Владеть: методами поиска, сбора и обработки, критического анализа и синтеза информации; методикой системного подхода для решения поставленных задач - способен самостоятельно осуществлять поиск, анализ и синтез информации, необходимой для его повседневной и профессиональной деятельности;
-УК-6.1. Знать: основные приемы эффективного управления собственным временем; основные методики самоконтроля, саморазвития и самообразования на протяжении всей жизни - способен оценивать и планировать ресурсы для решения поставленных задач;
-ОПК-3.1. Знать: принципы, методы и средства решения стандартных задач профессиональной деятельности на основе информационной и библиографической культуры с применением информационно- коммуникационных технологий и с учетом основных требований информационной безопасности -знает принципы, методы и средства решения стандартных задач профессиональной деятельности;
-ОПК-3.2. Уметь: решать стандартные задачи профессиональной деятельности на основе информационной и библиографической культуры с применением информационно- коммуникационных технологий и с учетом основных требований информационной безопасности - применяет на практике знания, полученные в результате анализа литературы, для решения задач профессиональной деятельности;
-ОПК-3.3 Владеть: навыками подготовки обзоров, аннотаций, составления рефератов, научных докладов, публикаций и библиографии по научно- исследовательской работе с учетом требований информационной безопасности- владеет навыками подготовки обзоров, рефератов, отчетов, докладов.
-</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>29.09.25</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>23.12.25</кафедра:Дата_окончания_этапа_защиты_работы>
+        <кафедра:Виды_отчетных_материалов_пиикн_7>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_пиикн_7>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_7>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_пиикн_7>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_7>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_пиикн_7>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_7>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_пиикн_7>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_7>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        Индикаторы достижения компетенций и результаты обучения из программы практики:
+        УК-1.2. Уметь: применять методики поиска, сбора и обработки информации; осуществлять критический анализ и синтез информации, полученной из разных источников - умеет грамотно и обоснованно сделать обзор существующих решений для конкретной задачи профессиональной области;
+        УК-1.3Владеть: методами поиска, сбора и обработки, критического анализа и синтеза информации; методикой системного подхода для решения поставленных задач - способен самостоятельно осуществлять поиск, анализ и синтез информации, необходимой для его повседневной и профессиональной деятельности;
+        УК-6.1. Знать: основные приемы эффективного управления собственным временем; основные методики самоконтроля, саморазвития и самообразования на протяжении всей жизни - способен оценивать и планировать ресурсы для решения поставленных задач;
+        ОПК-3.1. Знать: принципы, методы и средства решения стандартных задач профессиональной деятельности на основе информационной и библиографической культуры с применением информационно- коммуникационных технологий и с учетом основных требований информационной безопасности -знает принципы, методы и средства решения стандартных задач профессиональной деятельности;
+        ОПК-3.2. Уметь: решать стандартные задачи профессиональной деятельности на основе информационной и библиографической культуры с применением информационно- коммуникационных технологий и с учетом основных требований информационной безопасности - применяет на практике знания, полученные в результате анализа литературы, для решения задач профессиональной деятельности;
+        ОПК-3.3 Владеть: навыками подготовки обзоров, аннотаций, составления рефератов, научных докладов, публикаций и библиографии по научно- исследовательской работе с учетом требований информационной безопасности- владеет навыками подготовки обзоров, рефератов, отчетов, докладов.</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_пиикн_7>
+        <кафедра:Содержание_работы_организационного_этапа_из_пиикн_7>Например: инструктаж о порядке прохождения  практики, получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_пиикн_7>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_7>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_пиикн_7>
+        <кафедра:Срок_завершения_организационного_этапа_из_пиикн_7>Продолжительность не более 2 дней</кафедра:Срок_завершения_организационного_этапа_из_пиикн_7>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_7>Продолжительность не более 10 дней</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_пиикн_7>
+        <кафедра:Цвет_из_пиикн_7 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_пиикн_7>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_7>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_пиикн_7>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_7>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_пиикн_7>
+        <кафедра:Дата_начала_организационного_этапа_из_пиикн_7>06.10.25</кафедра:Дата_начала_организационного_этапа_из_пиикн_7>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_7>23.12.25</кафедра:Дата_окончания_этапа_защиты_работы_из_пиикн_7>
     </owl:NamedIndividual>
+
+
+
+
+
 
 
     <!-- http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ТРПС_4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ТРПС_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
+        <кафедра:Виды_отчетных_материалов_трпс_4>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_трпс_4>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_4>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_4>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_трпс_4>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_трпс_4>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_4>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_4>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_4>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику.
 Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики.
 Для магистратуры – обязательно включить посещение конкретного научного семинара.
 
@@ -1364,16 +2549,16 @@
 ОПК-4.3. Владеть: навыками применения новых научных принципов и методов исследования для решения профессиональных задач.
 ОПК-5.1. Знать современное программное и аппаратное обеспечение информационных и автоматизированных систем;
 ОПК-5.2. Уметь: модернизировать программное и аппаратное обеспечение информационных и автоматизированных систем для решения профессиональных задач;
-ОПК-5.3. Владеть: навыками разработки программного и аппаратного обеспечения информационных и автоматизированных систем для решения профессиональных задач;</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней до начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>02.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>13.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+ОПК-5.3. Владеть: навыками разработки программного и аппаратного обеспечения информационных и автоматизированных систем для решения профессиональных задач;</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_4>
+        <кафедра:Содержание_работы_организационного_этапа_из_трпс_4>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_трпс_4>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_4>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_4>
+        <кафедра:Срок_завершения_организационного_этапа_из_трпс_4>Продолжительность не более 2 дней до начала практики</кафедра:Срок_завершения_организационного_этапа_из_трпс_4>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_4>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_4>
+        <кафедра:Цвет_из_трпс_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_трпс_4>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_трпс_4>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_трпс_4>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_трпс_4>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_трпс_4>
+        <кафедра:Дата_начала_организационного_этапа_из_трпс_4>02.02.26</кафедра:Дата_начала_организационного_этапа_из_трпс_4>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_трпс_4>13.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_трпс_4>
     </owl:NamedIndividual>
 
 
@@ -1385,26 +2570,27 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#ИЗ_ТРПС_2">
         <rdf:type rdf:resource="http://www.semanticweb.org/oleyn/ontologies/2022/4/кафедра#Индивидуальное_задание_на_практику"/>
-        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания>
-        <кафедра:Виды_отчетных_материалов_организационного_этапа>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа>
-        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты>
-        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики.
+        <кафедра:Виды_отчетных_материалов_трпс_2>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация</кафедра:Виды_отчетных_материалов_трпс_2>
+        <кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_2>Описание результатов выполненного задания, материалы к отчету, текст обзора, аннотации, реферата, научного доклада, публикации. Выходные данные публикации и научного доклада предоставляются, если это требуется программой практики.</кафедра:Виды_отчетных_материалов_выполнения_этапов_индивидуального_задания_из_трпс_2>
+        <кафедра:Виды_отчетных_материалов_организационного_этапа_из_трпс_2>Индивидуальное задание.</кафедра:Виды_отчетных_материалов_организационного_этапа_из_трпс_2>
+        <кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_2>Письменный отчет по установленной форме, отзыв руководителя, электронная презентация, защита отчета.</кафедра:Виды_отчетных_материалов_подготовки_и_защиты_из_трпс_2>
+        <кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_2>Содержание работ должно быть конкретизировано и отражать непосредственную деятельность, связанную с целями практики, запланированными результатами обучения (указать все индикаторы достижения компетенций из программы практики в привязке к содержанию работ) и темой задания на практику. Подготовка обзоров, аннотаций, рефератов, научных докладов, публикаций в соответствии с программой практики.
         Для магистратуры – обязательно включить посещение конкретного научного семинара. Индикаторы достижения компетенций из программы практики:
         УК-6.1 Знать: методики самооценки, самоконтроля и саморазвития с использованием подходов здоровьесбережения
         УК-6.2 Уметь: решать задачи собственного личностного и профессионального развития, определять и реализовывать приоритеты совершенствования собственной деятельности; применять методики самооценки и самоконтроля; применять методики, позволяющие улучшить и сохранить здоровье в процессе жизнедеятельности
         УК-6.3 Владеть: технологиями и навыками управления своей познавательной деятельностью и ее совершенствования на основе самооценки, самоконтроля и принципов самообразования в течение всей жизни, в том числе с использованием здоровьесберегающих подходов и методик.
         ПКС-2.1 Знать основные методы разработки программного обеспечения
         ПКС-2.2 Уметь применять на практике программные средства и платформы информационных технологий
-        ПКС-2.3 Уметь анализировать особенности предметной области и контекста решаемой задачи для обоснованного выбора инструментария</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания>
-        <кафедра:Содержание_работы_организационного_этапа>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа>
-        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Срок_завершения_организационного_этапа>Продолжительность не более 2 дней до начала практики</кафедра:Срок_завершения_организационного_этапа>
-        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов>
-        <кафедра:Цвет rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет>
-        <кафедра:Форма_отчетности_индивидуального_этапа>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа>
-        <кафедра:Срок_завершения_индивидуального_этапа>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа>
-        <кафедра:Дата_начала_организационного_этапа>09.02.26</кафедра:Дата_начала_организационного_этапа>
-        <кафедра:Дата_окончания_этапа_защиты_работы>30.05.26</кафедра:Дата_окончания_этапа_защиты_работы>
+        ПКС-2.3 Уметь анализировать особенности предметной области и контекста решаемой задачи для обоснованного выбора инструментария</кафедра:Содержание_работы_выполнения_этапов_индивидуального_задания_из_трпс_2>
+        <кафедра:Содержание_работы_организационного_этапа_из_трпс_2>Например: получение индивидуального задания, вводный инструктаж по технике безопасности, ППБ, охране труда. Знакомство с локальными нормативными актами организации.</кафедра:Содержание_работы_организационного_этапа_из_трпс_2>
+        <кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_2>Обобщение полученных результатов, подготовка письменного отчета по практике, получение отзыва руководителя от профильной организации, сдача отчета и отзыва на проверку руководителю практики от НГУ, подготовка электронной презентации для защиты отчета, представление отчетных материалов по практике на кафедру, защита отчета на кафедре.</кафедра:Содержание_работы_подготовки_и_защиты_отчетных_материалов_из_трпс_2>
+        <кафедра:Срок_завершения_организационного_этапа_из_трпс_2>Продолжительность не более 2 дней до начала практики</кафедра:Срок_завершения_организационного_этапа_из_трпс_2>
+        <кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_2>Продолжительность не более 10 дней до конца практики</кафедра:Срок_завершения_этапа_подготовки_и_защиты_отчетных_материалов_из_трпс_2>
+        <кафедра:Цвет_из_трпс_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#000000</кафедра:Цвет_из_трпс_2>
+        <кафедра:Форма_отчетности_индивидуального_этапа_из_трпс_2>Своя форма отчетности для каждого этапа!</кафедра:Форма_отчетности_индивидуального_этапа_из_трпс_2>
+        <кафедра:Срок_завершения_индивидуального_этапа_из_трпс_2>Свой срок для каждого этапа</кафедра:Срок_завершения_индивидуального_этапа_из_трпс_2>
+        <кафедра:Дата_начала_организационного_этапа_из_трпс_2>09.02.26</кафедра:Дата_начала_организационного_этапа_из_трпс_2>
+        <кафедра:Дата_окончания_этапа_защиты_работы_из_трпс_2>30.05.26</кафедра:Дата_окончания_этапа_защиты_работы_из_трпс_2>
     </owl:NamedIndividual>
 
 
