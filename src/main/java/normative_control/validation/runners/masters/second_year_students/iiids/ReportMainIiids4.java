@@ -5,13 +5,13 @@ import normative_control.validation.service.impl.masters.iiids.second_year_stude
 import normative_control.validation.validators.ValidatorDataReport;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
+import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_IIDS_4;
 import static normative_control.utils.ValidationPaths.IIIDS_4_REPORT_PATH;
 
 public class ReportMainIiids4 {
     public static void main(String[] args) {
         ReportDocumentValidator reportDocumentValidator = new ReportDocumentValidatorImpl();
-        ValidatorDataReport data = reportDocumentValidator.extractFromSparql(QUERY_REPORT);
+        ValidatorDataReport data = reportDocumentValidator.extractFromSparql(QUERY_REPORT_IIDS_4);
         if (data != null) {
             reportDocumentValidator.validateDocxFiles(IIIDS_4_REPORT_PATH, data);
         } else {

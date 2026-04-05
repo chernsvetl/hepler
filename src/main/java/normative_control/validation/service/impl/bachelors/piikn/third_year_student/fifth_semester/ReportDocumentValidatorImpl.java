@@ -14,7 +14,13 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import normative_control.validation.service.ReportDocumentValidator;
 import normative_control.validation.validators.ValidatorDataReport;
+import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTInd;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTP;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTPPr;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTSpacing;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
 
 import java.io.File;
@@ -22,6 +28,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +67,7 @@ import static normative_control.utils.Constants.SPACE;
 import static normative_control.utils.Constants.formatter;
 import static normative_control.utils.Files.PIIKN_5_REPORT_FILE;
 import static normative_control.utils.ValidationPaths.MODEL_FILENAME;
+import static normative_control.validation.service.utils.Constants.*;
 import static normative_control.validation.validators.CommonValidator.containsSection;
 import static normative_control.validation.validators.CommonValidator.extractThemeText;
 import static normative_control.validation.validators.CommonValidator.getFontSize;
@@ -68,8 +76,51 @@ import static normative_control.validation.validators.CommonValidator.isValidThe
 import static normative_control.validation.validators.CommonValidator.parseSizeRange;
 
 public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
-
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+    /**
+     * Определяет индекс первого параграфа основного текста (после титульного листа)
+     */
+    private int findFirstContentParagraphIndex(List<XWPFParagraph> paragraphs) {
+        int titleStartIndex = -1;
+        int titleEndIndex = -1;
+
+        // Ищем начало титульника
+        for (int i = 0; i < paragraphs.size(); i++) {
+            String text = paragraphs.get(i).getText().trim();
+            if (text.contains(TITLE_START)) {
+                titleStartIndex = i;
+                break;
+            }
+        }
+
+        // Если нашли начало, ищем конец титульника (строку с городом и годом)
+        if (titleStartIndex != -1) {
+            for (int i = titleStartIndex; i < paragraphs.size(); i++) {
+                String text = paragraphs.get(i).getText().trim();
+                if (CITY_YEAR_PATTERN.matcher(text).matches()) {
+                    titleEndIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // Если нашли и начало, и конец, возвращаем индекс следующего параграфа
+        if (titleStartIndex != -1 && titleEndIndex != -1) {
+            return titleEndIndex + 1;
+        }
+
+        // Если не нашли границы титульника, ищем по ключевым словам "Введение", "Оглавление", "Содержание"
+        for (int i = 0; i < paragraphs.size(); i++) {
+            String text = paragraphs.get(i).getText().trim();
+            if (text.contains("Введение") || text.contains("Оглавление") || text.contains("Содержание")) {
+                return i;
+            }
+        }
+
+        // Запасной вариант - начинаем со второго параграфа
+        return paragraphs.size() > 1 ? 1 : 0;
+    }
 
     @Override
     public void validateDocxFiles(String directoryPath, ValidatorDataReport data) {
@@ -168,6 +219,183 @@ public class ReportDocumentValidatorImpl implements ReportDocumentValidator {
                 documentInfo.addProperty("isValid", valid);
                 if (!errors.isEmpty()) {
                     documentInfo.add("errors", gson.toJsonTree(errors));
+                }
+
+                List<XWPFParagraph> paragraphs = document.getParagraphs();
+
+                // проверка на то, есть ли оценка на титульнике
+                boolean hasGradeOnTitlePage = false;
+                String gradeErrorMsg = null;
+
+                int maxCheck = Math.min(50, paragraphs.size());
+                int startIdx = -1;
+                int endIdx = -1;
+
+                for (int i = 0; i < maxCheck; i++) {
+                    if (paragraphs.get(i).getText().contains("Оценка по итогам защиты отчета")) {
+                        startIdx = i;
+                        break;
+                    }
+                }
+                if (startIdx != -1) {
+                    for (int i = startIdx; i < maxCheck; i++) {
+                        if (paragraphs.get(i).getText().contains("Отчет заслушан на заседании кафедры")) {
+                            endIdx = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (startIdx != -1 && endIdx != -1) {
+                    StringBuilder betweenText = new StringBuilder();
+                    for (int i = startIdx; i <= endIdx; i++) {
+                        betweenText.append(paragraphs.get(i).getText()).append("\n");
+                    }
+                    String content = betweenText.toString();
+                    content = content.replaceFirst("(?s).*Оценка по итогам защиты отчета\\s*:", "")
+                            .replaceFirst("Отчет заслушан на заседании кафедры.*", "");
+                    String hintPattern = "\\(\\s*неудовлетворительно\\s*[,]?\\s*удовлетворительно\\s*[,]?\\s*хорошо\\s*[,]?\\s*отлично\\s*\\)";
+                    content = content.replaceAll("(?i)" + hintPattern, "");
+                    String cleaned = content.replaceAll("[_\\-\\.,\\s\\n\\r\\t]+", "");
+
+                    if (cleaned.matches(".*[а-яА-Яa-zA-Z0-9].*")) {
+                        hasGradeOnTitlePage = true;
+                        gradeErrorMsg = "Оценка по итогам защиты отчета на титульнике не должна быть выставлена. Найден лишний текст: " + cleaned;
+                    }
+                }
+
+                if (hasGradeOnTitlePage) {
+                    valid = false;
+                    errorMessage.append(gradeErrorMsg).append("\n");
+                    loggerInfo.append(gradeErrorMsg).append("\n");
+                    errors.add(gradeErrorMsg);
+                }
+
+                // валидация на форматирование абзацев
+                int contentStartIndex = findFirstContentParagraphIndex(paragraphs);
+
+                boolean lineSpacingValid = true;
+                boolean paragraphSpacingValid = true;
+                boolean indentationValid = true;
+                boolean alignmentValid = true;
+
+                for (int i = contentStartIndex; i < paragraphs.size(); i++) {
+                    XWPFParagraph paragraph = paragraphs.get(i);
+                    CTP ctp = paragraph.getCTP();
+                    CTPPr pPr = ctp.getPPr();
+
+                    if (pPr != null) {
+                        CTSpacing spacing = pPr.getSpacing();
+                        if (spacing != null) {
+                            Object lineObj = spacing.getLine();
+                            if (lineObj != null) {
+                                double lineSpacingValue = 1.0;
+                                if (lineObj instanceof BigInteger) {
+                                    lineSpacingValue = ((BigInteger) lineObj).doubleValue() / LINE_TO_TWIPS;
+                                } else if (lineObj instanceof String) {
+                                    try {
+                                        lineSpacingValue = Double.parseDouble((String) lineObj) / LINE_TO_TWIPS;
+                                    } catch (NumberFormatException e) {
+                                        lineSpacingValue = 1.0;
+                                    }
+                                } else if (lineObj instanceof Number) {
+                                    lineSpacingValue = ((Number) lineObj).doubleValue() / LINE_TO_TWIPS;
+                                }
+                                if (Math.abs(lineSpacingValue - EXPECTED_LINE_SPACING) > 0.1) {
+                                    lineSpacingValid = false;
+                                }
+                            } else {
+                                lineSpacingValid = false;
+                            }
+
+                            Object beforeObj = spacing.getBefore();
+                            Object afterObj = spacing.getAfter();
+                            int beforeValue = 0, afterValue = 0;
+                            if (beforeObj instanceof BigInteger) {
+                                beforeValue = ((BigInteger) beforeObj).intValue();
+                            } else if (beforeObj instanceof String) {
+                                try {
+                                    beforeValue = Integer.parseInt((String) beforeObj);
+                                } catch (NumberFormatException e) {}
+                            } else if (beforeObj instanceof Number) {
+                                beforeValue = ((Number) beforeObj).intValue();
+                            }
+                            if (afterObj instanceof BigInteger) {
+                                afterValue = ((BigInteger) afterObj).intValue();
+                            } else if (afterObj instanceof String) {
+                                try {
+                                    afterValue = Integer.parseInt((String) afterObj);
+                                } catch (NumberFormatException e) {}
+                            } else if (afterObj instanceof Number) {
+                                afterValue = ((Number) afterObj).intValue();
+                            }
+                            if (beforeValue > 0 || afterValue > 0) {
+                                paragraphSpacingValid = false;
+                            }
+                        } else {
+                            lineSpacingValid = false;
+                        }
+
+                        CTInd indentation = pPr.getInd();
+                        if (indentation != null) {
+                            Object firstLineObj = indentation.getFirstLine();
+                            if (firstLineObj != null) {
+                                double indentCm = 0;
+                                if (firstLineObj instanceof BigInteger) {
+                                    indentCm = ((BigInteger) firstLineObj).doubleValue() / CM_TO_TWIPS;
+                                } else if (firstLineObj instanceof String) {
+                                    try {
+                                        indentCm = Double.parseDouble((String) firstLineObj) / CM_TO_TWIPS;
+                                    } catch (NumberFormatException e) {}
+                                } else if (firstLineObj instanceof Number) {
+                                    indentCm = ((Number) firstLineObj).doubleValue() / CM_TO_TWIPS;
+                                }
+                                if (Math.abs(indentCm - EXPECTED_INDENTATION_CM) > 0.1) {
+                                    indentationValid = false;
+                                }
+                            } else {
+                                indentationValid = false;
+                            }
+                        } else {
+                            indentationValid = false;
+                        }
+                    } else {
+                        lineSpacingValid = false;
+                        indentationValid = false;
+                    }
+
+                    if (paragraph.getAlignment() != ParagraphAlignment.BOTH) {
+                        alignmentValid = false;
+                    }
+                }
+
+                if (!lineSpacingValid) {
+                    valid = false;
+                    String errorMsg = "Межстрочный интервал должен быть одинарным";
+                    errorMessage.append(errorMsg).append("\n");
+                    loggerInfo.append(errorMsg).append("\n");
+                    errors.add(errorMsg);
+                }
+                if (!paragraphSpacingValid) {
+                    valid = false;
+                    String errorMsg = "Между абзацами не должно быть дополнительных интервалов";
+                    errorMessage.append(errorMsg).append("\n");
+                    loggerInfo.append(errorMsg).append("\n");
+                    errors.add(errorMsg);
+                }
+                if (!indentationValid) {
+                    valid = false;
+                    String errorMsg = "Абзацный отступ должен быть 1,25 см";
+                    errorMessage.append(errorMsg).append("\n");
+                    loggerInfo.append(errorMsg).append("\n");
+                    errors.add(errorMsg);
+                }
+                if (!alignmentValid) {
+                    valid = false;
+                    String errorMsg = "Выравнивание текста должно быть по ширине";
+                    errorMessage.append(errorMsg).append("\n");
+                    loggerInfo.append(errorMsg).append("\n");
+                    errors.add(errorMsg);
                 }
 
                 if (valid) {

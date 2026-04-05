@@ -5,8 +5,6 @@ import normative_control.validation.service.impl.masters.trps.second_year_studen
 import normative_control.validation.validators.ValidatorDataIndividualTask;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_KNIS_8;
 import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_TRPS_4;
 import static normative_control.utils.ValidationPaths.TRPS_4_INDIVIDUAL_TASK_PATH;
 

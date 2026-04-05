@@ -41,5 +41,9 @@ public class Errors {
     public static final String JSON_WRITE_ERROR = "Ошибка при записи JSON файла: ";
     public static final String JSON_THEME_ERROR = "Тема задания требует доработки. Отсутствуют ключевые слова (разработка, исследование, реализация, анализ). Необходимо хотя бы одно из перечисленных.";
     public static final String JSON_STEP_INDIVIDUAL_TASK_DATE_NOT_CHANGED = "Срок завершения этапа индивидуального задания не изменен.";
+    public static final String PARAGRAPH_SPACING_ERROR = "Ошибка форматирования абзацев: ";
+    public static final String INDENTATION_ERROR = "Ошибка абзацного отступа: ";
+    public static final String MARGINS_ERROR = "Ошибка полей страницы: ";
+
     public static final String NEXT_LINE = "\n";
 }

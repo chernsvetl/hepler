@@ -16,6 +16,7 @@ import normative_control.validation.service.IndividualTaskDocumentValidator;
 import normative_control.validation.validators.ValidatorDataDatesIndividualTask;
 import normative_control.validation.validators.ValidatorDataIndividualTask;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import ru.nsu.fit.chernyavtseva.assistant.Main;
 
@@ -30,6 +31,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static normative_control.notifications.Errors.CONTENT_STEP_DEFEND_TASK_NOT_CHANGED;
 import static normative_control.notifications.Errors.CONTENT_STEP_INDIVIDUAL_TASK_NOT_CHANGED;
@@ -56,7 +59,6 @@ import static normative_control.notifications.Errors.THEME_ERROR;
 import static normative_control.notifications.Errors.VALIDATION_END;
 import static normative_control.output.FileLogger.writeValidationLogs;
 import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_KNIS_8;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_PIIKN_8;
 import static normative_control.utils.Constants.ANSI_BLACK;
 import static normative_control.utils.Constants.ANSI_GREEN;
 import static normative_control.utils.Constants.ANSI_RED;
@@ -336,6 +338,49 @@ public class IndividualTaskDocumentValidatorImpl implements IndividualTaskDocume
                                 loggerInfo.append(errorMsg).append("\n");
                             }
                         }
+                    }
+                }
+
+                // проверка дат в акте и инструктаже
+                StringBuilder fullText = new StringBuilder();
+                for (XWPFParagraph paragraph : document.getParagraphs()) {
+                    fullText.append(paragraph.getText()).append("\n");
+                }
+                String docText = fullText.toString();
+
+                // проверка даты инструктажа: ищем фразу "с оформлением установленной документации"
+                // и затем проверяем, что до "Руководитель практики назначе" нет шаблона с подчеркиваниями
+                int instructionPos = docText.indexOf("с оформлением установленной документации");
+                if (instructionPos != -1) {
+                    int endSearch = Math.min(docText.length(), instructionPos + 100);
+                    String afterInstruction = docText.substring(instructionPos, endSearch);
+                    // паттерн -  кавычка (или её отсутствие), затем 1+ подчёркиваний, затем пробелы, 1+ подчёркиваний, 20, пробелы, 1+ подчёркиваний, "г" с точкой или без
+                    Pattern placeholderPattern = Pattern.compile("[«\"]?_{1,}[»\"]?\\s*_{1,}\\s*20\\s*_{1,}\\s*г\\.?");
+                    if (placeholderPattern.matcher(afterInstruction).find()) {
+                        valid = false;
+                        String errorMsg = "Дата инструктажа не заполнена.";
+                        errors.add(errorMsg);
+                        errorMessage.append(errorMsg).append("\n");
+                        loggerInfo.append(errorMsg).append("\n");
+                    }
+                }
+
+                // проверка распорядительного акта: ищем фразу "назначен распорядительным актом от"
+                // и затем проверяем, что до "(Для обучающихся, направленных на практик" есть шаблон с подчеркиваниями
+                Pattern actPattern = Pattern.compile(
+                        "назначен распорядительным актом от(.*?)\\(Для обучающихся, направленных на практик",
+                        Pattern.DOTALL);
+                Matcher actMatcher = actPattern.matcher(docText);
+                if (actMatcher.find()) {
+                    String between = actMatcher.group(1);
+                    // ищем шаблон вида «___» _________ 20__г. №__________.
+                    Pattern placeholderPattern = Pattern.compile("[«\"]?___[»\"]?\\s*_________\\s*20__г\\.?\\s*№\\s*__________\\.?");
+                    if (placeholderPattern.matcher(between).find()) {
+                        valid = false;
+                        String errorMsg = "Дата и номер распорядительного акта не заполнены.";
+                        errors.add(errorMsg);
+                        errorMessage.append(errorMsg).append("\n");
+                        loggerInfo.append(errorMsg).append("\n");
                     }
                 }
 

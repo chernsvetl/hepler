@@ -5,9 +5,7 @@ import normative_control.validation.service.impl.masters.iot.second_year_student
 import normative_control.validation.validators.ValidatorDataIndividualTask;
 
 import static normative_control.notifications.Errors.SPARQL_ERROR;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT;
 import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_IOT_4;
-import static normative_control.query_model.ValidatorQuery.QUERY_REPORT_TRPS_4;
 import static normative_control.utils.ValidationPaths.IOT_4_INDIVIDUAL_TASK_PATH;
 
 public class IndividualTaskMainIot4 {

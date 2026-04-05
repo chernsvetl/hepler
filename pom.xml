@@ -29,6 +29,7 @@
     </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <poi.version>5.2.5</poi.version> <!-- Общая версия для POI -->
     </properties>
     <dependencies>
         <dependency>
@@ -41,27 +42,35 @@
             <artifactId>pdfbox</artifactId>
             <version>2.0.27</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
+        <!-- Apache POI - версии приведены к одной -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>5.2.0</version>
+            <version>${poi.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>5.1.0</version>
+            <version>${poi.version}</version>
         </dependency>
+
+        <!-- Дополнительная зависимость для работы с форматированием -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-full</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.13.2</version>
+            <version>2.20.0</version> <!-- Обновлена версия -->
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
-            <version>1.9</version>
+            <version>1.10.0</version> <!-- Обновлена версия -->
         </dependency>
         <dependency>
             <groupId>com.github.petrovich4j</groupId>
@@ -78,7 +87,6 @@
             <artifactId>jena-sparql-api-core</artifactId>
             <version>2.13.0-5</version>
         </dependency>
-
         <dependency>
             <groupId>org.aksw.jena-sparql-api</groupId>
             <artifactId>jena-sparql-api-server</artifactId>
